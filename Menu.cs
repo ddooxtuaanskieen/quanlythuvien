@@ -16,5 +16,11 @@ namespace QUANLYTHUVIEN
         {
             InitializeComponent();
         }
+
+        private void button_NhanVien_Click(object sender, EventArgs e)
+        {
+            NhanVien nv = new NhanVien();
+            nv.ShowDialog();
+        }
     }
 }

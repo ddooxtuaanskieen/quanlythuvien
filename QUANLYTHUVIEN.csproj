@@ -68,10 +68,45 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\DOCGIA.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MUONTRA.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NHANVIEN.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PHANLOAI.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PHANQUYEN.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QUYEN.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SACH.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SANGTAC.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TACGIA.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\THELOAI.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ThuVien.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ThuVien.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ThuVien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThuVien.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -139,6 +174,12 @@
     <Content Include="Models\ThuVien.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ThuVien.Context.cs</LastGenOutput>
+      <DependentUpon>ThuVien.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ThuVien.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ThuVien.edmx</DependentUpon>
+      <LastGenOutput>ThuVien.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
