@@ -113,11 +113,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ThuVien.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Muon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Muon.Designer.cs">
+      <DependentUpon>Muon.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanQuyen.Designer.cs">
+      <DependentUpon>PhanQuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,11 +139,26 @@
     <Compile Include="QuenMatKhau.Designer.cs">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sach.Designer.cs">
+      <DependentUpon>Sach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tra.Designer.cs">
+      <DependentUpon>Tra.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Muon.resx">
+      <DependentUpon>Muon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
@@ -147,6 +174,9 @@
     </Compile>
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tra.resx">
+      <DependentUpon>Tra.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Models\ThuVien.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

@@ -46,6 +46,18 @@ namespace QUANLYTHUVIEN
                     return null;
             }
         }
+        public static IEnumerable<SACH> getAvailableBooks()
+        {
+            List<String> unavailableBooks = new List<string>();
+            foreach (var item in tv.MUONTRAs.Where(x => x.NgayTra == null).ToList())
+            {
+                unavailableBooks.Add(item.MaSach);
+            }
+            //return tv.SACHes.Where(x => unavailableBooks.IndexOf(x.MaSach) == -1).ToList();
+            return from sach in tv.SACHes
+                   where unavailableBooks.IndexOf(sach.MaSach) == -1
+                   select sach;
+        }
         public static IEnumerable<Object> getData(string obj, string keyword)
         {
             switch (obj)

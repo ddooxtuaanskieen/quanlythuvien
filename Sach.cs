@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace QUANLYTHUVIEN
 {
-    public partial class Menu : Form
+    public partial class Sach : Form
     {
-        public Menu()
+        public Sach()
         {
             InitializeComponent();
-        }
-
-        private void button_NhanVien_Click(object sender, EventArgs e)
-        {
-            NhanVien nv = new NhanVien();
-            nv.ShowDialog();
-        }
-
-        private void button_Muon_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

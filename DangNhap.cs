@@ -48,5 +48,16 @@ namespace QUANLYTHUVIEN
                 }
             }
         }
+
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+            //List<string> demo = new List<string>();
+            //demo.Add("Hai");
+            //demo.Add("Kien");
+            //demo.Add("Cuong");
+            ////MessageBox.Show(demo.FindIndex("Hai").ToString());
+            //MessageBox.Show(demo.IndexOf("qai").ToString());
+
+        }
     }
 }

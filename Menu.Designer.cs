@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.button_NhanVien = new System.Windows.Forms.Button();
+            this.button_Muon = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_NhanVien
@@ -41,11 +42,22 @@
             this.button_NhanVien.UseVisualStyleBackColor = true;
             this.button_NhanVien.Click += new System.EventHandler(this.button_NhanVien_Click);
             // 
+            // button_Muon
+            // 
+            this.button_Muon.Location = new System.Drawing.Point(379, 226);
+            this.button_Muon.Name = "button_Muon";
+            this.button_Muon.Size = new System.Drawing.Size(75, 23);
+            this.button_Muon.TabIndex = 1;
+            this.button_Muon.Text = "button1";
+            this.button_Muon.UseVisualStyleBackColor = true;
+            this.button_Muon.Click += new System.EventHandler(this.button_Muon_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_Muon);
             this.Controls.Add(this.button_NhanVien);
             this.Name = "Menu";
             this.Text = "Menu";
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button button_NhanVien;
+        private System.Windows.Forms.Button button_Muon;
     }
 }
