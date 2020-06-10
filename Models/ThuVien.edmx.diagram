@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dc0c85012a35458aab9901c0650c64b6" Name="Diagram1">
+        <EntityTypeShape EntityType="QUANLYTHUVIENModel.DOCGIA" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTHUVIENModel.MUONTRA" Width="1.5" PointX="5.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTHUVIENModel.NHANVIEN" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTHUVIENModel.PHANLOAI" Width="1.5" PointX="5.25" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTHUVIENModel.PHANQUYEN" Width="1.5" PointX="8.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTHUVIENModel.QUYEN" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTHUVIENModel.SACH" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTHUVIENModel.SANGTAC" Width="1.5" PointX="8.25" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTHUVIENModel.TACGIA" Width="1.5" PointX="3" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTHUVIENModel.THELOAI" Width="1.5" PointX="3" PointY="27.75" IsExpanded="true" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__DOCGIA__NguoiLap__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__MUONTRA__MaDocGi__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__MUONTRA__MaSach__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__MUONTRA__NguoiCh__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__MUONTRA__NguoiNh__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__NHANVIEN__NguoiL__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__PHANLOAI__NguoiL__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__PHANQUYEN__MaNha__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__PHANQUYEN__Nguoi__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__QUYEN__NguoiLap__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__SACH__NguoiLap__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__SANGTAC__NguoiLa__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__TACGIA__NguoiLap__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__THELOAI__NguoiLa__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__PHANLOAI__MaSach__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__PHANLOAI__MaThel__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__PHANQUYEN__MaQuy__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__SANGTAC__MaSach__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTHUVIENModel.FK__SANGTAC__MaTacGi__5535A963" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
