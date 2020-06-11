@@ -12,6 +12,8 @@ namespace QUANLYTHUVIEN.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class QUANLYTHUVIENEntities : DbContext
     {
@@ -35,5 +37,19 @@ namespace QUANLYTHUVIEN.Models
         public virtual DbSet<SANGTAC> SANGTACs { get; set; }
         public virtual DbSet<TACGIA> TACGIAs { get; set; }
         public virtual DbSet<THELOAI> THELOAIs { get; set; }
+    
+        public virtual ObjectResult<GETAVAILABLEBOOKS_Result> GETAVAILABLEBOOKS()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GETAVAILABLEBOOKS_Result>("GETAVAILABLEBOOKS");
+        }
+    
+        public virtual ObjectResult<GETAVALIDMEMBER_Result> GETAVALIDMEMBER(Nullable<int> n)
+        {
+            var nParameter = n.HasValue ?
+                new ObjectParameter("n", n) :
+                new ObjectParameter("n", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GETAVALIDMEMBER_Result>("GETAVALIDMEMBER", nParameter);
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace QUANLYTHUVIEN
 {
     public partial class NhanVien : Form
     {
-        public string MaNhanVien = "";
+        public string maNhanVien = null;
         public NhanVien()
         {
             InitializeComponent();
@@ -21,15 +21,15 @@ namespace QUANLYTHUVIEN
 
         private void NhanVien_Load(object sender, EventArgs e)
         {
-            dataGridView_NhanVien.DataSource = Ham.getAllData("NV");
+            dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
         }
 
         private void dataGridView_NhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            MaNhanVien = dataGridView_NhanVien.CurrentRow.Cells[0].Value.ToString();
+            maNhanVien = dataGridView_NhanVien.CurrentRow.Cells[0].Value.ToString();
             textBox_HoVaTen.Text = dataGridView_NhanVien.CurrentRow.Cells[1].Value.ToString();
             textBox_SoCMT.Text = dataGridView_NhanVien.CurrentRow.Cells[2].Value.ToString();
-            //dateTimePicker_NgaySinh.Value = (DateTime)dataGridView.CurrentRow.Cells[0].Value;
+            dateTimePicker_NgaySinh.Value = (DateTime)dataGridView_NhanVien.CurrentRow.Cells[3].Value;
             textBox_DiaChi.Text = dataGridView_NhanVien.CurrentRow.Cells[4].Value.ToString();
             textBox_SoDienThoai.Text = dataGridView_NhanVien.CurrentRow.Cells[5].Value.ToString();
             textBox_Email.Text = dataGridView_NhanVien.CurrentRow.Cells[6].Value.ToString();
@@ -37,19 +37,12 @@ namespace QUANLYTHUVIEN
 
         private void textBox_TimKiem_TextChanged(object sender, EventArgs e)
         {
-            if (textBox_TimKiem.Text == "")
-            {
-                dataGridView_NhanVien.DataSource = Ham.getAllData("NV");
-            }
-            else
-            {
-                dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
-            }
+            dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
         }
 
         private void button_Them_Click(object sender, EventArgs e)
         {
-            MaNhanVien = "";
+            maNhanVien = null;
             textBox_HoVaTen.Text
                 = textBox_SoCMT.Text
                 = textBox_DiaChi.Text
@@ -61,7 +54,11 @@ namespace QUANLYTHUVIEN
 
         private void button_Luu_Click(object sender, EventArgs e)
         {
-            if (textBox_HoVaTen.Text == "" || textBox_SoCMT.Text == "" || textBox_DiaChi.Text == "" || textBox_SoDienThoai.Text == "" || textBox_Email.Text == "")
+            if (textBox_HoVaTen.Text == "" 
+                || textBox_SoCMT.Text == "" 
+                || textBox_DiaChi.Text == "" 
+                || textBox_SoDienThoai.Text == "" 
+                || textBox_Email.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thông tin cần thiết.");
             }
@@ -81,7 +78,7 @@ namespace QUANLYTHUVIEN
                 Ham.tv.NHANVIENs.Add(nv);
                 Ham.tv.SaveChanges();
 
-                MaNhanVien = "";
+                maNhanVien = null;
                 textBox_HoVaTen.Text
                     = textBox_SoCMT.Text
                     = textBox_DiaChi.Text
@@ -89,33 +86,29 @@ namespace QUANLYTHUVIEN
                     = textBox_Email.Text
                     = textBox_MatKhau.Text
                     = "";
-
-                if (textBox_TimKiem.Text == "")
-                {
-                    dataGridView_NhanVien.DataSource = Ham.getAllData("NV");
-                }
-                else
-                {
-                    dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
-                }
+                dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
             }
         }
 
         private void button_CapNhat_Click(object sender, EventArgs e)
         {
-            if (MaNhanVien == "")
+            if (maNhanVien == null || maNhanVien == "")
             {
-                MessageBox.Show("Vui lòng chọn Nhân viên cần chỉnh sửa.");
+                MessageBox.Show("Vui lòng chọn nhân viên cần chỉnh sửa.");
             }
             else
             {
-                if (textBox_HoVaTen.Text == "" || textBox_SoCMT.Text == "" || textBox_DiaChi.Text == "" || textBox_SoDienThoai.Text == "" || textBox_Email.Text == "")
+                if (textBox_HoVaTen.Text == "" 
+                    || textBox_SoCMT.Text == "" 
+                    || textBox_DiaChi.Text == "" 
+                    || textBox_SoDienThoai.Text == "" 
+                    || textBox_Email.Text == "")
                 {
                     MessageBox.Show("Vui lòng điền những thông tin cần thiết.");
                 }
                 else
                 {
-                    NHANVIEN nv = Ham.tv.NHANVIENs.Where(x => x.MaNhanVien == MaNhanVien).SingleOrDefault();
+                    NHANVIEN nv = Ham.tv.NHANVIENs.Where(x => x.MaNhanVien == maNhanVien).SingleOrDefault();
                     nv.HoVaTen = textBox_HoVaTen.Text;
                     nv.SoCMT = textBox_SoCMT.Text;
                     nv.NgaySinh = dateTimePicker_NgaySinh.Value;
@@ -125,30 +118,16 @@ namespace QUANLYTHUVIEN
                     nv.MatKhau = textBox_MatKhau.Text == "" ? nv.MatKhau : Ham.getMD5(textBox_MatKhau.Text);
                     Ham.tv.SaveChanges();
                 }
-                if (textBox_TimKiem.Text == "")
-                {
-                    dataGridView_NhanVien.DataSource = Ham.getAllData("NV");
-                }
-                else
-                {
-                    dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
-                }
-                MaNhanVien = "";
+                dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
+                maNhanVien = null;
             }
         }
 
         private void button_Xoa_Click(object sender, EventArgs e)
         {
-            Ham.deleteData("NV", MaNhanVien);
-            if (textBox_TimKiem.Text == "")
-            {
-                dataGridView_NhanVien.DataSource = Ham.getAllData("NV");
-            }
-            else
-            {
-                dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
-            }
-            MaNhanVien = "";
+            Ham.deleteData("NV", maNhanVien);
+            dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
+            maNhanVien = null;
         }
     }
 }

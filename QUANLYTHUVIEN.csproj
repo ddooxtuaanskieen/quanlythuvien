@@ -71,6 +71,12 @@
     <Compile Include="Models\DOCGIA.cs">
       <DependentUpon>ThuVien.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GETAVAILABLEBOOKS_Result.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GETAVALIDMEMBER_Result.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\MUONTRA.cs">
       <DependentUpon>ThuVien.tt</DependentUpon>
     </Compile>
@@ -145,12 +151,6 @@
     <Compile Include="Sach.Designer.cs">
       <DependentUpon>Sach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tra.Designer.cs">
-      <DependentUpon>Tra.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,9 +174,6 @@
     </Compile>
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tra.resx">
-      <DependentUpon>Tra.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Models\ThuVien.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

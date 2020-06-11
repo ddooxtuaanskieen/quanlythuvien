@@ -16,7 +16,7 @@ namespace QUANLYTHUVIEN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Muon());
+            Application.Run(new DangNhap());
         }
     }
 }

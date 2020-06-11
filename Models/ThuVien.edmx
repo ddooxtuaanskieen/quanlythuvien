@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QUANLYTHUVIENModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QUANLYTHUVIENModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DOCGIA">
           <Key>
             <PropertyRef Name="MaDocGia" />
@@ -362,6 +362,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="GETAVAILABLEBOOKS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GETAVALIDMEMBER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="n" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="QUANLYTHUVIENModelStoreContainer">
           <EntitySet Name="DOCGIA" EntityType="Self.DOCGIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MUONTRA" EntityType="Self.MUONTRA" Schema="dbo" store:Type="Tables" />
@@ -450,8 +454,7 @@
             <End Role="THELOAI" EntitySet="THELOAI" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QUANLYTHUVIENModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -937,7 +940,36 @@
             <End Role="TACGIA" EntitySet="TACGIAs" />
             <End Role="SANGTAC" EntitySet="SANGTACs" />
           </AssociationSet>
+          <FunctionImport Name="GETAVAILABLEBOOKS" ReturnType="Collection(QUANLYTHUVIENModel.GETAVAILABLEBOOKS_Result)" />
+          <FunctionImport Name="GETAVALIDMEMBER" ReturnType="Collection(QUANLYTHUVIENModel.GETAVALIDMEMBER_Result)">
+            <Parameter Name="n" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="GETAVAILABLEBOOKS_Result">
+          <Property Type="String" Name="MaSach" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="TieuDe" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="NhaXuatBan" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="NgonNgu" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Anh" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="Mota" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="Gia" Nullable="false" />
+          <Property Type="String" Name="NguoiLap" Nullable="false" MaxLength="15" />
+          <Property Type="DateTime" Name="NgayLap" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="NgayXoa" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="GETAVALIDMEMBER_Result">
+          <Property Type="String" Name="MaDocGia" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="HoVaTen" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="SoCMT" Nullable="false" MaxLength="15" />
+          <Property Type="DateTime" Name="NgaySinh" Nullable="false" />
+          <Property Type="String" Name="DiaChi" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="SoDienThoai" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="SoDu" Nullable="false" />
+          <Property Type="String" Name="NguoiLap" Nullable="false" MaxLength="15" />
+          <Property Type="DateTime" Name="NgayLap" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="NgayXoa" Nullable="true" Precision="23" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1080,6 +1112,39 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GETAVAILABLEBOOKS" FunctionName="QUANLYTHUVIENModel.Store.GETAVAILABLEBOOKS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QUANLYTHUVIENModel.GETAVAILABLEBOOKS_Result">
+                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+                <ScalarProperty Name="NhaXuatBan" ColumnName="NhaXuatBan" />
+                <ScalarProperty Name="NgonNgu" ColumnName="NgonNgu" />
+                <ScalarProperty Name="Anh" ColumnName="Anh" />
+                <ScalarProperty Name="Mota" ColumnName="Mota" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GETAVALIDMEMBER" FunctionName="QUANLYTHUVIENModel.Store.GETAVALIDMEMBER">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QUANLYTHUVIENModel.GETAVALIDMEMBER_Result">
+                <ScalarProperty Name="MaDocGia" ColumnName="MaDocGia" />
+                <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
+                <ScalarProperty Name="SoCMT" ColumnName="SoCMT" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SoDu" ColumnName="SoDu" />
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

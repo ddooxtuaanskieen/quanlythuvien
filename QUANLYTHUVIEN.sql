@@ -10,6 +10,7 @@ GO
 USE QUANLYTHUVIEN
 GO
 
+
 CREATE TABLE NHANVIEN
 (
 	MaNhanVien nvarchar(15) not null primary key,
@@ -272,6 +273,136 @@ INSERT INTO SACH VALUES
 INSERT INTO SACH VALUES
 (
 	'S5',
+	N'Mắt biếc',
+	N'Nhà xuất bản Nhã Nam',
+	N'Việt',
+	null,
+	null,
+	70000,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO SACH VALUES
+(
+	'S6',
+	N'Mắt biếc',
+	N'Nhà xuất bản Nhã Nam',
+	N'Việt',
+	null,
+	null,
+	70000,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO SACH VALUES
+(
+	'S7',
+	N'Mắt biếc',
+	N'Nhà xuất bản Nhã Nam',
+	N'Việt',
+	null,
+	null,
+	70000,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO SACH VALUES
+(
+	'S8',
+	N'Mắt biếc',
+	N'Nhà xuất bản Nhã Nam',
+	N'Việt',
+	null,
+	null,
+	70000,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO SACH VALUES
+(
+	'S9',
+	N'Mắt biếc',
+	N'Nhà xuất bản Nhã Nam',
+	N'Việt',
+	null,
+	null,
+	70000,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO SACH VALUES
+(
+	'S10',
+	N'Mắt biếc',
+	N'Nhà xuất bản Nhã Nam',
+	N'Việt',
+	null,
+	null,
+	70000,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO SACH VALUES
+(
+	'S11',
+	N'Mắt biếc',
+	N'Nhà xuất bản Nhã Nam',
+	N'Việt',
+	null,
+	null,
+	70000,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO SACH VALUES
+(
+	'S12',
+	N'Mắt biếc',
+	N'Nhà xuất bản Nhã Nam',
+	N'Việt',
+	null,
+	null,
+	70000,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO SACH VALUES
+(
+	'S13',
+	N'Mắt biếc',
+	N'Nhà xuất bản Nhã Nam',
+	N'Việt',
+	null,
+	null,
+	70000,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO SACH VALUES
+(
+	'S14',
+	N'Mắt biếc',
+	N'Nhà xuất bản Nhã Nam',
+	N'Việt',
+	null,
+	null,
+	70000,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO SACH VALUES
+(
+	'S15',
 	N'Mắt biếc',
 	N'Nhà xuất bản Nhã Nam',
 	N'Việt',
@@ -587,6 +718,146 @@ INSERT INTO DOCGIA VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+INSERT INTO DOCGIA VALUES
+(
+	'DG6',
+	N'Đào Lương Tài',
+	'214521452',
+	'1992-03-22',
+	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
+	'0952221451',
+	'averysimp.len.a.m.e@gmail.com',
+	0,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO DOCGIA VALUES
+(
+	'DG7',
+	N'Đào Lương Tài',
+	'214521452',
+	'1992-03-22',
+	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
+	'0952221451',
+	'averysimp.len.a.m.e@gmail.com',
+	0,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO DOCGIA VALUES
+(
+	'DG8',
+	N'Đào Lương Tài',
+	'214521452',
+	'1992-03-22',
+	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
+	'0952221451',
+	'averysimp.len.a.m.e@gmail.com',
+	0,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO DOCGIA VALUES
+(
+	'DG9',
+	N'Đào Lương Tài',
+	'214521452',
+	'1992-03-22',
+	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
+	'0952221451',
+	'averysimp.len.a.m.e@gmail.com',
+	0,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO DOCGIA VALUES
+(
+	'DG10',
+	N'Đào Lương Tài',
+	'214521452',
+	'1992-03-22',
+	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
+	'0952221451',
+	'averysimp.len.a.m.e@gmail.com',
+	0,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO DOCGIA VALUES
+(
+	'DG11',
+	N'Đào Lương Tài',
+	'214521452',
+	'1992-03-22',
+	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
+	'0952221451',
+	'averysimp.len.a.m.e@gmail.com',
+	0,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO DOCGIA VALUES
+(
+	'DG12',
+	N'Đào Lương Tài',
+	'214521452',
+	'1992-03-22',
+	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
+	'0952221451',
+	'averysimp.len.a.m.e@gmail.com',
+	0,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO DOCGIA VALUES
+(
+	'DG13',
+	N'Đào Lương Tài',
+	'214521452',
+	'1992-03-22',
+	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
+	'0952221451',
+	'averysimp.len.a.m.e@gmail.com',
+	0,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO DOCGIA VALUES
+(
+	'DG14',
+	N'Đào Lương Tài',
+	'214521452',
+	'1992-03-22',
+	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
+	'0952221451',
+	'averysimp.len.a.m.e@gmail.com',
+	0,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
+INSERT INTO DOCGIA VALUES
+(
+	'DG15',
+	N'Đào Lương Tài',
+	'214521452',
+	'1992-03-22',
+	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
+	'0952221451',
+	'averysimp.len.a.m.e@gmail.com',
+	0,
+	'NV1',
+	'2020-01-01 00:00:00',
+	null
+)
 
 CREATE TABLE MUONTRA
 (
@@ -606,7 +877,255 @@ INSERT INTO MUONTRA VALUES
 	'S1',
 	'NV1',
 	'2020-01-01 00:00:00',
+	'2020-01-10 00:00:00',
+	'NV1',
+	'2020-01-05 00:00:00'
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT2',
+	'DG1',
+	'S2',
+	'NV1',
+	'2020-01-01 00:00:00',
+	'2020-01-10 00:00:00',
+	'NV1',
+	'2020-01-05 00:00:00'
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT3',
+	'DG2',
+	'S1',
+	'NV1',
+	'2020-01-11 00:00:00',
+	'2020-01-20 00:00:00',
+	'NV1',
+	'2020-01-15 00:00:00'
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT4',
+	'DG2',
+	'S2',
+	'NV1',
+	'2020-01-11 00:00:00',
 	'2020-01-15 00:00:00',
+	'NV1',
+	'2020-01-20 00:00:00'
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT5',
+	'DG3',
+	'S1',
+	'NV1',
+	'2020-01-21 00:00:00',
+	'2020-01-31 00:00:00',
+	'NV1',
+	'2020-01-25 00:00:00'
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT6',
+	'DG3',
+	'S2',
+	'NV1',
+	'2020-01-21 00:00:00',
+	'2020-12-31 00:00:00',
 	null,
 	null
 )
+INSERT INTO MUONTRA VALUES
+(
+	'MT7',
+	'DG4',
+	'S1',
+	'NV1',
+	'2020-02-01 00:00:00',
+	'2020-02-10 00:00:00',
+	'NV1',
+	'2020-02-05 00:00:00'
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT8',
+	'DG4',
+	'S3',
+	'NV1',
+	'2020-02-01 00:00:00',
+	'2020-02-10 00:00:00',
+	null,
+	null
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT9',
+	'DG5',
+	'S1',
+	'NV1',
+	'2020-02-11 00:00:00',
+	'2020-02-15 00:00:00',
+	'NV1',
+	'2020-02-20 00:00:00'
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT10',
+	'DG5',
+	'S4',
+	'NV1',
+	'2020-02-11 00:00:00',
+	'2020-02-15 00:00:00',
+	'NV1',
+	'2020-02-20 00:00:00'
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT11',
+	'DG6',
+	'S1',
+	'NV1',
+	'2020-02-21 00:00:00',
+	'2020-02-25 00:00:00',
+	'NV1',
+	'2020-02-28 00:00:00'
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT12',
+	'DG6',
+	'S4',
+	'NV1',
+	'2020-02-21 00:00:00',
+	'2020-12-31 00:00:00',
+	null,
+	null
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT13',
+	'DG7',
+	'S1',
+	'NV1',
+	'2020-03-01 00:00:00',
+	'2020-03-10 00:00:00',
+	'NV1',
+	'2020-03-15 00:00:00'
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT14',
+	'DG7',
+	'S5',
+	'NV1',
+	'2020-03-01 00:00:00',
+	'2020-03-10 00:00:00',
+	null,
+	null
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT15',
+	'DG8',
+	'S1',
+	'NV1',
+	'2020-03-11 00:00:00',
+	'2020-12-31 00:00:00',
+	null,
+	null
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT16',
+	'DG8',
+	'S6',
+	'NV1',
+	'2020-03-11 00:00:00',
+	'2020-12-31 00:00:00',
+	null,
+	null
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT17',
+	'DG9',
+	'S7',
+	'NV1',
+	'2020-03-21 00:00:00',
+	'2020-12-31 00:00:00',
+	null,
+	null
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT18',
+	'DG9',
+	'S8',
+	'NV1',
+	'2020-03-21 00:00:00',
+	'2020-03-31 00:00:00',
+	null,
+	null
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT19',
+	'DG10',
+	'S9',
+	'NV1',
+	'2020-04-01 00:00:00',
+	'2020-04-10 00:00:00',
+	null,
+	null
+)
+INSERT INTO MUONTRA VALUES
+(
+	'MT20',
+	'DG10',
+	'S10',
+	'NV1',
+	'2020-04-01 00:00:00',
+	'2020-04-10 00:00:00',
+	null,
+	null
+)
+
+GO
+CREATE PROCEDURE GETAVAILABLEBOOKS
+AS
+BEGIN
+	SELECT * FROM SACH
+	WHERE SACH.NgayXoa IS NULL
+	AND SACH.MaSach NOT IN
+	(
+		SELECT MUONTRA.MaSach FROM MUONTRA
+		WHERE MUONTRA.NgayTra IS NULL
+	)
+END
+GO
+
+GO
+CREATE PROCEDURE GETAVALIDMEMBER(@n INT)
+AS
+BEGIN
+	--n là số sách được giữ tối đa
+	SELECT * FROM DOCGIA
+	WHERE DOCGIA.NgayXoa IS NULL
+	AND DOCGIA.MaDocGia NOT IN
+	(
+		SELECT MUONTRA.MaDocGia FROM MUONTRA
+		WHERE MUONTRA.NgayTra IS NULL
+		GROUP BY MUONTRA.MaDocGia
+		HAVING COUNT(MUONTRA.MaDocGia) >= @n
+		--Lọc ra những người cầm quá số sách quy định
+	)
+	AND MaDocGia NOT IN
+	(
+		SELECT DISTINCT MUONTRA.MaDocGia FROM MUONTRA
+		WHERE MUONTRA.NgayTra IS NULL
+		AND MUONTRA.NgayHenTra < GETDATE()
+		--Lọc ra những người cầm sách quá hẹn mà chưa trả
+	)
+END
+GO
