@@ -26,6 +26,7 @@ CREATE TABLE NHANVIEN
 	NgayLap datetime not null default getdate(),
 	NgayXoa datetime default null
 )
+GO
 INSERT INTO NHANVIEN VALUES 
 (
 	'NV1', 
@@ -41,6 +42,7 @@ INSERT INTO NHANVIEN VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO NHANVIEN VALUES 
 (
 	'NV2', 
@@ -56,6 +58,7 @@ INSERT INTO NHANVIEN VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO NHANVIEN VALUES 
 (
 	'NV3', 
@@ -71,6 +74,7 @@ INSERT INTO NHANVIEN VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO NHANVIEN VALUES 
 (
 	'NV4', 
@@ -86,6 +90,7 @@ INSERT INTO NHANVIEN VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO NHANVIEN VALUES 
 (
 	'NV5', 
@@ -101,6 +106,7 @@ INSERT INTO NHANVIEN VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO NHANVIEN VALUES 
 (
 	'NV6', 
@@ -116,6 +122,7 @@ INSERT INTO NHANVIEN VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO NHANVIEN VALUES 
 (
 	'NV7', 
@@ -131,6 +138,7 @@ INSERT INTO NHANVIEN VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO NHANVIEN VALUES 
 (
 	'NV8', 
@@ -146,6 +154,7 @@ INSERT INTO NHANVIEN VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO NHANVIEN VALUES 
 (
 	'NV9', 
@@ -161,6 +170,7 @@ INSERT INTO NHANVIEN VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO NHANVIEN VALUES 
 (
 	'NV10', 
@@ -176,6 +186,7 @@ INSERT INTO NHANVIEN VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 
 CREATE TABLE QUYEN
 (
@@ -186,6 +197,7 @@ CREATE TABLE QUYEN
 	NgayLap datetime not null default getdate(),
 	NgayXoa datetime default null
 )
+GO
 --INSERT INTO QUYEN VALUES
 --(
 --	'Q1',
@@ -204,6 +216,7 @@ CREATE TABLE PHANQUYEN
 	NguoiLap nvarchar(15) not null foreign key references NHANVIEN(MaNhanVien),
 	NgayLap datetime not null default getdate()
 )
+GO
 
 CREATE TABLE SACH
 (
@@ -218,6 +231,7 @@ CREATE TABLE SACH
 	NgayLap datetime not null default getdate(),
 	NgayXoa datetime default null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S1',
@@ -231,6 +245,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S2',
@@ -244,6 +259,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S3',
@@ -257,6 +273,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S4',
@@ -270,6 +287,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S5',
@@ -283,6 +301,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S6',
@@ -296,6 +315,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S7',
@@ -309,6 +329,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S8',
@@ -322,6 +343,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S9',
@@ -335,6 +357,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S10',
@@ -348,6 +371,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S11',
@@ -361,6 +385,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S12',
@@ -374,6 +399,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S13',
@@ -387,6 +413,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S14',
@@ -400,6 +427,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO SACH VALUES
 (
 	'S15',
@@ -413,6 +441,7 @@ INSERT INTO SACH VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 
 CREATE TABLE TACGIA
 (
@@ -428,6 +457,7 @@ CREATE TABLE TACGIA
 	NgayLap datetime not null default getdate(),
 	NgayXoa datetime default null
 )
+GO
 INSERT INTO TACGIA VALUES
 (
 	'TG1',
@@ -442,6 +472,7 @@ INSERT INTO TACGIA VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO TACGIA VALUES
 (
 	'TG2',
@@ -456,6 +487,7 @@ INSERT INTO TACGIA VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO TACGIA VALUES
 (
 	'TG3',
@@ -470,6 +502,7 @@ INSERT INTO TACGIA VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO TACGIA VALUES
 (
 	'TG4',
@@ -484,6 +517,7 @@ INSERT INTO TACGIA VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO TACGIA VALUES
 (
 	'TG5',
@@ -498,6 +532,7 @@ INSERT INTO TACGIA VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 
 CREATE TABLE SANGTAC
 (
@@ -507,6 +542,7 @@ CREATE TABLE SANGTAC
 	NguoiLap nvarchar(15) not null foreign key references NHANVIEN(MaNhanVien),
 	NgayLap datetime not null default getdate()
 )
+GO
 INSERT INTO SANGTAC VALUES
 (
 	'S1',
@@ -514,6 +550,7 @@ INSERT INTO SANGTAC VALUES
 	'NV1',
 	'2020-01-01 00:00:00'
 )
+GO
 INSERT INTO SANGTAC VALUES
 (
 	'S2',
@@ -521,6 +558,7 @@ INSERT INTO SANGTAC VALUES
 	'NV1',
 	'2020-01-01 00:00:00'
 )
+GO
 INSERT INTO SANGTAC VALUES
 (
 	'S3',
@@ -528,6 +566,7 @@ INSERT INTO SANGTAC VALUES
 	'NV1',
 	'2020-01-01 00:00:00'
 )
+GO
 INSERT INTO SANGTAC VALUES
 (
 	'S4',
@@ -535,6 +574,7 @@ INSERT INTO SANGTAC VALUES
 	'NV1',
 	'2020-01-01 00:00:00'
 )
+GO
 INSERT INTO SANGTAC VALUES
 (
 	'S5',
@@ -542,6 +582,7 @@ INSERT INTO SANGTAC VALUES
 	'NV1',
 	'2020-01-01 00:00:00'
 )
+GO
 
 CREATE TABLE THELOAI
 (
@@ -552,6 +593,7 @@ CREATE TABLE THELOAI
 	NgayLap datetime not null default getdate(),
 	NgayXoa datetime default null
 )
+GO
 INSERT INTO THELOAI VALUES
 (
 	'TL1',
@@ -561,6 +603,7 @@ INSERT INTO THELOAI VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO THELOAI VALUES
 (
 	'TL2',
@@ -570,6 +613,7 @@ INSERT INTO THELOAI VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO THELOAI VALUES
 (
 	'TL3',
@@ -579,6 +623,7 @@ INSERT INTO THELOAI VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO THELOAI VALUES
 (
 	'TL4',
@@ -588,6 +633,7 @@ INSERT INTO THELOAI VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO THELOAI VALUES
 (
 	'TL5',
@@ -597,6 +643,7 @@ INSERT INTO THELOAI VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO THELOAI VALUES
 (
 	'TL6',
@@ -606,6 +653,7 @@ INSERT INTO THELOAI VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO THELOAI VALUES
 (
 	'TL7',
@@ -615,6 +663,7 @@ INSERT INTO THELOAI VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO THELOAI VALUES
 (
 	'TL8',
@@ -624,6 +673,7 @@ INSERT INTO THELOAI VALUES
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 
 CREATE TABLE PHANLOAI
 (
@@ -633,6 +683,7 @@ CREATE TABLE PHANLOAI
 	NguoiLap nvarchar(15) not null foreign key references NHANVIEN(MaNhanVien),
 	NgayLap datetime not null default getdate()
 )
+GO
 
 CREATE TABLE DOCGIA
 (
@@ -643,11 +694,11 @@ CREATE TABLE DOCGIA
 	DiaChi nvarchar(200) not null,
 	SoDienThoai nvarchar(15) not null,
 	Email nvarchar(200) not null,
-	SoDu int default 0 not null,
 	NguoiLap nvarchar(15) not null foreign key references NHANVIEN(MaNhanVien),
 	NgayLap datetime not null default getdate(),
 	NgayXoa datetime default null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG1',
@@ -657,11 +708,11 @@ INSERT INTO DOCGIA VALUES
 	N'Nhà vườn B10, KĐT Trung Hòa Nhân Chính, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội',
 	'0952214412',
 	'averysimplena.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG2',
@@ -671,11 +722,11 @@ INSERT INTO DOCGIA VALUES
 	N'Tâng 9, toà nhà Tổng Công ty 319, số 63 Lê Văn Lương, Phường Trung Hoà, Quận Cầu Giấy, Hà Nội',
 	'0956665573',
 	'averysimplen.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG3',
@@ -685,11 +736,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 11, ngõ 12, đường Kim Giang, Phường Kim Giang, Quận Thanh Xuân, Hà Nội',
 	'0965558475',
 	'averysimpl.en.a.me@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG4',
@@ -699,11 +750,11 @@ INSERT INTO DOCGIA VALUES
 	N'Nhà CO2- L16, An Vượng Villas, Khu đô thị mới Dương Nội, Phường Dương Nội, Quận Hà Đông, Hà Nội',
 	'0965552224',
 	'averysimp.lenam.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG5',
@@ -713,11 +764,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG6',
@@ -727,11 +778,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG7',
@@ -741,11 +792,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG8',
@@ -755,11 +806,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG9',
@@ -769,11 +820,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG10',
@@ -783,11 +834,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG11',
@@ -797,11 +848,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG12',
@@ -811,11 +862,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG13',
@@ -825,11 +876,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG14',
@@ -839,11 +890,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 INSERT INTO DOCGIA VALUES
 (
 	'DG15',
@@ -853,11 +904,11 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
-	0,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
 )
+GO
 
 CREATE TABLE MUONTRA
 (
@@ -868,8 +919,10 @@ CREATE TABLE MUONTRA
 	NgayMuon datetime not null default getdate(),
 	NgayHenTra datetime not null,
 	NguoiNhanTra nvarchar(15) foreign key references NHANVIEN(MaNhanVien),
-	NgayTra datetime
+	NgayTra datetime,
+	Phi int
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT1',
@@ -881,6 +934,7 @@ INSERT INTO MUONTRA VALUES
 	'NV1',
 	'2020-01-05 00:00:00'
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT2',
@@ -892,6 +946,7 @@ INSERT INTO MUONTRA VALUES
 	'NV1',
 	'2020-01-05 00:00:00'
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT3',
@@ -903,6 +958,7 @@ INSERT INTO MUONTRA VALUES
 	'NV1',
 	'2020-01-15 00:00:00'
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT4',
@@ -914,6 +970,7 @@ INSERT INTO MUONTRA VALUES
 	'NV1',
 	'2020-01-20 00:00:00'
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT5',
@@ -925,6 +982,7 @@ INSERT INTO MUONTRA VALUES
 	'NV1',
 	'2020-01-25 00:00:00'
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT6',
@@ -936,6 +994,7 @@ INSERT INTO MUONTRA VALUES
 	null,
 	null
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT7',
@@ -947,6 +1006,7 @@ INSERT INTO MUONTRA VALUES
 	'NV1',
 	'2020-02-05 00:00:00'
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT8',
@@ -958,6 +1018,7 @@ INSERT INTO MUONTRA VALUES
 	null,
 	null
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT9',
@@ -969,6 +1030,7 @@ INSERT INTO MUONTRA VALUES
 	'NV1',
 	'2020-02-20 00:00:00'
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT10',
@@ -980,6 +1042,7 @@ INSERT INTO MUONTRA VALUES
 	'NV1',
 	'2020-02-20 00:00:00'
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT11',
@@ -991,6 +1054,7 @@ INSERT INTO MUONTRA VALUES
 	'NV1',
 	'2020-02-28 00:00:00'
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT12',
@@ -1002,6 +1066,7 @@ INSERT INTO MUONTRA VALUES
 	null,
 	null
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT13',
@@ -1013,6 +1078,7 @@ INSERT INTO MUONTRA VALUES
 	'NV1',
 	'2020-03-15 00:00:00'
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT14',
@@ -1024,6 +1090,7 @@ INSERT INTO MUONTRA VALUES
 	null,
 	null
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT15',
@@ -1035,6 +1102,7 @@ INSERT INTO MUONTRA VALUES
 	null,
 	null
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT16',
@@ -1046,6 +1114,7 @@ INSERT INTO MUONTRA VALUES
 	null,
 	null
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT17',
@@ -1057,6 +1126,7 @@ INSERT INTO MUONTRA VALUES
 	null,
 	null
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT18',
@@ -1068,6 +1138,7 @@ INSERT INTO MUONTRA VALUES
 	null,
 	null
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT19',
@@ -1079,6 +1150,7 @@ INSERT INTO MUONTRA VALUES
 	null,
 	null
 )
+GO
 INSERT INTO MUONTRA VALUES
 (
 	'MT20',
@@ -1090,8 +1162,8 @@ INSERT INTO MUONTRA VALUES
 	null,
 	null
 )
-
 GO
+
 CREATE PROCEDURE GETAVAILABLEBOOKS
 AS
 BEGIN
@@ -1105,7 +1177,6 @@ BEGIN
 END
 GO
 
-GO
 CREATE PROCEDURE GETAVALIDMEMBER(@n INT)
 AS
 BEGIN
