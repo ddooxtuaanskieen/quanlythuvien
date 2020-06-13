@@ -16,5 +16,11 @@ namespace QUANLYTHUVIEN
         {
             InitializeComponent();
         }
+
+        private void BCTKDocGia_Load(object sender, EventArgs e)
+        {
+            dataGridView_DanhSachDen.DataSource = Ham.tv.GETBLACKLIST(Ham.maxLate);
+            dataGridView_TopDocGia.DataSource = Ham.tv.GETTOPMEMBER();
+        }
     }
 }

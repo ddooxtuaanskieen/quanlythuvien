@@ -51,5 +51,24 @@ namespace QUANLYTHUVIEN.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GETAVALIDMEMBER_Result>("GETAVALIDMEMBER", nParameter);
         }
+    
+        public virtual ObjectResult<GETTOPBOOK_Result> GETTOPBOOK()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GETTOPBOOK_Result>("GETTOPBOOK");
+        }
+    
+        public virtual ObjectResult<GETTOPMEMBER_Result> GETTOPMEMBER()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GETTOPMEMBER_Result>("GETTOPMEMBER");
+        }
+    
+        public virtual ObjectResult<GETBLACKLIST_Result> GETBLACKLIST(Nullable<int> n)
+        {
+            var nParameter = n.HasValue ?
+                new ObjectParameter("N", n) :
+                new ObjectParameter("N", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GETBLACKLIST_Result>("GETBLACKLIST", nParameter);
+        }
     }
 }

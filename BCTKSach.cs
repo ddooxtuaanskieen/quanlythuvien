@@ -16,5 +16,11 @@ namespace QUANLYTHUVIEN
         {
             InitializeComponent();
         }
+
+        private void BCTKSach_Load(object sender, EventArgs e)
+        {
+            dataGridView_SachKhaDung.DataSource = Ham.tv.GETAVAILABLEBOOKS();
+            dataGridView_TopSach.DataSource = Ham.tv.GETTOPBOOK();
+        }
     }
 }

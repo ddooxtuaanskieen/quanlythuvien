@@ -95,6 +95,15 @@
     <Compile Include="Models\GETAVALIDMEMBER_Result.cs">
       <DependentUpon>ThuVien.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GETBLACKLIST_Result.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GETTOPBOOK_Result.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GETTOPMEMBER_Result.cs">
+      <DependentUpon>ThuVien.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\MUONTRA.cs">
       <DependentUpon>ThuVien.tt</DependentUpon>
     </Compile>
@@ -175,6 +184,12 @@
     <Compile Include="Sach.Designer.cs">
       <DependentUpon>Sach.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BCTKDocGia.resx">
+      <DependentUpon>BCTKDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCTKSach.resx">
+      <DependentUpon>BCTKSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>

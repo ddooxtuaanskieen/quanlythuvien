@@ -366,6 +366,11 @@
         <Function Name="GETAVALIDMEMBER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="n" Type="int" Mode="In" />
         </Function>
+        <Function Name="GETBLACKLIST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="N" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GETTOPBOOK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GETTOPMEMBER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="QUANLYTHUVIENModelStoreContainer">
           <EntitySet Name="DOCGIA" EntityType="Self.DOCGIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MUONTRA" EntityType="Self.MUONTRA" Schema="dbo" store:Type="Tables" />
@@ -942,7 +947,12 @@
           </AssociationSet>
           <FunctionImport Name="GETAVAILABLEBOOKS" ReturnType="Collection(QUANLYTHUVIENModel.GETAVAILABLEBOOKS_Result)" />
           <FunctionImport Name="GETAVALIDMEMBER" ReturnType="Collection(QUANLYTHUVIENModel.GETAVALIDMEMBER_Result)">
-            <Parameter Name="n" Mode="In" Type="Int32" />
+          <Parameter Name="n" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GETTOPBOOK" ReturnType="Collection(QUANLYTHUVIENModel.GETTOPBOOK_Result)" />
+          <FunctionImport Name="GETTOPMEMBER" ReturnType="Collection(QUANLYTHUVIENModel.GETTOPMEMBER_Result)" />
+          <FunctionImport Name="GETBLACKLIST" ReturnType="Collection(QUANLYTHUVIENModel.GETBLACKLIST_Result)">
+            <Parameter Name="N" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="GETAVAILABLEBOOKS_Result">
@@ -968,6 +978,21 @@
           <Property Type="String" Name="NguoiLap" Nullable="false" MaxLength="15" />
           <Property Type="DateTime" Name="NgayLap" Nullable="false" Precision="23" />
           <Property Type="DateTime" Name="NgayXoa" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="GETTOPBOOK_Result">
+          <Property Type="String" Name="MaSach" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="TieuDe" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="MUON" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GETTOPMEMBER_Result">
+          <Property Type="String" Name="MaDocGia" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="HoVaTen" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="MUON" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GETBLACKLIST_Result">
+          <Property Type="String" Name="MaDocGia" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="HoVaTen" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="TRE" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1140,6 +1165,33 @@
                 <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
                 <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
                 <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GETTOPBOOK" FunctionName="QUANLYTHUVIENModel.Store.GETTOPBOOK">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QUANLYTHUVIENModel.GETTOPBOOK_Result">
+                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+                <ScalarProperty Name="MUON" ColumnName="MUON" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GETTOPMEMBER" FunctionName="QUANLYTHUVIENModel.Store.GETTOPMEMBER">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QUANLYTHUVIENModel.GETTOPMEMBER_Result">
+                <ScalarProperty Name="MaDocGia" ColumnName="MaDocGia" />
+                <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
+                <ScalarProperty Name="MUON" ColumnName="MUON" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GETBLACKLIST" FunctionName="QUANLYTHUVIENModel.Store.GETBLACKLIST">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QUANLYTHUVIENModel.GETBLACKLIST_Result">
+                <ScalarProperty Name="MaDocGia" ColumnName="MaDocGia" />
+                <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
+                <ScalarProperty Name="TRE" ColumnName="TRE" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
