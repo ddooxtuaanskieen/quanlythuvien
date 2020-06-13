@@ -23,10 +23,28 @@ namespace QUANLYTHUVIEN
             nv.ShowDialog();
         }
 
-        private void button_Muon_Click(object sender, EventArgs e)
+        private void button_MuonTra_Click(object sender, EventArgs e)
         {
             MuonTra mt = new MuonTra();
             mt.ShowDialog();
+        }
+
+        private void button_DocGia_Click(object sender, EventArgs e)
+        {
+            DocGia dg = new DocGia();
+            dg.ShowDialog();
+        }
+
+        private void button_Sach_Click(object sender, EventArgs e)
+        {
+            Sach s = new Sach();
+            s.ShowDialog();
+        }
+
+        private void button_PhanQuyen_Click(object sender, EventArgs e)
+        {
+            PhanQuyen pq = new PhanQuyen();
+            pq.ShowDialog();
         }
     }
 }

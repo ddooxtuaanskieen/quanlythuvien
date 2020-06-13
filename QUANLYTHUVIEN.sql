@@ -21,7 +21,7 @@ CREATE TABLE NHANVIEN
 	SoDienThoai nvarchar(15) not null,
 	Email nvarchar(200) not null,
 	MatKhau ntext not null default '4A7D1ED414474E4033AC29CCB8653D9B',
-	Anh ntext default null,
+	Anh ntext,
 	NguoiLap nvarchar(15) not null foreign key references NHANVIEN(MaNhanVien),
 	NgayLap datetime not null default getdate(),
 	NgayXoa datetime default null
@@ -224,7 +224,7 @@ CREATE TABLE SACH
 	TieuDe nvarchar(200) not null,
 	NhaXuatBan nvarchar(200),
 	NgonNgu nvarchar(200),
-	Anh ntext default null,
+	Anh ntext,
 	Mota ntext,
 	Gia int not null,
 	NguoiLap nvarchar(15) not null foreign key references NHANVIEN(MaNhanVien),
@@ -451,7 +451,7 @@ CREATE TABLE TACGIA
 	DiaChi nvarchar(200),
 	SoDienThoai nvarchar(15),
 	Email nvarchar(200),
-	Anh ntext default null,
+	Anh ntext,
 	MoTa ntext,
 	NguoiLap nvarchar(15) not null foreign key references NHANVIEN(MaNhanVien),
 	NgayLap datetime not null default getdate(),
@@ -694,6 +694,7 @@ CREATE TABLE DOCGIA
 	DiaChi nvarchar(200) not null,
 	SoDienThoai nvarchar(15) not null,
 	Email nvarchar(200) not null,
+	Anh ntext,
 	NguoiLap nvarchar(15) not null foreign key references NHANVIEN(MaNhanVien),
 	NgayLap datetime not null default getdate(),
 	NgayXoa datetime default null
@@ -708,6 +709,7 @@ INSERT INTO DOCGIA VALUES
 	N'Nhà vườn B10, KĐT Trung Hòa Nhân Chính, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội',
 	'0952214412',
 	'averysimplena.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -722,6 +724,7 @@ INSERT INTO DOCGIA VALUES
 	N'Tâng 9, toà nhà Tổng Công ty 319, số 63 Lê Văn Lương, Phường Trung Hoà, Quận Cầu Giấy, Hà Nội',
 	'0956665573',
 	'averysimplen.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -736,6 +739,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 11, ngõ 12, đường Kim Giang, Phường Kim Giang, Quận Thanh Xuân, Hà Nội',
 	'0965558475',
 	'averysimpl.en.a.me@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -750,6 +754,7 @@ INSERT INTO DOCGIA VALUES
 	N'Nhà CO2- L16, An Vượng Villas, Khu đô thị mới Dương Nội, Phường Dương Nội, Quận Hà Đông, Hà Nội',
 	'0965552224',
 	'averysimp.lenam.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -764,6 +769,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -778,6 +784,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -792,6 +799,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -806,6 +814,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -820,6 +829,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -834,6 +844,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -848,6 +859,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -862,6 +874,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -876,6 +889,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -890,6 +904,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null
@@ -904,6 +919,7 @@ INSERT INTO DOCGIA VALUES
 	N'Số 19, ngách 124/64 đường âu Cơ, Phường Tứ Liên, Quận Tây Hồ, Hà Nội',
 	'0952221451',
 	'averysimp.len.a.m.e@gmail.com',
+	null,
 	'NV1',
 	'2020-01-01 00:00:00',
 	null

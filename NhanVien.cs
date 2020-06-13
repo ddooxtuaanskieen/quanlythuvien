@@ -95,6 +95,7 @@ namespace QUANLYTHUVIEN
                     = textBox_Email.Text
                     = textBox_MatKhau.Text
                     = "";
+                pictureBox_NhanVien.InitialImage = null;
                 dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
                 MessageBox.Show("Thêm đối tượng thành công.");
             }
@@ -104,7 +105,7 @@ namespace QUANLYTHUVIEN
         {
             if (maNhanVien == null || maNhanVien == "")
             {
-                MessageBox.Show("Vui lòng chọn nhân viên cần chỉnh sửa.");
+                MessageBox.Show("Vui lòng chọn đối tượng cần chỉnh sửa.");
             }
             else
             {

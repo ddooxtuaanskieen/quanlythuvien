@@ -27,6 +27,7 @@ namespace QUANLYTHUVIEN.Models
         public string DiaChi { get; set; }
         public string SoDienThoai { get; set; }
         public string Email { get; set; }
+        public string Anh { get; set; }
         public string NguoiLap { get; set; }
         public System.DateTime NgayLap { get; set; }
         public Nullable<System.DateTime> NgayXoa { get; set; }

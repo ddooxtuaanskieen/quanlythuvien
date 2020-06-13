@@ -16,6 +16,7 @@
           <Property Name="DiaChi" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="SoDienThoai" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Anh" Type="ntext" />
           <Property Name="NguoiLap" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="NgayLap" Type="datetime" Nullable="false" />
           <Property Name="NgayXoa" Type="datetime" />
@@ -134,7 +135,7 @@
           <Property Name="NgayLap" Type="datetime" Nullable="false" />
           <Property Name="NgayXoa" Type="datetime" />
         </EntityType>
-        <Association Name="FK__DOCGIA__NguoiLap__6477ECF3">
+        <Association Name="FK__DOCGIA__NguoiLap__619B8048">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -146,7 +147,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__MaDocGi__693CA210">
+        <Association Name="FK__MUONTRA__MaDocGi__66603565">
           <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="1" />
           <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -158,7 +159,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__MaSach__6A30C649">
+        <Association Name="FK__MUONTRA__MaSach__6754599E">
           <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
           <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -170,7 +171,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__NguoiCh__6B24EA82">
+        <Association Name="FK__MUONTRA__NguoiCh__68487DD7">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -182,7 +183,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__NguoiNh__6D0D32F4">
+        <Association Name="FK__MUONTRA__NguoiNh__6A30C649">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
           <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -194,7 +195,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__NHANVIEN__NguoiL__398D8EEE">
+        <Association Name="FK__NHANVIEN__NguoiL__38996AB5">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="NHANVIEN1" Type="Self.NHANVIEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -206,7 +207,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHANLOAI__MaSach__5EBF139D">
+        <Association Name="FK__PHANLOAI__MaSach__5BE2A6F2">
           <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
           <End Role="PHANLOAI" Type="Self.PHANLOAI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -218,7 +219,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHANLOAI__MaThel__5FB337D6">
+        <Association Name="FK__PHANLOAI__MaThel__5CD6CB2B">
           <End Role="THELOAI" Type="Self.THELOAI" Multiplicity="1" />
           <End Role="PHANLOAI" Type="Self.PHANLOAI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -230,7 +231,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHANLOAI__NguoiL__60A75C0F">
+        <Association Name="FK__PHANLOAI__NguoiL__5DCAEF64">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="PHANLOAI" Type="Self.PHANLOAI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -242,7 +243,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHANQUYEN__MaNha__4316F928">
+        <Association Name="FK__PHANQUYEN__MaNha__4222D4EF">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="PHANQUYEN" Type="Self.PHANQUYEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -254,7 +255,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHANQUYEN__MaQuy__440B1D61">
+        <Association Name="FK__PHANQUYEN__MaQuy__4316F928">
           <End Role="QUYEN" Type="Self.QUYEN" Multiplicity="1" />
           <End Role="PHANQUYEN" Type="Self.PHANQUYEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -266,7 +267,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PHANQUYEN__Nguoi__44FF419A">
+        <Association Name="FK__PHANQUYEN__Nguoi__440B1D61">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="PHANQUYEN" Type="Self.PHANQUYEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -278,7 +279,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__QUYEN__NguoiLap__3E52440B">
+        <Association Name="FK__QUYEN__NguoiLap__3D5E1FD2">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="QUYEN" Type="Self.QUYEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -290,7 +291,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SACH__NguoiLap__49C3F6B7">
+        <Association Name="FK__SACH__NguoiLap__47DBAE45">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="SACH" Type="Self.SACH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -302,7 +303,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SANGTAC__MaSach__5441852A">
+        <Association Name="FK__SANGTAC__MaSach__5165187F">
           <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
           <End Role="SANGTAC" Type="Self.SANGTAC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -314,7 +315,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SANGTAC__MaTacGi__5535A963">
+        <Association Name="FK__SANGTAC__MaTacGi__52593CB8">
           <End Role="TACGIA" Type="Self.TACGIA" Multiplicity="1" />
           <End Role="SANGTAC" Type="Self.SANGTAC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -326,7 +327,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SANGTAC__NguoiLa__5629CD9C">
+        <Association Name="FK__SANGTAC__NguoiLa__534D60F1">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="SANGTAC" Type="Self.SANGTAC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -338,7 +339,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TACGIA__NguoiLap__4F7CD00D">
+        <Association Name="FK__TACGIA__NguoiLap__4CA06362">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="TACGIA" Type="Self.TACGIA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -350,7 +351,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__THELOAI__NguoiLa__59FA5E80">
+        <Association Name="FK__THELOAI__NguoiLa__571DF1D5">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="THELOAI" Type="Self.THELOAI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -382,79 +383,79 @@
           <EntitySet Name="SANGTAC" EntityType="Self.SANGTAC" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TACGIA" EntityType="Self.TACGIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="THELOAI" EntityType="Self.THELOAI" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__DOCGIA__NguoiLap__6477ECF3" Association="Self.FK__DOCGIA__NguoiLap__6477ECF3">
+          <AssociationSet Name="FK__DOCGIA__NguoiLap__619B8048" Association="Self.FK__DOCGIA__NguoiLap__619B8048">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="DOCGIA" EntitySet="DOCGIA" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__MaDocGi__693CA210" Association="Self.FK__MUONTRA__MaDocGi__693CA210">
+          <AssociationSet Name="FK__MUONTRA__MaDocGi__66603565" Association="Self.FK__MUONTRA__MaDocGi__66603565">
             <End Role="DOCGIA" EntitySet="DOCGIA" />
             <End Role="MUONTRA" EntitySet="MUONTRA" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__MaSach__6A30C649" Association="Self.FK__MUONTRA__MaSach__6A30C649">
+          <AssociationSet Name="FK__MUONTRA__MaSach__6754599E" Association="Self.FK__MUONTRA__MaSach__6754599E">
             <End Role="SACH" EntitySet="SACH" />
             <End Role="MUONTRA" EntitySet="MUONTRA" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__NguoiCh__6B24EA82" Association="Self.FK__MUONTRA__NguoiCh__6B24EA82">
+          <AssociationSet Name="FK__MUONTRA__NguoiCh__68487DD7" Association="Self.FK__MUONTRA__NguoiCh__68487DD7">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="MUONTRA" EntitySet="MUONTRA" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__NguoiNh__6D0D32F4" Association="Self.FK__MUONTRA__NguoiNh__6D0D32F4">
+          <AssociationSet Name="FK__MUONTRA__NguoiNh__6A30C649" Association="Self.FK__MUONTRA__NguoiNh__6A30C649">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="MUONTRA" EntitySet="MUONTRA" />
           </AssociationSet>
-          <AssociationSet Name="FK__NHANVIEN__NguoiL__398D8EEE" Association="Self.FK__NHANVIEN__NguoiL__398D8EEE">
+          <AssociationSet Name="FK__NHANVIEN__NguoiL__38996AB5" Association="Self.FK__NHANVIEN__NguoiL__38996AB5">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="NHANVIEN1" EntitySet="NHANVIEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHANLOAI__MaSach__5EBF139D" Association="Self.FK__PHANLOAI__MaSach__5EBF139D">
+          <AssociationSet Name="FK__PHANLOAI__MaSach__5BE2A6F2" Association="Self.FK__PHANLOAI__MaSach__5BE2A6F2">
             <End Role="SACH" EntitySet="SACH" />
             <End Role="PHANLOAI" EntitySet="PHANLOAI" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHANLOAI__MaThel__5FB337D6" Association="Self.FK__PHANLOAI__MaThel__5FB337D6">
+          <AssociationSet Name="FK__PHANLOAI__MaThel__5CD6CB2B" Association="Self.FK__PHANLOAI__MaThel__5CD6CB2B">
             <End Role="THELOAI" EntitySet="THELOAI" />
             <End Role="PHANLOAI" EntitySet="PHANLOAI" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHANLOAI__NguoiL__60A75C0F" Association="Self.FK__PHANLOAI__NguoiL__60A75C0F">
+          <AssociationSet Name="FK__PHANLOAI__NguoiL__5DCAEF64" Association="Self.FK__PHANLOAI__NguoiL__5DCAEF64">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="PHANLOAI" EntitySet="PHANLOAI" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHANQUYEN__MaNha__4316F928" Association="Self.FK__PHANQUYEN__MaNha__4316F928">
+          <AssociationSet Name="FK__PHANQUYEN__MaNha__4222D4EF" Association="Self.FK__PHANQUYEN__MaNha__4222D4EF">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="PHANQUYEN" EntitySet="PHANQUYEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHANQUYEN__MaQuy__440B1D61" Association="Self.FK__PHANQUYEN__MaQuy__440B1D61">
+          <AssociationSet Name="FK__PHANQUYEN__MaQuy__4316F928" Association="Self.FK__PHANQUYEN__MaQuy__4316F928">
             <End Role="QUYEN" EntitySet="QUYEN" />
             <End Role="PHANQUYEN" EntitySet="PHANQUYEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PHANQUYEN__Nguoi__44FF419A" Association="Self.FK__PHANQUYEN__Nguoi__44FF419A">
+          <AssociationSet Name="FK__PHANQUYEN__Nguoi__440B1D61" Association="Self.FK__PHANQUYEN__Nguoi__440B1D61">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="PHANQUYEN" EntitySet="PHANQUYEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__QUYEN__NguoiLap__3E52440B" Association="Self.FK__QUYEN__NguoiLap__3E52440B">
+          <AssociationSet Name="FK__QUYEN__NguoiLap__3D5E1FD2" Association="Self.FK__QUYEN__NguoiLap__3D5E1FD2">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="QUYEN" EntitySet="QUYEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__SACH__NguoiLap__49C3F6B7" Association="Self.FK__SACH__NguoiLap__49C3F6B7">
+          <AssociationSet Name="FK__SACH__NguoiLap__47DBAE45" Association="Self.FK__SACH__NguoiLap__47DBAE45">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="SACH" EntitySet="SACH" />
           </AssociationSet>
-          <AssociationSet Name="FK__SANGTAC__MaSach__5441852A" Association="Self.FK__SANGTAC__MaSach__5441852A">
+          <AssociationSet Name="FK__SANGTAC__MaSach__5165187F" Association="Self.FK__SANGTAC__MaSach__5165187F">
             <End Role="SACH" EntitySet="SACH" />
             <End Role="SANGTAC" EntitySet="SANGTAC" />
           </AssociationSet>
-          <AssociationSet Name="FK__SANGTAC__MaTacGi__5535A963" Association="Self.FK__SANGTAC__MaTacGi__5535A963">
+          <AssociationSet Name="FK__SANGTAC__MaTacGi__52593CB8" Association="Self.FK__SANGTAC__MaTacGi__52593CB8">
             <End Role="TACGIA" EntitySet="TACGIA" />
             <End Role="SANGTAC" EntitySet="SANGTAC" />
           </AssociationSet>
-          <AssociationSet Name="FK__SANGTAC__NguoiLa__5629CD9C" Association="Self.FK__SANGTAC__NguoiLa__5629CD9C">
+          <AssociationSet Name="FK__SANGTAC__NguoiLa__534D60F1" Association="Self.FK__SANGTAC__NguoiLa__534D60F1">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="SANGTAC" EntitySet="SANGTAC" />
           </AssociationSet>
-          <AssociationSet Name="FK__TACGIA__NguoiLap__4F7CD00D" Association="Self.FK__TACGIA__NguoiLap__4F7CD00D">
+          <AssociationSet Name="FK__TACGIA__NguoiLap__4CA06362" Association="Self.FK__TACGIA__NguoiLap__4CA06362">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="TACGIA" EntitySet="TACGIA" />
           </AssociationSet>
-          <AssociationSet Name="FK__THELOAI__NguoiLa__59FA5E80" Association="Self.FK__THELOAI__NguoiLa__59FA5E80">
+          <AssociationSet Name="FK__THELOAI__NguoiLa__571DF1D5" Association="Self.FK__THELOAI__NguoiLa__571DF1D5">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="THELOAI" EntitySet="THELOAI" />
           </AssociationSet>
@@ -463,488 +464,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QUANLYTHUVIENModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="DOCGIA">
-          <Key>
-            <PropertyRef Name="MaDocGia" />
-          </Key>
-          <Property Name="MaDocGia" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="HoVaTen" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SoCMT" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SoDienThoai" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NguoiLap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__DOCGIA__NguoiLap__6477ECF3" FromRole="DOCGIA" ToRole="NHANVIEN" />
-          <NavigationProperty Name="MUONTRAs" Relationship="Self.FK__MUONTRA__MaDocGi__693CA210" FromRole="DOCGIA" ToRole="MUONTRA" />
-        </EntityType>
-        <EntityType Name="MUONTRA">
-          <Key>
-            <PropertyRef Name="MaMuonTra" />
-          </Key>
-          <Property Name="MaMuonTra" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaDocGia" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaSach" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NguoiChoMuon" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgayMuon" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="NgayHenTra" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="NguoiNhanTra" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Name="NgayTra" Type="DateTime" Precision="3" />
-          <Property Name="Phi" Type="Int32" />
-          <NavigationProperty Name="DOCGIA" Relationship="Self.FK__MUONTRA__MaDocGi__693CA210" FromRole="MUONTRA" ToRole="DOCGIA" />
-          <NavigationProperty Name="SACH" Relationship="Self.FK__MUONTRA__MaSach__6A30C649" FromRole="MUONTRA" ToRole="SACH" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__MUONTRA__NguoiCh__6B24EA82" FromRole="MUONTRA" ToRole="NHANVIEN" />
-          <NavigationProperty Name="NHANVIEN1" Relationship="Self.FK__MUONTRA__NguoiNh__6D0D32F4" FromRole="MUONTRA" ToRole="NHANVIEN" />
-        </EntityType>
-        <EntityType Name="NHANVIEN">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaNhanVien" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="HoVaTen" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SoCMT" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SoDienThoai" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Anh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NguoiLap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="DOCGIAs" Relationship="Self.FK__DOCGIA__NguoiLap__6477ECF3" FromRole="NHANVIEN" ToRole="DOCGIA" />
-          <NavigationProperty Name="MUONTRAs" Relationship="Self.FK__MUONTRA__NguoiCh__6B24EA82" FromRole="NHANVIEN" ToRole="MUONTRA" />
-          <NavigationProperty Name="MUONTRAs1" Relationship="Self.FK__MUONTRA__NguoiNh__6D0D32F4" FromRole="NHANVIEN" ToRole="MUONTRA" />
-          <NavigationProperty Name="NHANVIEN1" Relationship="Self.FK__NHANVIEN__NguoiL__398D8EEE" FromRole="NHANVIEN" ToRole="NHANVIEN1" />
-          <NavigationProperty Name="NHANVIEN2" Relationship="Self.FK__NHANVIEN__NguoiL__398D8EEE" FromRole="NHANVIEN1" ToRole="NHANVIEN" />
-          <NavigationProperty Name="PHANLOAIs" Relationship="Self.FK__PHANLOAI__NguoiL__60A75C0F" FromRole="NHANVIEN" ToRole="PHANLOAI" />
-          <NavigationProperty Name="PHANQUYENs" Relationship="Self.FK__PHANQUYEN__MaNha__4316F928" FromRole="NHANVIEN" ToRole="PHANQUYEN" />
-          <NavigationProperty Name="PHANQUYENs1" Relationship="Self.FK__PHANQUYEN__Nguoi__44FF419A" FromRole="NHANVIEN" ToRole="PHANQUYEN" />
-          <NavigationProperty Name="QUYENs" Relationship="Self.FK__QUYEN__NguoiLap__3E52440B" FromRole="NHANVIEN" ToRole="QUYEN" />
-          <NavigationProperty Name="SACHes" Relationship="Self.FK__SACH__NguoiLap__49C3F6B7" FromRole="NHANVIEN" ToRole="SACH" />
-          <NavigationProperty Name="SANGTACs" Relationship="Self.FK__SANGTAC__NguoiLa__5629CD9C" FromRole="NHANVIEN" ToRole="SANGTAC" />
-          <NavigationProperty Name="TACGIAs" Relationship="Self.FK__TACGIA__NguoiLap__4F7CD00D" FromRole="NHANVIEN" ToRole="TACGIA" />
-          <NavigationProperty Name="THELOAIs" Relationship="Self.FK__THELOAI__NguoiLa__59FA5E80" FromRole="NHANVIEN" ToRole="THELOAI" />
-        </EntityType>
-        <EntityType Name="PHANLOAI">
-          <Key>
-            <PropertyRef Name="MaSach" />
-            <PropertyRef Name="MaTheloai" />
-          </Key>
-          <Property Name="MaSach" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaTheloai" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NguoiLap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__PHANLOAI__NguoiL__60A75C0F" FromRole="PHANLOAI" ToRole="NHANVIEN" />
-          <NavigationProperty Name="SACH" Relationship="Self.FK__PHANLOAI__MaSach__5EBF139D" FromRole="PHANLOAI" ToRole="SACH" />
-          <NavigationProperty Name="THELOAI" Relationship="Self.FK__PHANLOAI__MaThel__5FB337D6" FromRole="PHANLOAI" ToRole="THELOAI" />
-        </EntityType>
-        <EntityType Name="PHANQUYEN">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-            <PropertyRef Name="MaQuyen" />
-          </Key>
-          <Property Name="MaNhanVien" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaQuyen" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NguoiLap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__PHANQUYEN__MaNha__4316F928" FromRole="PHANQUYEN" ToRole="NHANVIEN" />
-          <NavigationProperty Name="NHANVIEN1" Relationship="Self.FK__PHANQUYEN__Nguoi__44FF419A" FromRole="PHANQUYEN" ToRole="NHANVIEN" />
-          <NavigationProperty Name="QUYEN" Relationship="Self.FK__PHANQUYEN__MaQuy__440B1D61" FromRole="PHANQUYEN" ToRole="QUYEN" />
-        </EntityType>
-        <EntityType Name="QUYEN">
-          <Key>
-            <PropertyRef Name="MaQuyen" />
-          </Key>
-          <Property Name="MaQuyen" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Ten" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NguoiLap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__QUYEN__NguoiLap__3E52440B" FromRole="QUYEN" ToRole="NHANVIEN" />
-          <NavigationProperty Name="PHANQUYENs" Relationship="Self.FK__PHANQUYEN__MaQuy__440B1D61" FromRole="QUYEN" ToRole="PHANQUYEN" />
-        </EntityType>
-        <EntityType Name="SACH">
-          <Key>
-            <PropertyRef Name="MaSach" />
-          </Key>
-          <Property Name="MaSach" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TieuDe" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NhaXuatBan" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="NgonNgu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Anh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Gia" Type="Int32" Nullable="false" />
-          <Property Name="NguoiLap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="MUONTRAs" Relationship="Self.FK__MUONTRA__MaSach__6A30C649" FromRole="SACH" ToRole="MUONTRA" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__SACH__NguoiLap__49C3F6B7" FromRole="SACH" ToRole="NHANVIEN" />
-          <NavigationProperty Name="PHANLOAIs" Relationship="Self.FK__PHANLOAI__MaSach__5EBF139D" FromRole="SACH" ToRole="PHANLOAI" />
-          <NavigationProperty Name="SANGTACs" Relationship="Self.FK__SANGTAC__MaSach__5441852A" FromRole="SACH" ToRole="SANGTAC" />
-        </EntityType>
-        <EntityType Name="SANGTAC">
-          <Key>
-            <PropertyRef Name="MaSach" />
-            <PropertyRef Name="MaTacGia" />
-          </Key>
-          <Property Name="MaSach" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaTacGia" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NguoiLap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__SANGTAC__NguoiLa__5629CD9C" FromRole="SANGTAC" ToRole="NHANVIEN" />
-          <NavigationProperty Name="SACH" Relationship="Self.FK__SANGTAC__MaSach__5441852A" FromRole="SANGTAC" ToRole="SACH" />
-          <NavigationProperty Name="TACGIA" Relationship="Self.FK__SANGTAC__MaTacGi__5535A963" FromRole="SANGTAC" ToRole="TACGIA" />
-        </EntityType>
-        <EntityType Name="TACGIA">
-          <Key>
-            <PropertyRef Name="MaTacGia" />
-          </Key>
-          <Property Name="MaTacGia" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="HoVaTen" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
-          <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="SoDienThoai" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Anh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NguoiLap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__TACGIA__NguoiLap__4F7CD00D" FromRole="TACGIA" ToRole="NHANVIEN" />
-          <NavigationProperty Name="SANGTACs" Relationship="Self.FK__SANGTAC__MaTacGi__5535A963" FromRole="TACGIA" ToRole="SANGTAC" />
-        </EntityType>
-        <EntityType Name="THELOAI">
-          <Key>
-            <PropertyRef Name="MaTheloai" />
-          </Key>
-          <Property Name="MaTheloai" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Ten" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NguoiLap" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__THELOAI__NguoiLa__59FA5E80" FromRole="THELOAI" ToRole="NHANVIEN" />
-          <NavigationProperty Name="PHANLOAIs" Relationship="Self.FK__PHANLOAI__MaThel__5FB337D6" FromRole="THELOAI" ToRole="PHANLOAI" />
-        </EntityType>
-        <Association Name="FK__DOCGIA__NguoiLap__6477ECF3">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
-          <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="DOCGIA">
-              <PropertyRef Name="NguoiLap" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__MUONTRA__MaDocGi__693CA210">
-          <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="1" />
-          <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="DOCGIA">
-              <PropertyRef Name="MaDocGia" />
-            </Principal>
-            <Dependent Role="MUONTRA">
-              <PropertyRef Name="MaDocGia" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__MUONTRA__MaSach__6A30C649">
-          <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
-          <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SACH">
-              <PropertyRef Name="MaSach" />
-            </Principal>
-            <Dependent Role="MUONTRA">
-              <PropertyRef Name="MaSach" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__MUONTRA__NguoiCh__6B24EA82">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
-          <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="MUONTRA">
-              <PropertyRef Name="NguoiChoMuon" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__MUONTRA__NguoiNh__6D0D32F4">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
-          <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="MUONTRA">
-              <PropertyRef Name="NguoiNhanTra" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__NHANVIEN__NguoiL__398D8EEE">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
-          <End Role="NHANVIEN1" Type="Self.NHANVIEN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="NHANVIEN1">
-              <PropertyRef Name="NguoiLap" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__PHANLOAI__NguoiL__60A75C0F">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
-          <End Role="PHANLOAI" Type="Self.PHANLOAI" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="PHANLOAI">
-              <PropertyRef Name="NguoiLap" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__PHANQUYEN__MaNha__4316F928">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
-          <End Role="PHANQUYEN" Type="Self.PHANQUYEN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="PHANQUYEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__PHANQUYEN__Nguoi__44FF419A">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
-          <End Role="PHANQUYEN" Type="Self.PHANQUYEN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="PHANQUYEN">
-              <PropertyRef Name="NguoiLap" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__QUYEN__NguoiLap__3E52440B">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
-          <End Role="QUYEN" Type="Self.QUYEN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="QUYEN">
-              <PropertyRef Name="NguoiLap" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__SACH__NguoiLap__49C3F6B7">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
-          <End Role="SACH" Type="Self.SACH" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="SACH">
-              <PropertyRef Name="NguoiLap" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__SANGTAC__NguoiLa__5629CD9C">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
-          <End Role="SANGTAC" Type="Self.SANGTAC" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="SANGTAC">
-              <PropertyRef Name="NguoiLap" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__TACGIA__NguoiLap__4F7CD00D">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
-          <End Role="TACGIA" Type="Self.TACGIA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="TACGIA">
-              <PropertyRef Name="NguoiLap" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__THELOAI__NguoiLa__59FA5E80">
-          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
-          <End Role="THELOAI" Type="Self.THELOAI" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="THELOAI">
-              <PropertyRef Name="NguoiLap" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__PHANLOAI__MaSach__5EBF139D">
-          <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
-          <End Role="PHANLOAI" Type="Self.PHANLOAI" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SACH">
-              <PropertyRef Name="MaSach" />
-            </Principal>
-            <Dependent Role="PHANLOAI">
-              <PropertyRef Name="MaSach" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__PHANLOAI__MaThel__5FB337D6">
-          <End Role="THELOAI" Type="Self.THELOAI" Multiplicity="1" />
-          <End Role="PHANLOAI" Type="Self.PHANLOAI" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="THELOAI">
-              <PropertyRef Name="MaTheloai" />
-            </Principal>
-            <Dependent Role="PHANLOAI">
-              <PropertyRef Name="MaTheloai" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__PHANQUYEN__MaQuy__440B1D61">
-          <End Role="QUYEN" Type="Self.QUYEN" Multiplicity="1" />
-          <End Role="PHANQUYEN" Type="Self.PHANQUYEN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="QUYEN">
-              <PropertyRef Name="MaQuyen" />
-            </Principal>
-            <Dependent Role="PHANQUYEN">
-              <PropertyRef Name="MaQuyen" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__SANGTAC__MaSach__5441852A">
-          <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
-          <End Role="SANGTAC" Type="Self.SANGTAC" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SACH">
-              <PropertyRef Name="MaSach" />
-            </Principal>
-            <Dependent Role="SANGTAC">
-              <PropertyRef Name="MaSach" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__SANGTAC__MaTacGi__5535A963">
-          <End Role="TACGIA" Type="Self.TACGIA" Multiplicity="1" />
-          <End Role="SANGTAC" Type="Self.SANGTAC" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TACGIA">
-              <PropertyRef Name="MaTacGia" />
-            </Principal>
-            <Dependent Role="SANGTAC">
-              <PropertyRef Name="MaTacGia" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="QUANLYTHUVIENEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="DOCGIAs" EntityType="Self.DOCGIA" />
-          <EntitySet Name="MUONTRAs" EntityType="Self.MUONTRA" />
-          <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
-          <EntitySet Name="PHANLOAIs" EntityType="Self.PHANLOAI" />
-          <EntitySet Name="PHANQUYENs" EntityType="Self.PHANQUYEN" />
-          <EntitySet Name="QUYENs" EntityType="Self.QUYEN" />
-          <EntitySet Name="SACHes" EntityType="Self.SACH" />
-          <EntitySet Name="SANGTACs" EntityType="Self.SANGTAC" />
-          <EntitySet Name="TACGIAs" EntityType="Self.TACGIA" />
-          <EntitySet Name="THELOAIs" EntityType="Self.THELOAI" />
-          <AssociationSet Name="FK__DOCGIA__NguoiLap__6477ECF3" Association="Self.FK__DOCGIA__NguoiLap__6477ECF3">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="DOCGIA" EntitySet="DOCGIAs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__MaDocGi__693CA210" Association="Self.FK__MUONTRA__MaDocGi__693CA210">
-            <End Role="DOCGIA" EntitySet="DOCGIAs" />
-            <End Role="MUONTRA" EntitySet="MUONTRAs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__MaSach__6A30C649" Association="Self.FK__MUONTRA__MaSach__6A30C649">
-            <End Role="SACH" EntitySet="SACHes" />
-            <End Role="MUONTRA" EntitySet="MUONTRAs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__NguoiCh__6B24EA82" Association="Self.FK__MUONTRA__NguoiCh__6B24EA82">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="MUONTRA" EntitySet="MUONTRAs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__NguoiNh__6D0D32F4" Association="Self.FK__MUONTRA__NguoiNh__6D0D32F4">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="MUONTRA" EntitySet="MUONTRAs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__NHANVIEN__NguoiL__398D8EEE" Association="Self.FK__NHANVIEN__NguoiL__398D8EEE">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="NHANVIEN1" EntitySet="NHANVIENs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__PHANLOAI__NguoiL__60A75C0F" Association="Self.FK__PHANLOAI__NguoiL__60A75C0F">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="PHANLOAI" EntitySet="PHANLOAIs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__PHANQUYEN__MaNha__4316F928" Association="Self.FK__PHANQUYEN__MaNha__4316F928">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="PHANQUYEN" EntitySet="PHANQUYENs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__PHANQUYEN__Nguoi__44FF419A" Association="Self.FK__PHANQUYEN__Nguoi__44FF419A">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="PHANQUYEN" EntitySet="PHANQUYENs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__QUYEN__NguoiLap__3E52440B" Association="Self.FK__QUYEN__NguoiLap__3E52440B">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="QUYEN" EntitySet="QUYENs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__SACH__NguoiLap__49C3F6B7" Association="Self.FK__SACH__NguoiLap__49C3F6B7">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="SACH" EntitySet="SACHes" />
-          </AssociationSet>
-          <AssociationSet Name="FK__SANGTAC__NguoiLa__5629CD9C" Association="Self.FK__SANGTAC__NguoiLa__5629CD9C">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="SANGTAC" EntitySet="SANGTACs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__TACGIA__NguoiLap__4F7CD00D" Association="Self.FK__TACGIA__NguoiLap__4F7CD00D">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="TACGIA" EntitySet="TACGIAs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__THELOAI__NguoiLa__59FA5E80" Association="Self.FK__THELOAI__NguoiLa__59FA5E80">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="THELOAI" EntitySet="THELOAIs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__PHANLOAI__MaSach__5EBF139D" Association="Self.FK__PHANLOAI__MaSach__5EBF139D">
-            <End Role="SACH" EntitySet="SACHes" />
-            <End Role="PHANLOAI" EntitySet="PHANLOAIs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__PHANLOAI__MaThel__5FB337D6" Association="Self.FK__PHANLOAI__MaThel__5FB337D6">
-            <End Role="THELOAI" EntitySet="THELOAIs" />
-            <End Role="PHANLOAI" EntitySet="PHANLOAIs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__PHANQUYEN__MaQuy__440B1D61" Association="Self.FK__PHANQUYEN__MaQuy__440B1D61">
-            <End Role="QUYEN" EntitySet="QUYENs" />
-            <End Role="PHANQUYEN" EntitySet="PHANQUYENs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__SANGTAC__MaSach__5441852A" Association="Self.FK__SANGTAC__MaSach__5441852A">
-            <End Role="SACH" EntitySet="SACHes" />
-            <End Role="SANGTAC" EntitySet="SANGTACs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__SANGTAC__MaTacGi__5535A963" Association="Self.FK__SANGTAC__MaTacGi__5535A963">
-            <End Role="TACGIA" EntitySet="TACGIAs" />
-            <End Role="SANGTAC" EntitySet="SANGTACs" />
-          </AssociationSet>
           <FunctionImport Name="GETAVAILABLEBOOKS" ReturnType="Collection(QUANLYTHUVIENModel.GETAVAILABLEBOOKS_Result)" />
           <FunctionImport Name="GETAVALIDMEMBER" ReturnType="Collection(QUANLYTHUVIENModel.GETAVALIDMEMBER_Result)">
           <Parameter Name="n" Mode="In" Type="Int32" />
@@ -952,8 +472,94 @@
           <FunctionImport Name="GETTOPBOOK" ReturnType="Collection(QUANLYTHUVIENModel.GETTOPBOOK_Result)" />
           <FunctionImport Name="GETTOPMEMBER" ReturnType="Collection(QUANLYTHUVIENModel.GETTOPMEMBER_Result)" />
           <FunctionImport Name="GETBLACKLIST" ReturnType="Collection(QUANLYTHUVIENModel.GETBLACKLIST_Result)">
-            <Parameter Name="N" Mode="In" Type="Int32" />
+          <Parameter Name="N" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="DOCGIAs" EntityType="QUANLYTHUVIENModel.DOCGIA" />
+          <EntitySet Name="MUONTRAs" EntityType="QUANLYTHUVIENModel.MUONTRA" />
+          <EntitySet Name="NHANVIENs" EntityType="QUANLYTHUVIENModel.NHANVIEN" />
+          <EntitySet Name="PHANLOAIs" EntityType="QUANLYTHUVIENModel.PHANLOAI" />
+          <EntitySet Name="PHANQUYENs" EntityType="QUANLYTHUVIENModel.PHANQUYEN" />
+          <EntitySet Name="QUYENs" EntityType="QUANLYTHUVIENModel.QUYEN" />
+          <EntitySet Name="SACHes" EntityType="QUANLYTHUVIENModel.SACH" />
+          <EntitySet Name="SANGTACs" EntityType="QUANLYTHUVIENModel.SANGTAC" />
+          <EntitySet Name="TACGIAs" EntityType="QUANLYTHUVIENModel.TACGIA" />
+          <EntitySet Name="THELOAIs" EntityType="QUANLYTHUVIENModel.THELOAI" />
+          <AssociationSet Name="FK__DOCGIA__NguoiLap__619B8048" Association="QUANLYTHUVIENModel.FK__DOCGIA__NguoiLap__619B8048">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="DOCGIA" EntitySet="DOCGIAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MUONTRA__MaDocGi__66603565" Association="QUANLYTHUVIENModel.FK__MUONTRA__MaDocGi__66603565">
+            <End Role="DOCGIA" EntitySet="DOCGIAs" />
+            <End Role="MUONTRA" EntitySet="MUONTRAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MUONTRA__MaSach__6754599E" Association="QUANLYTHUVIENModel.FK__MUONTRA__MaSach__6754599E">
+            <End Role="SACH" EntitySet="SACHes" />
+            <End Role="MUONTRA" EntitySet="MUONTRAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MUONTRA__NguoiCh__68487DD7" Association="QUANLYTHUVIENModel.FK__MUONTRA__NguoiCh__68487DD7">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="MUONTRA" EntitySet="MUONTRAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MUONTRA__NguoiNh__6A30C649" Association="QUANLYTHUVIENModel.FK__MUONTRA__NguoiNh__6A30C649">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="MUONTRA" EntitySet="MUONTRAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NHANVIEN__NguoiL__38996AB5" Association="QUANLYTHUVIENModel.FK__NHANVIEN__NguoiL__38996AB5">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="NHANVIEN1" EntitySet="NHANVIENs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHANLOAI__NguoiL__5DCAEF64" Association="QUANLYTHUVIENModel.FK__PHANLOAI__NguoiL__5DCAEF64">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="PHANLOAI" EntitySet="PHANLOAIs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHANQUYEN__MaNha__4222D4EF" Association="QUANLYTHUVIENModel.FK__PHANQUYEN__MaNha__4222D4EF">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="PHANQUYEN" EntitySet="PHANQUYENs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHANQUYEN__Nguoi__440B1D61" Association="QUANLYTHUVIENModel.FK__PHANQUYEN__Nguoi__440B1D61">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="PHANQUYEN" EntitySet="PHANQUYENs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QUYEN__NguoiLap__3D5E1FD2" Association="QUANLYTHUVIENModel.FK__QUYEN__NguoiLap__3D5E1FD2">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="QUYEN" EntitySet="QUYENs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SACH__NguoiLap__47DBAE45" Association="QUANLYTHUVIENModel.FK__SACH__NguoiLap__47DBAE45">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="SACH" EntitySet="SACHes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SANGTAC__NguoiLa__534D60F1" Association="QUANLYTHUVIENModel.FK__SANGTAC__NguoiLa__534D60F1">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="SANGTAC" EntitySet="SANGTACs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TACGIA__NguoiLap__4CA06362" Association="QUANLYTHUVIENModel.FK__TACGIA__NguoiLap__4CA06362">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="TACGIA" EntitySet="TACGIAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THELOAI__NguoiLa__571DF1D5" Association="QUANLYTHUVIENModel.FK__THELOAI__NguoiLa__571DF1D5">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="THELOAI" EntitySet="THELOAIs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHANLOAI__MaSach__5BE2A6F2" Association="QUANLYTHUVIENModel.FK__PHANLOAI__MaSach__5BE2A6F2">
+            <End Role="SACH" EntitySet="SACHes" />
+            <End Role="PHANLOAI" EntitySet="PHANLOAIs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHANLOAI__MaThel__5CD6CB2B" Association="QUANLYTHUVIENModel.FK__PHANLOAI__MaThel__5CD6CB2B">
+            <End Role="THELOAI" EntitySet="THELOAIs" />
+            <End Role="PHANLOAI" EntitySet="PHANLOAIs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHANQUYEN__MaQuy__4316F928" Association="QUANLYTHUVIENModel.FK__PHANQUYEN__MaQuy__4316F928">
+            <End Role="QUYEN" EntitySet="QUYENs" />
+            <End Role="PHANQUYEN" EntitySet="PHANQUYENs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SANGTAC__MaSach__5165187F" Association="QUANLYTHUVIENModel.FK__SANGTAC__MaSach__5165187F">
+            <End Role="SACH" EntitySet="SACHes" />
+            <End Role="SANGTAC" EntitySet="SANGTACs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SANGTAC__MaTacGi__52593CB8" Association="QUANLYTHUVIENModel.FK__SANGTAC__MaTacGi__52593CB8">
+            <End Role="TACGIA" EntitySet="TACGIAs" />
+            <End Role="SANGTAC" EntitySet="SANGTACs" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="GETAVAILABLEBOOKS_Result">
           <Property Type="String" Name="MaSach" Nullable="false" MaxLength="15" />
@@ -994,148 +600,408 @@
           <Property Type="String" Name="HoVaTen" Nullable="false" MaxLength="200" />
           <Property Type="Int32" Name="TRE" Nullable="true" />
         </ComplexType>
+        <EntityType Name="DOCGIA">
+          <Key>
+            <PropertyRef Name="MaDocGia" />
+          </Key>
+          <Property Name="MaDocGia" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="HoVaTen" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SoCMT" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SoDienThoai" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Anh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiLap" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__DOCGIA__NguoiLap__619B8048" FromRole="DOCGIA" ToRole="NHANVIEN" />
+          <NavigationProperty Name="MUONTRAs" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaDocGi__66603565" FromRole="DOCGIA" ToRole="MUONTRA" />
+        </EntityType>
+        <EntityType Name="MUONTRA">
+          <Key>
+            <PropertyRef Name="MaMuonTra" />
+          </Key>
+          <Property Name="MaMuonTra" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="MaDocGia" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="MaSach" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiChoMuon" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayMuon" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NgayHenTra" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NguoiNhanTra" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTra" Type="DateTime" Precision="3" />
+          <Property Name="Phi" Type="Int32" />
+          <NavigationProperty Name="DOCGIA" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaDocGi__66603565" FromRole="MUONTRA" ToRole="DOCGIA" />
+          <NavigationProperty Name="SACH" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaSach__6754599E" FromRole="MUONTRA" ToRole="SACH" />
+          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiCh__68487DD7" FromRole="MUONTRA" ToRole="NHANVIEN" />
+          <NavigationProperty Name="NHANVIEN1" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiNh__6A30C649" FromRole="MUONTRA" ToRole="NHANVIEN" />
+        </EntityType>
+        <EntityType Name="NHANVIEN">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="MaNhanVien" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="HoVaTen" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SoCMT" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SoDienThoai" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Anh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiLap" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="DOCGIAs" Relationship="QUANLYTHUVIENModel.FK__DOCGIA__NguoiLap__619B8048" FromRole="NHANVIEN" ToRole="DOCGIA" />
+          <NavigationProperty Name="MUONTRAs" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiCh__68487DD7" FromRole="NHANVIEN" ToRole="MUONTRA" />
+          <NavigationProperty Name="MUONTRAs1" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiNh__6A30C649" FromRole="NHANVIEN" ToRole="MUONTRA" />
+          <NavigationProperty Name="NHANVIEN1" Relationship="QUANLYTHUVIENModel.FK__NHANVIEN__NguoiL__38996AB5" FromRole="NHANVIEN" ToRole="NHANVIEN1" />
+          <NavigationProperty Name="NHANVIEN2" Relationship="QUANLYTHUVIENModel.FK__NHANVIEN__NguoiL__38996AB5" FromRole="NHANVIEN1" ToRole="NHANVIEN" />
+          <NavigationProperty Name="PHANLOAIs" Relationship="QUANLYTHUVIENModel.FK__PHANLOAI__NguoiL__5DCAEF64" FromRole="NHANVIEN" ToRole="PHANLOAI" />
+          <NavigationProperty Name="PHANQUYENs" Relationship="QUANLYTHUVIENModel.FK__PHANQUYEN__MaNha__4222D4EF" FromRole="NHANVIEN" ToRole="PHANQUYEN" />
+          <NavigationProperty Name="PHANQUYENs1" Relationship="QUANLYTHUVIENModel.FK__PHANQUYEN__Nguoi__440B1D61" FromRole="NHANVIEN" ToRole="PHANQUYEN" />
+          <NavigationProperty Name="QUYENs" Relationship="QUANLYTHUVIENModel.FK__QUYEN__NguoiLap__3D5E1FD2" FromRole="NHANVIEN" ToRole="QUYEN" />
+          <NavigationProperty Name="SACHes" Relationship="QUANLYTHUVIENModel.FK__SACH__NguoiLap__47DBAE45" FromRole="NHANVIEN" ToRole="SACH" />
+          <NavigationProperty Name="SANGTACs" Relationship="QUANLYTHUVIENModel.FK__SANGTAC__NguoiLa__534D60F1" FromRole="NHANVIEN" ToRole="SANGTAC" />
+          <NavigationProperty Name="TACGIAs" Relationship="QUANLYTHUVIENModel.FK__TACGIA__NguoiLap__4CA06362" FromRole="NHANVIEN" ToRole="TACGIA" />
+          <NavigationProperty Name="THELOAIs" Relationship="QUANLYTHUVIENModel.FK__THELOAI__NguoiLa__571DF1D5" FromRole="NHANVIEN" ToRole="THELOAI" />
+        </EntityType>
+        <EntityType Name="PHANLOAI">
+          <Key>
+            <PropertyRef Name="MaSach" />
+            <PropertyRef Name="MaTheloai" />
+          </Key>
+          <Property Name="MaSach" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="MaTheloai" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiLap" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__PHANLOAI__NguoiL__5DCAEF64" FromRole="PHANLOAI" ToRole="NHANVIEN" />
+          <NavigationProperty Name="SACH" Relationship="QUANLYTHUVIENModel.FK__PHANLOAI__MaSach__5BE2A6F2" FromRole="PHANLOAI" ToRole="SACH" />
+          <NavigationProperty Name="THELOAI" Relationship="QUANLYTHUVIENModel.FK__PHANLOAI__MaThel__5CD6CB2B" FromRole="PHANLOAI" ToRole="THELOAI" />
+        </EntityType>
+        <EntityType Name="PHANQUYEN">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="MaQuyen" />
+          </Key>
+          <Property Name="MaNhanVien" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="MaQuyen" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiLap" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__PHANQUYEN__MaNha__4222D4EF" FromRole="PHANQUYEN" ToRole="NHANVIEN" />
+          <NavigationProperty Name="NHANVIEN1" Relationship="QUANLYTHUVIENModel.FK__PHANQUYEN__Nguoi__440B1D61" FromRole="PHANQUYEN" ToRole="NHANVIEN" />
+          <NavigationProperty Name="QUYEN" Relationship="QUANLYTHUVIENModel.FK__PHANQUYEN__MaQuy__4316F928" FromRole="PHANQUYEN" ToRole="QUYEN" />
+        </EntityType>
+        <EntityType Name="QUYEN">
+          <Key>
+            <PropertyRef Name="MaQuyen" />
+          </Key>
+          <Property Name="MaQuyen" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Ten" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiLap" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__QUYEN__NguoiLap__3D5E1FD2" FromRole="QUYEN" ToRole="NHANVIEN" />
+          <NavigationProperty Name="PHANQUYENs" Relationship="QUANLYTHUVIENModel.FK__PHANQUYEN__MaQuy__4316F928" FromRole="QUYEN" ToRole="PHANQUYEN" />
+        </EntityType>
+        <EntityType Name="SACH">
+          <Key>
+            <PropertyRef Name="MaSach" />
+          </Key>
+          <Property Name="MaSach" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="TieuDe" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NhaXuatBan" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NgonNgu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Anh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gia" Type="Int32" Nullable="false" />
+          <Property Name="NguoiLap" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="MUONTRAs" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaSach__6754599E" FromRole="SACH" ToRole="MUONTRA" />
+          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__SACH__NguoiLap__47DBAE45" FromRole="SACH" ToRole="NHANVIEN" />
+          <NavigationProperty Name="PHANLOAIs" Relationship="QUANLYTHUVIENModel.FK__PHANLOAI__MaSach__5BE2A6F2" FromRole="SACH" ToRole="PHANLOAI" />
+          <NavigationProperty Name="SANGTACs" Relationship="QUANLYTHUVIENModel.FK__SANGTAC__MaSach__5165187F" FromRole="SACH" ToRole="SANGTAC" />
+        </EntityType>
+        <EntityType Name="SANGTAC">
+          <Key>
+            <PropertyRef Name="MaSach" />
+            <PropertyRef Name="MaTacGia" />
+          </Key>
+          <Property Name="MaSach" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="MaTacGia" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiLap" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__SANGTAC__NguoiLa__534D60F1" FromRole="SANGTAC" ToRole="NHANVIEN" />
+          <NavigationProperty Name="SACH" Relationship="QUANLYTHUVIENModel.FK__SANGTAC__MaSach__5165187F" FromRole="SANGTAC" ToRole="SACH" />
+          <NavigationProperty Name="TACGIA" Relationship="QUANLYTHUVIENModel.FK__SANGTAC__MaTacGi__52593CB8" FromRole="SANGTAC" ToRole="TACGIA" />
+        </EntityType>
+        <EntityType Name="TACGIA">
+          <Key>
+            <PropertyRef Name="MaTacGia" />
+          </Key>
+          <Property Name="MaTacGia" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="HoVaTen" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SoDienThoai" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Anh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiLap" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__TACGIA__NguoiLap__4CA06362" FromRole="TACGIA" ToRole="NHANVIEN" />
+          <NavigationProperty Name="SANGTACs" Relationship="QUANLYTHUVIENModel.FK__SANGTAC__MaTacGi__52593CB8" FromRole="TACGIA" ToRole="SANGTAC" />
+        </EntityType>
+        <EntityType Name="THELOAI">
+          <Key>
+            <PropertyRef Name="MaTheloai" />
+          </Key>
+          <Property Name="MaTheloai" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Ten" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiLap" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NgayXoa" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__THELOAI__NguoiLa__571DF1D5" FromRole="THELOAI" ToRole="NHANVIEN" />
+          <NavigationProperty Name="PHANLOAIs" Relationship="QUANLYTHUVIENModel.FK__PHANLOAI__MaThel__5CD6CB2B" FromRole="THELOAI" ToRole="PHANLOAI" />
+        </EntityType>
+        <Association Name="FK__DOCGIA__NguoiLap__619B8048">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.DOCGIA" Role="DOCGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="DOCGIA">
+              <PropertyRef Name="NguoiLap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MUONTRA__MaDocGi__66603565">
+          <End Type="QUANLYTHUVIENModel.DOCGIA" Role="DOCGIA" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.MUONTRA" Role="MUONTRA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCGIA">
+              <PropertyRef Name="MaDocGia" />
+            </Principal>
+            <Dependent Role="MUONTRA">
+              <PropertyRef Name="MaDocGia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MUONTRA__MaSach__6754599E">
+          <End Type="QUANLYTHUVIENModel.SACH" Role="SACH" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.MUONTRA" Role="MUONTRA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SACH">
+              <PropertyRef Name="MaSach" />
+            </Principal>
+            <Dependent Role="MUONTRA">
+              <PropertyRef Name="MaSach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MUONTRA__NguoiCh__68487DD7">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.MUONTRA" Role="MUONTRA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="MUONTRA">
+              <PropertyRef Name="NguoiChoMuon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MUONTRA__NguoiNh__6A30C649">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="0..1" />
+          <End Type="QUANLYTHUVIENModel.MUONTRA" Role="MUONTRA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="MUONTRA">
+              <PropertyRef Name="NguoiNhanTra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NHANVIEN__NguoiL__38996AB5">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="NHANVIEN1">
+              <PropertyRef Name="NguoiLap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHANLOAI__NguoiL__5DCAEF64">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.PHANLOAI" Role="PHANLOAI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="PHANLOAI">
+              <PropertyRef Name="NguoiLap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHANQUYEN__MaNha__4222D4EF">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.PHANQUYEN" Role="PHANQUYEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="PHANQUYEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHANQUYEN__Nguoi__440B1D61">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.PHANQUYEN" Role="PHANQUYEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="PHANQUYEN">
+              <PropertyRef Name="NguoiLap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QUYEN__NguoiLap__3D5E1FD2">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.QUYEN" Role="QUYEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="QUYEN">
+              <PropertyRef Name="NguoiLap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SACH__NguoiLap__47DBAE45">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.SACH" Role="SACH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="SACH">
+              <PropertyRef Name="NguoiLap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SANGTAC__NguoiLa__534D60F1">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.SANGTAC" Role="SANGTAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="SANGTAC">
+              <PropertyRef Name="NguoiLap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TACGIA__NguoiLap__4CA06362">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.TACGIA" Role="TACGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="TACGIA">
+              <PropertyRef Name="NguoiLap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THELOAI__NguoiLa__571DF1D5">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.THELOAI" Role="THELOAI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="THELOAI">
+              <PropertyRef Name="NguoiLap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHANLOAI__MaSach__5BE2A6F2">
+          <End Type="QUANLYTHUVIENModel.SACH" Role="SACH" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.PHANLOAI" Role="PHANLOAI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SACH">
+              <PropertyRef Name="MaSach" />
+            </Principal>
+            <Dependent Role="PHANLOAI">
+              <PropertyRef Name="MaSach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHANLOAI__MaThel__5CD6CB2B">
+          <End Type="QUANLYTHUVIENModel.THELOAI" Role="THELOAI" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.PHANLOAI" Role="PHANLOAI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THELOAI">
+              <PropertyRef Name="MaTheloai" />
+            </Principal>
+            <Dependent Role="PHANLOAI">
+              <PropertyRef Name="MaTheloai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHANQUYEN__MaQuy__4316F928">
+          <End Type="QUANLYTHUVIENModel.QUYEN" Role="QUYEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.PHANQUYEN" Role="PHANQUYEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QUYEN">
+              <PropertyRef Name="MaQuyen" />
+            </Principal>
+            <Dependent Role="PHANQUYEN">
+              <PropertyRef Name="MaQuyen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SANGTAC__MaSach__5165187F">
+          <End Type="QUANLYTHUVIENModel.SACH" Role="SACH" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.SANGTAC" Role="SANGTAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SACH">
+              <PropertyRef Name="MaSach" />
+            </Principal>
+            <Dependent Role="SANGTAC">
+              <PropertyRef Name="MaSach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SANGTAC__MaTacGi__52593CB8">
+          <End Type="QUANLYTHUVIENModel.TACGIA" Role="TACGIA" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.SANGTAC" Role="SANGTAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TACGIA">
+              <PropertyRef Name="MaTacGia" />
+            </Principal>
+            <Dependent Role="SANGTAC">
+              <PropertyRef Name="MaTacGia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="QUANLYTHUVIENModelStoreContainer" CdmEntityContainer="QUANLYTHUVIENEntities">
-          <EntitySetMapping Name="DOCGIAs">
-            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.DOCGIA">
-              <MappingFragment StoreEntitySet="DOCGIA">
-                <ScalarProperty Name="MaDocGia" ColumnName="MaDocGia" />
-                <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
-                <ScalarProperty Name="SoCMT" ColumnName="SoCMT" />
-                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
-                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
-                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MUONTRAs">
-            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.MUONTRA">
-              <MappingFragment StoreEntitySet="MUONTRA">
-                <ScalarProperty Name="MaMuonTra" ColumnName="MaMuonTra" />
-                <ScalarProperty Name="MaDocGia" ColumnName="MaDocGia" />
-                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
-                <ScalarProperty Name="NguoiChoMuon" ColumnName="NguoiChoMuon" />
-                <ScalarProperty Name="NgayMuon" ColumnName="NgayMuon" />
-                <ScalarProperty Name="NgayHenTra" ColumnName="NgayHenTra" />
-                <ScalarProperty Name="NguoiNhanTra" ColumnName="NguoiNhanTra" />
-                <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
-                <ScalarProperty Name="Phi" ColumnName="Phi" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="NHANVIENs">
-            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.NHANVIEN">
-              <MappingFragment StoreEntitySet="NHANVIEN">
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
-                <ScalarProperty Name="SoCMT" ColumnName="SoCMT" />
-                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
-                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
-                <ScalarProperty Name="Anh" ColumnName="Anh" />
-                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
-                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PHANLOAIs">
-            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.PHANLOAI">
-              <MappingFragment StoreEntitySet="PHANLOAI">
-                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
-                <ScalarProperty Name="MaTheloai" ColumnName="MaTheloai" />
-                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
-                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PHANQUYENs">
-            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.PHANQUYEN">
-              <MappingFragment StoreEntitySet="PHANQUYEN">
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="MaQuyen" ColumnName="MaQuyen" />
-                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
-                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="QUYENs">
-            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.QUYEN">
-              <MappingFragment StoreEntitySet="QUYEN">
-                <ScalarProperty Name="MaQuyen" ColumnName="MaQuyen" />
-                <ScalarProperty Name="Ten" ColumnName="Ten" />
-                <ScalarProperty Name="Mota" ColumnName="Mota" />
-                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
-                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SACHes">
-            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.SACH">
-              <MappingFragment StoreEntitySet="SACH">
-                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
-                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
-                <ScalarProperty Name="NhaXuatBan" ColumnName="NhaXuatBan" />
-                <ScalarProperty Name="NgonNgu" ColumnName="NgonNgu" />
-                <ScalarProperty Name="Anh" ColumnName="Anh" />
-                <ScalarProperty Name="Mota" ColumnName="Mota" />
-                <ScalarProperty Name="Gia" ColumnName="Gia" />
-                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
-                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SANGTACs">
-            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.SANGTAC">
-              <MappingFragment StoreEntitySet="SANGTAC">
-                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
-                <ScalarProperty Name="MaTacGia" ColumnName="MaTacGia" />
-                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
-                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TACGIAs">
-            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.TACGIA">
-              <MappingFragment StoreEntitySet="TACGIA">
-                <ScalarProperty Name="MaTacGia" ColumnName="MaTacGia" />
-                <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
-                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
-                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Anh" ColumnName="Anh" />
-                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
-                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="THELOAIs">
-            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.THELOAI">
-              <MappingFragment StoreEntitySet="THELOAI">
-                <ScalarProperty Name="MaTheloai" ColumnName="MaTheloai" />
-                <ScalarProperty Name="Ten" ColumnName="Ten" />
-                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
-                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="GETAVAILABLEBOOKS" FunctionName="QUANLYTHUVIENModel.Store.GETAVAILABLEBOOKS">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QUANLYTHUVIENModel.GETAVAILABLEBOOKS_Result">
@@ -1195,6 +1061,143 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="DOCGIAs">
+            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.DOCGIA">
+              <MappingFragment StoreEntitySet="DOCGIA">
+                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="Anh" ColumnName="Anh" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="SoCMT" ColumnName="SoCMT" />
+                <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
+                <ScalarProperty Name="MaDocGia" ColumnName="MaDocGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MUONTRAs">
+            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.MUONTRA">
+              <MappingFragment StoreEntitySet="MUONTRA">
+                <ScalarProperty Name="Phi" ColumnName="Phi" />
+                <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
+                <ScalarProperty Name="NguoiNhanTra" ColumnName="NguoiNhanTra" />
+                <ScalarProperty Name="NgayHenTra" ColumnName="NgayHenTra" />
+                <ScalarProperty Name="NgayMuon" ColumnName="NgayMuon" />
+                <ScalarProperty Name="NguoiChoMuon" ColumnName="NguoiChoMuon" />
+                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+                <ScalarProperty Name="MaDocGia" ColumnName="MaDocGia" />
+                <ScalarProperty Name="MaMuonTra" ColumnName="MaMuonTra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NHANVIENs">
+            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.NHANVIEN">
+              <MappingFragment StoreEntitySet="NHANVIEN">
+                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="Anh" ColumnName="Anh" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="SoCMT" ColumnName="SoCMT" />
+                <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHANLOAIs">
+            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.PHANLOAI">
+              <MappingFragment StoreEntitySet="PHANLOAI">
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="MaTheloai" ColumnName="MaTheloai" />
+                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHANQUYENs">
+            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.PHANQUYEN">
+              <MappingFragment StoreEntitySet="PHANQUYEN">
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="MaQuyen" ColumnName="MaQuyen" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QUYENs">
+            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.QUYEN">
+              <MappingFragment StoreEntitySet="QUYEN">
+                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="Mota" ColumnName="Mota" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="MaQuyen" ColumnName="MaQuyen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SACHes">
+            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.SACH">
+              <MappingFragment StoreEntitySet="SACH">
+                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="Mota" ColumnName="Mota" />
+                <ScalarProperty Name="Anh" ColumnName="Anh" />
+                <ScalarProperty Name="NgonNgu" ColumnName="NgonNgu" />
+                <ScalarProperty Name="NhaXuatBan" ColumnName="NhaXuatBan" />
+                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SANGTACs">
+            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.SANGTAC">
+              <MappingFragment StoreEntitySet="SANGTAC">
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="MaTacGia" ColumnName="MaTacGia" />
+                <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TACGIAs">
+            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.TACGIA">
+              <MappingFragment StoreEntitySet="TACGIA">
+                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="Anh" ColumnName="Anh" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
+                <ScalarProperty Name="MaTacGia" ColumnName="MaTacGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THELOAIs">
+            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.THELOAI">
+              <MappingFragment StoreEntitySet="THELOAI">
+                <ScalarProperty Name="NgayXoa" ColumnName="NgayXoa" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="MaTheloai" ColumnName="MaTheloai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

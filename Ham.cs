@@ -16,6 +16,9 @@ namespace QUANLYTHUVIEN
         public static int maxLate = 2;
         public static string defaultPassword = "00000000";
         public static string defaultNVImage = "https://i.imgur.com/sIHKSa9.jpg";
+        public static string defaultDGImage = "https://i.imgur.com/sIHKSa9.jpg";
+        public static string defaultSImage = "https://i.imgur.com/sIHKSa9.jpg";
+
         public static int pricePerDay = 500;
         public static QUANLYTHUVIENEntities tv = new QUANLYTHUVIENEntities();
         public static string generateID(string obj)
@@ -69,16 +72,24 @@ namespace QUANLYTHUVIEN
                             x.MaNhanVien,
                             x.HoVaTen,
                             x.NguoiLap,
-                            x.NgayLap,
-                            x.NgayXoa
+                            x.NgayLap
                         })
                         .ToList();
                 //case "Q":
                 //    return "Q" + (tv.QUYENs.Count() + 1).ToString();
                 //case "PQ":
                 //    return "PQ" + (tv.PHANQUYENs.Count() + 1).ToString();
-                //case "S":
-                //    return "S" + (tv.SACHes.Count() + 1).ToString();
+                case "S":
+                    return tv.SACHes
+                        .Where(x => x.NgayXoa == null)
+                        .Select(x => new
+                        {
+                            x.MaSach,
+                            x.TieuDe,
+                            x.NguoiLap,
+                            x.NgayLap
+                        })
+                        .ToList();
                 //case "TG":
                 //    return "TG" + (tv.TACGIAs.Count() + 1).ToString();
                 //case "ST":
@@ -87,8 +98,17 @@ namespace QUANLYTHUVIEN
                 //    return "TL" + (tv.THELOAIs.Count() + 1).ToString();
                 //case "PL":
                 //    return "PL" + (tv.PHANLOAIs.Count() + 1).ToString();
-                //case "DG":
-                //    return "DG" + (tv.DOCGIAs.Count() + 1).ToString();
+                case "DG":
+                    return tv.DOCGIAs
+                        .Where(x => x.NgayXoa == null)
+                        .Select(x => new
+                        {
+                            x.MaDocGia,
+                            x.HoVaTen,
+                            x.NguoiLap,
+                            x.NgayLap
+                        })
+                        .ToList();
                 case "MT":
                     return tv.MUONTRAs
                         .Select(x => new
@@ -126,16 +146,26 @@ namespace QUANLYTHUVIEN
                                     x.MaNhanVien,
                                     x.HoVaTen,
                                     x.NguoiLap,
-                                    x.NgayLap,
-                                    x.NgayXoa
+                                    x.NgayLap
                                 })
                             .ToList();
                     //case "Q":
                     //    return "Q" + (tv.QUYENs.Count() + 1).ToString();
                     //case "PQ":
                     //    return "PQ" + (tv.PHANQUYENs.Count() + 1).ToString();
-                    //case "S":
-                    //    return "S" + (tv.SACHes.Count() + 1).ToString();
+                    case "S":
+                        return tv.SACHes
+                            .Where(x => (x.NgayXoa == null)
+                            && (x.MaSach.ToLower().IndexOf(keyword.ToLower()) != -1
+                            || x.TieuDe.ToLower().IndexOf(keyword.ToLower()) != -1))
+                                .Select(x => new
+                                {
+                                    x.MaSach,
+                                    x.TieuDe,
+                                    x.NguoiLap,
+                                    x.NgayLap
+                                })
+                            .ToList();
                     //case "TG":
                     //    return "TG" + (tv.TACGIAs.Count() + 1).ToString();
                     //case "ST":
@@ -144,8 +174,19 @@ namespace QUANLYTHUVIEN
                     //    return "TL" + (tv.THELOAIs.Count() + 1).ToString();
                     //case "PL":
                     //    return "PL" + (tv.PHANLOAIs.Count() + 1).ToString();
-                    //case "DG":
-                    //    return "DG" + (tv.DOCGIAs.Count() + 1).ToString();
+                    case "DG":
+                        return tv.DOCGIAs
+                            .Where(x => (x.NgayXoa == null)
+                            && (x.MaDocGia.ToLower().IndexOf(keyword.ToLower()) != -1
+                            || x.HoVaTen.ToLower().IndexOf(keyword.ToLower()) != -1))
+                                .Select(x => new
+                                {
+                                    x.MaDocGia,
+                                    x.HoVaTen,
+                                    x.NguoiLap,
+                                    x.NgayLap
+                                })
+                            .ToList();
                     case "MT":
                         return tv.MUONTRAs
                             .Where(x=> x.MaMuonTra.ToLower().IndexOf(keyword.ToLower()) != -1
@@ -190,8 +231,13 @@ namespace QUANLYTHUVIEN
                     //    return "Q" + (tv.QUYENs.Count() + 1).ToString();
                     //case "PQ":
                     //    return "PQ" + (tv.PHANQUYENs.Count() + 1).ToString();
-                    //case "S":
-                    //    return "S" + (tv.SACHes.Count() + 1).ToString();
+                    case "S":
+                        {
+                            SACH s = tv.SACHes
+                                .Where(x => x.MaSach == id).SingleOrDefault();
+                            s.NgayXoa = DateTime.Now;
+                            break;
+                        }
                     //case "TG":
                     //    return "TG" + (tv.TACGIAs.Count() + 1).ToString();
                     //case "ST":
@@ -200,8 +246,13 @@ namespace QUANLYTHUVIEN
                     //    return "TL" + (tv.THELOAIs.Count() + 1).ToString();
                     //case "PL":
                     //    return "PL" + (tv.PHANLOAIs.Count() + 1).ToString();
-                    //case "DG":
-                    //    return "DG" + (tv.DOCGIAs.Count() + 1).ToString();
+                    case "DG":
+                        {
+                            DOCGIA dg = tv.DOCGIAs
+                                .Where(x => x.MaDocGia == id).SingleOrDefault();
+                            dg.NgayXoa = DateTime.Now;
+                            break;
+                        }
                     case "MT":
                         {
                             MUONTRA mt = tv.MUONTRAs
