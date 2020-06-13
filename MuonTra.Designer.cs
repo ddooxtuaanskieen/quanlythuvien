@@ -2,7 +2,7 @@
 
 namespace QUANLYTHUVIEN
 {
-    partial class Muon
+    partial class MuonTra
     {
         /// <summary>
         /// Required designer variable.

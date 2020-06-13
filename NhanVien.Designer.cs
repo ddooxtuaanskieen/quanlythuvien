@@ -48,7 +48,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePicker_NgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox_NhanVien = new System.Windows.Forms.PictureBox();
+            this.textBox_Anh = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_NhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_NhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // button_Them
@@ -111,7 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(135, 278);
+            this.label1.Location = new System.Drawing.Point(35, 278);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 6;
@@ -119,14 +123,14 @@
             // 
             // textBox_HoVaTen
             // 
-            this.textBox_HoVaTen.Location = new System.Drawing.Point(198, 275);
+            this.textBox_HoVaTen.Location = new System.Drawing.Point(98, 275);
             this.textBox_HoVaTen.Name = "textBox_HoVaTen";
             this.textBox_HoVaTen.Size = new System.Drawing.Size(100, 20);
             this.textBox_HoVaTen.TabIndex = 7;
             // 
             // textBox_SoCMT
             // 
-            this.textBox_SoCMT.Location = new System.Drawing.Point(198, 316);
+            this.textBox_SoCMT.Location = new System.Drawing.Point(98, 316);
             this.textBox_SoCMT.Name = "textBox_SoCMT";
             this.textBox_SoCMT.Size = new System.Drawing.Size(100, 20);
             this.textBox_SoCMT.TabIndex = 9;
@@ -134,7 +138,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(135, 316);
+            this.label2.Location = new System.Drawing.Point(35, 316);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 8;
@@ -142,7 +146,7 @@
             // 
             // textBox_DiaChi
             // 
-            this.textBox_DiaChi.Location = new System.Drawing.Point(198, 408);
+            this.textBox_DiaChi.Location = new System.Drawing.Point(98, 408);
             this.textBox_DiaChi.Name = "textBox_DiaChi";
             this.textBox_DiaChi.Size = new System.Drawing.Size(232, 20);
             this.textBox_DiaChi.TabIndex = 11;
@@ -150,7 +154,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(135, 408);
+            this.label3.Location = new System.Drawing.Point(35, 408);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 10;
@@ -158,7 +162,7 @@
             // 
             // textBox_SoDienThoai
             // 
-            this.textBox_SoDienThoai.Location = new System.Drawing.Point(597, 300);
+            this.textBox_SoDienThoai.Location = new System.Drawing.Point(477, 278);
             this.textBox_SoDienThoai.Name = "textBox_SoDienThoai";
             this.textBox_SoDienThoai.Size = new System.Drawing.Size(100, 20);
             this.textBox_SoDienThoai.TabIndex = 13;
@@ -166,7 +170,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(521, 303);
+            this.label4.Location = new System.Drawing.Point(401, 281);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 13);
             this.label4.TabIndex = 12;
@@ -174,7 +178,7 @@
             // 
             // textBox_Email
             // 
-            this.textBox_Email.Location = new System.Drawing.Point(597, 345);
+            this.textBox_Email.Location = new System.Drawing.Point(477, 323);
             this.textBox_Email.Name = "textBox_Email";
             this.textBox_Email.Size = new System.Drawing.Size(100, 20);
             this.textBox_Email.TabIndex = 15;
@@ -182,7 +186,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(521, 345);
+            this.label5.Location = new System.Drawing.Point(401, 323);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 14;
@@ -190,7 +194,7 @@
             // 
             // textBox_MatKhau
             // 
-            this.textBox_MatKhau.Location = new System.Drawing.Point(597, 386);
+            this.textBox_MatKhau.Location = new System.Drawing.Point(477, 364);
             this.textBox_MatKhau.Name = "textBox_MatKhau";
             this.textBox_MatKhau.Size = new System.Drawing.Size(100, 20);
             this.textBox_MatKhau.TabIndex = 17;
@@ -198,7 +202,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(521, 386);
+            this.label6.Location = new System.Drawing.Point(401, 364);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 16;
@@ -207,7 +211,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(135, 364);
+            this.label8.Location = new System.Drawing.Point(35, 364);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 13);
             this.label8.TabIndex = 20;
@@ -215,16 +219,45 @@
             // 
             // dateTimePicker_NgaySinh
             // 
-            this.dateTimePicker_NgaySinh.Location = new System.Drawing.Point(198, 364);
+            this.dateTimePicker_NgaySinh.Location = new System.Drawing.Point(98, 364);
             this.dateTimePicker_NgaySinh.Name = "dateTimePicker_NgaySinh";
             this.dateTimePicker_NgaySinh.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker_NgaySinh.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(401, 408);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 13);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Ảnh";
+            // 
+            // pictureBox_NhanVien
+            // 
+            this.pictureBox_NhanVien.Location = new System.Drawing.Point(633, 262);
+            this.pictureBox_NhanVien.Name = "pictureBox_NhanVien";
+            this.pictureBox_NhanVien.Size = new System.Drawing.Size(132, 166);
+            this.pictureBox_NhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_NhanVien.TabIndex = 23;
+            this.pictureBox_NhanVien.TabStop = false;
+            // 
+            // textBox_Anh
+            // 
+            this.textBox_Anh.Location = new System.Drawing.Point(477, 402);
+            this.textBox_Anh.Name = "textBox_Anh";
+            this.textBox_Anh.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Anh.TabIndex = 24;
+            this.textBox_Anh.TextChanged += new System.EventHandler(this.textBox_Anh_TextChanged);
             // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox_Anh);
+            this.Controls.Add(this.pictureBox_NhanVien);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker_NgaySinh);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox_MatKhau);
@@ -249,6 +282,7 @@
             this.Text = "NhanVien";
             this.Load += new System.EventHandler(this.NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_NhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_NhanVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,5 +310,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker_NgaySinh;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox_NhanVien;
+        private System.Windows.Forms.TextBox textBox_Anh;
     }
 }

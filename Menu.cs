@@ -25,8 +25,8 @@ namespace QUANLYTHUVIEN
 
         private void button_Muon_Click(object sender, EventArgs e)
         {
-            Muon m = new Muon();
-            m.ShowDialog();
+            MuonTra mt = new MuonTra();
+            mt.ShowDialog();
         }
     }
 }

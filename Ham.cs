@@ -13,6 +13,9 @@ namespace QUANLYTHUVIEN
     {
         public static string currentUser = null;
         public static int maxBookHold = 2;
+        public static int maxLate = 2;
+        public static string defaultPassword = "00000000";
+        public static string defaultNVImage = "https://i.imgur.com/sIHKSa9.jpg";
         public static QUANLYTHUVIENEntities tv = new QUANLYTHUVIENEntities();
         public static string generateID(string obj)
         {
@@ -60,7 +63,14 @@ namespace QUANLYTHUVIEN
                 case "NV":
                     return tv.NHANVIENs
                         .Where(x => x.NgayXoa == null)
-                        .Select(x => new { x.MaNhanVien, x.HoVaTen, x.SoCMT, x.NgaySinh, x.DiaChi, x.SoDienThoai, x.Email, x.MatKhau, x.Anh, x.NguoiLap, x.NgayLap })
+                        .Select(x => new
+                        {
+                            x.MaNhanVien,
+                            x.HoVaTen,
+                            x.NguoiLap,
+                            x.NgayLap,
+                            x.NgayXoa
+                        })
                         .ToList();
                 //case "Q":
                 //    return "Q" + (tv.QUYENs.Count() + 1).ToString();
@@ -80,7 +90,17 @@ namespace QUANLYTHUVIEN
                 //    return "DG" + (tv.DOCGIAs.Count() + 1).ToString();
                 case "MT":
                     return tv.MUONTRAs
-                        .Select(x => new { x.MaMuonTra, x.MaDocGia, x.MaSach, x.NguoiChoMuon, x.NgayMuon, x.NgayHenTra, x.NguoiNhanTra, x.NgayTra})
+                        .Select(x => new
+                        {
+                            x.MaMuonTra,
+                            x.MaDocGia,
+                            x.MaSach,
+                            x.NguoiChoMuon,
+                            x.NgayMuon,
+                            x.NgayHenTra,
+                            x.NguoiNhanTra,
+                            x.NgayTra
+                        })
                         .ToList();
                 default:
                     return null;
@@ -97,9 +117,16 @@ namespace QUANLYTHUVIEN
                 {
                     case "NV":
                         return tv.NHANVIENs
-                            .Where(x => (x.NgayXoa == null) 
+                            .Where(x => (x.NgayXoa == null)
                             && (x.MaNhanVien.ToLower().IndexOf(keyword.ToLower()) != -1 || x.HoVaTen.ToLower().IndexOf(keyword.ToLower()) != -1))
-                            .Select(x => new { x.MaNhanVien, x.HoVaTen, x.SoCMT, x.NgaySinh, x.DiaChi, x.SoDienThoai, x.Email, x.MatKhau, x.Anh, x.NguoiLap, x.NgayLap })
+                                .Select(x => new
+                                {
+                                    x.MaNhanVien,
+                                    x.HoVaTen,
+                                    x.NguoiLap,
+                                    x.NgayLap,
+                                    x.NgayXoa
+                                })
                             .ToList();
                     //case "Q":
                     //    return "Q" + (tv.QUYENs.Count() + 1).ToString();
@@ -117,8 +144,21 @@ namespace QUANLYTHUVIEN
                     //    return "PL" + (tv.PHANLOAIs.Count() + 1).ToString();
                     //case "DG":
                     //    return "DG" + (tv.DOCGIAs.Count() + 1).ToString();
-                    //case "MT":
-                    //    return "MT" + (tv.MUONTRAs.Count() + 1).ToString();
+                    case "MT":
+                        return tv.MUONTRAs
+                            .Where(x=> x.MaMuonTra.ToLower().IndexOf(keyword.ToLower()) != -1)
+                                .Select(x => new
+                                {
+                                    x.MaMuonTra,
+                                    x.MaDocGia,
+                                    x.MaSach,
+                                    x.NguoiChoMuon,
+                                    x.NgayMuon,
+                                    x.NgayHenTra,
+                                    x.NguoiNhanTra,
+                                    x.NgayTra
+                                })
+                            .ToList();
                     default:
                         return null;
                 }
@@ -126,9 +166,9 @@ namespace QUANLYTHUVIEN
         }
         public static bool deleteData(string obj, string id)
         {
-            if(id == null || id == "")
+            if (id == null || id == "")
             {
-                MessageBox.Show("Vui lòng chọn đối tượng cần xóa");
+                MessageBox.Show("Vui lòng chọn đối tượng cần xóa.");
                 return false;
             }
             else
@@ -169,15 +209,17 @@ namespace QUANLYTHUVIEN
                         return false;
                 }
                 tv.SaveChanges();
+                MessageBox.Show("Xóa đối tượng thành công.");
                 return true;
             }
-            
+
         }
         public static int getFine(string maMuon)
         {
             MUONTRA mt = tv.MUONTRAs.Where(x => x.MaMuonTra == maMuon).SingleOrDefault();
-            if (mt.NgayTra < mt.NgayHenTra) return 0;
-            else return 500 * (int)((DateTime)mt.NgayTra - mt.NgayHenTra).TotalDays;
+            return mt.NgayTra < mt.NgayHenTra ? 
+                0 : 
+                500 * (int)((DateTime)mt.NgayTra - mt.NgayHenTra).TotalDays;
         }
     }
 }

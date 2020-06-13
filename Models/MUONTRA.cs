@@ -22,6 +22,7 @@ namespace QUANLYTHUVIEN.Models
         public System.DateTime NgayHenTra { get; set; }
         public string NguoiNhanTra { get; set; }
         public Nullable<System.DateTime> NgayTra { get; set; }
+        public Nullable<int> Phi { get; set; }
     
         public virtual DOCGIA DOCGIA { get; set; }
         public virtual SACH SACH { get; set; }

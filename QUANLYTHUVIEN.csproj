@@ -119,11 +119,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ThuVien.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Muon.cs">
+    <Compile Include="MuonTra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Muon.Designer.cs">
-      <DependentUpon>Muon.cs</DependentUpon>
+    <Compile Include="MuonTra.Designer.cs">
+      <DependentUpon>MuonTra.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
@@ -157,8 +157,8 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Muon.resx">
-      <DependentUpon>Muon.cs</DependentUpon>
+    <EmbeddedResource Include="MuonTra.resx">
+      <DependentUpon>MuonTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>

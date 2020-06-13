@@ -26,13 +26,19 @@ namespace QUANLYTHUVIEN
 
         private void dataGridView_NhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            pictureBox_NhanVien.Image = null;
             maNhanVien = dataGridView_NhanVien.CurrentRow.Cells[0].Value.ToString();
-            textBox_HoVaTen.Text = dataGridView_NhanVien.CurrentRow.Cells[1].Value.ToString();
-            textBox_SoCMT.Text = dataGridView_NhanVien.CurrentRow.Cells[2].Value.ToString();
-            dateTimePicker_NgaySinh.Value = (DateTime)dataGridView_NhanVien.CurrentRow.Cells[3].Value;
-            textBox_DiaChi.Text = dataGridView_NhanVien.CurrentRow.Cells[4].Value.ToString();
-            textBox_SoDienThoai.Text = dataGridView_NhanVien.CurrentRow.Cells[5].Value.ToString();
-            textBox_Email.Text = dataGridView_NhanVien.CurrentRow.Cells[6].Value.ToString();
+            NHANVIEN nv = Ham.tv.NHANVIENs.Where(x => x.MaNhanVien == maNhanVien).SingleOrDefault();
+            textBox_HoVaTen.Text = nv.HoVaTen;
+            textBox_SoCMT.Text = nv.SoCMT;
+            dateTimePicker_NgaySinh.Value = nv.NgaySinh;
+            textBox_DiaChi.Text = nv.DiaChi;
+            textBox_SoDienThoai.Text = nv.SoDienThoai;
+            textBox_Email.Text = nv.Email;
+            textBox_Anh.Text = nv.Anh;
+            pictureBox_NhanVien.ImageLocation = nv.Anh == null ?
+                Ham.defaultNVImage :
+                nv.Anh;
         }
 
         private void textBox_TimKiem_TextChanged(object sender, EventArgs e)
@@ -49,7 +55,9 @@ namespace QUANLYTHUVIEN
                 = textBox_SoDienThoai.Text
                 = textBox_Email.Text
                 = textBox_MatKhau.Text
+                = textBox_Anh.Text
                 = "";
+            pictureBox_NhanVien.InitialImage = null;
         }
 
         private void button_Luu_Click(object sender, EventArgs e)
@@ -72,8 +80,9 @@ namespace QUANLYTHUVIEN
                 nv.DiaChi = textBox_DiaChi.Text;
                 nv.SoDienThoai = textBox_SoDienThoai.Text;
                 nv.Email = textBox_Email.Text;
-                nv.MatKhau = textBox_MatKhau.Text == "" ? Ham.getMD5("00000000") : Ham.getMD5(textBox_MatKhau.Text);
+                nv.MatKhau = textBox_MatKhau.Text == "" ? Ham.getMD5(Ham.defaultPassword) : Ham.getMD5(textBox_MatKhau.Text);
                 nv.NguoiLap = Ham.currentUser;
+                nv.Anh = textBox_Anh.Text;
                 nv.NgayLap = DateTime.Now;
                 Ham.tv.NHANVIENs.Add(nv);
                 Ham.tv.SaveChanges();
@@ -87,6 +96,7 @@ namespace QUANLYTHUVIEN
                     = textBox_MatKhau.Text
                     = "";
                 dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
+                MessageBox.Show("Thêm đối tượng thành công.");
             }
         }
 
@@ -117,9 +127,10 @@ namespace QUANLYTHUVIEN
                     nv.Email = textBox_Email.Text;
                     nv.MatKhau = textBox_MatKhau.Text == "" ? nv.MatKhau : Ham.getMD5(textBox_MatKhau.Text);
                     Ham.tv.SaveChanges();
+                    dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
+                    maNhanVien = null;
+                    MessageBox.Show("Chỉnh sửa đối tượng thành công.");
                 }
-                dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
-                maNhanVien = null;
             }
         }
 
@@ -128,6 +139,11 @@ namespace QUANLYTHUVIEN
             Ham.deleteData("NV", maNhanVien);
             dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
             maNhanVien = null;
+        }
+
+        private void textBox_Anh_TextChanged(object sender, EventArgs e)
+        {
+            pictureBox_NhanVien.ImageLocation = textBox_Anh.Text;
         }
     }
 }

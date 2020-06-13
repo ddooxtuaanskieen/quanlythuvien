@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace QUANLYTHUVIEN
 {
-    public partial class Muon : Form
+    public partial class MuonTra : Form
     {
         public static string maPhieuMuon = null;
-        public Muon()
+        public MuonTra()
         {
             InitializeComponent();
         }
