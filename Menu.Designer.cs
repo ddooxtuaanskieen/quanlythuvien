@@ -34,7 +34,7 @@
             // 
             // button_NhanVien
             // 
-            this.button_NhanVien.Location = new System.Drawing.Point(380, 145);
+            this.button_NhanVien.Location = new System.Drawing.Point(184, 85);
             this.button_NhanVien.Name = "button_NhanVien";
             this.button_NhanVien.Size = new System.Drawing.Size(75, 23);
             this.button_NhanVien.TabIndex = 0;
@@ -48,7 +48,7 @@
             this.button_Muon.Name = "button_Muon";
             this.button_Muon.Size = new System.Drawing.Size(75, 23);
             this.button_Muon.TabIndex = 1;
-            this.button_Muon.Text = "button1";
+            this.button_Muon.Text = "Mượn/Trả";
             this.button_Muon.UseVisualStyleBackColor = true;
             this.button_Muon.Click += new System.EventHandler(this.button_Muon_Click);
             // 

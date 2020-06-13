@@ -1184,39 +1184,39 @@ INSERT INTO MUONTRA VALUES
 )
 GO
 
---CREATE PROCEDURE GETAVAILABLEBOOKS
---AS
---BEGIN
---	SELECT * FROM SACH
---	WHERE SACH.NgayXoa IS NULL
---	AND SACH.MaSach NOT IN
---	(
---		SELECT MUONTRA.MaSach FROM MUONTRA
---		WHERE MUONTRA.NgayTra IS NULL
---	)
---END
---GO
+CREATE PROCEDURE GETAVAILABLEBOOKS
+AS
+BEGIN
+	SELECT * FROM SACH
+	WHERE SACH.NgayXoa IS NULL
+	AND SACH.MaSach NOT IN
+	(
+		SELECT MUONTRA.MaSach FROM MUONTRA
+		WHERE MUONTRA.NgayTra IS NULL
+	)
+END
+GO
 
---CREATE PROCEDURE GETAVALIDMEMBER(@n INT)
---AS
---BEGIN
---	n là số sách được giữ tối đa
---	SELECT * FROM DOCGIA
---	WHERE DOCGIA.NgayXoa IS NULL
---	AND DOCGIA.MaDocGia NOT IN
---	(
---		SELECT MUONTRA.MaDocGia FROM MUONTRA
---		WHERE MUONTRA.NgayTra IS NULL
---		GROUP BY MUONTRA.MaDocGia
---		HAVING COUNT(MUONTRA.MaDocGia) >= @n
---		Lọc ra những người cầm quá số sách quy định
---	)
---	AND MaDocGia NOT IN
---	(
---		SELECT DISTINCT MUONTRA.MaDocGia FROM MUONTRA
---		WHERE MUONTRA.NgayTra IS NULL
---		AND MUONTRA.NgayHenTra < GETDATE()
---		Lọc ra những người cầm sách quá hẹn mà chưa trả
---	)
---END
---GO
+CREATE PROCEDURE GETAVALIDMEMBER(@n INT)
+AS
+BEGIN
+	--n là số sách được giữ tối đa
+	SELECT * FROM DOCGIA
+	WHERE DOCGIA.NgayXoa IS NULL
+	AND DOCGIA.MaDocGia NOT IN
+	(
+		SELECT MUONTRA.MaDocGia FROM MUONTRA
+		WHERE MUONTRA.NgayTra IS NULL
+		GROUP BY MUONTRA.MaDocGia
+		HAVING COUNT(MUONTRA.MaDocGia) >= @n
+		--Lọc ra những người cầm quá số sách quy định
+	)
+	AND MaDocGia NOT IN
+	(
+		SELECT DISTINCT MUONTRA.MaDocGia FROM MUONTRA
+		WHERE MUONTRA.NgayTra IS NULL
+		AND MUONTRA.NgayHenTra < GETDATE()
+		--Lọc ra những người cầm sách quá hẹn mà chưa trả
+	)
+END
+GO

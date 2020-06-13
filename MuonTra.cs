@@ -13,7 +13,7 @@ namespace QUANLYTHUVIEN
 {
     public partial class MuonTra : Form
     {
-        public static string maPhieuMuon = null;
+        public static string maMuonTra = null;
         public MuonTra()
         {
             InitializeComponent();
@@ -23,48 +23,34 @@ namespace QUANLYTHUVIEN
         {
             dataGridView_Sach.DataSource = Ham.tv.GETAVAILABLEBOOKS();
             dataGridView_DocGia.DataSource = Ham.tv.GETAVALIDMEMBER(Ham.maxBookHold);
-            dataGridView_MuonTra.DataSource = Ham.tv.MUONTRAs.ToList();
+            dataGridView_MuonTra.DataSource = Ham.getData("MT", textBox_TimKiemMuonTra.Text);
             dateTimePicker_NgayHenTra.Value = DateTime.Now.AddDays(1);
         }
 
         private void textBox_TimKiemSach_TextChanged(object sender, EventArgs e)
         {
-            if (textBox_TimKiemSach.Text == "")
-            {
-                dataGridView_Sach.DataSource = Ham.tv.GETAVAILABLEBOOKS();
-            }
-            else
-            {
-                dataGridView_Sach.DataSource = Ham.tv.GETAVAILABLEBOOKS()
-                    .Where(x => x.MaSach.ToLower().IndexOf(textBox_TimKiemSach.Text.ToLower()) != -1
-                    || x.TieuDe.ToLower().IndexOf(textBox_TimKiemSach.Text.ToLower()) != -1)
-                    .ToList();
-            }
+            dataGridView_Sach.DataSource = Ham.tv.GETAVAILABLEBOOKS()
+                .Where(x => x.MaSach.ToLower().IndexOf(textBox_TimKiemSach.Text) != -1
+                || x.TieuDe.ToLower().IndexOf(textBox_TimKiemSach.Text) != -1)
+                .ToList();
         }
 
         private void textBox_TimKiemDocGia_TextChanged(object sender, EventArgs e)
         {
-            if (textBox_TimKiemDocGia.Text == "")
-            {
-                dataGridView_DocGia.DataSource = Ham.tv.GETAVALIDMEMBER(Ham.maxBookHold);
-            }
-            else
-            {
-                dataGridView_DocGia.DataSource = Ham.tv.GETAVALIDMEMBER(Ham.maxBookHold)
-                    .Where(x => x.MaDocGia.ToLower().IndexOf(textBox_TimKiemDocGia.Text.ToLower()) != -1
-                    || x.HoVaTen.ToLower().IndexOf(textBox_TimKiemDocGia.Text.ToLower()) != -1)
-                    .ToList();
-            }
+            dataGridView_DocGia.DataSource = Ham.tv.GETAVALIDMEMBER(Ham.maxBookHold)
+                .Where(x => x.MaDocGia.ToLower().IndexOf(textBox_TimKiemSach.Text) != -1
+                || x.HoVaTen.ToLower().IndexOf(textBox_TimKiemSach.Text) != -1)
+                .ToList();
         }
 
         private void textBox_TimKiemMuonTra_TextChanged(object sender, EventArgs e)
         {
-
+            dataGridView_MuonTra.DataSource = Ham.getData("MT", textBox_TimKiemMuonTra.Text);
         }
 
         private void dataGridView_MuonTra_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            maPhieuMuon = dataGridView_MuonTra.CurrentRow.Cells[0].Value.ToString();
+            maMuonTra = dataGridView_MuonTra.CurrentRow.Cells[0].Value.ToString();
         }
         private void dataGridView_DocGia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -97,23 +83,26 @@ namespace QUANLYTHUVIEN
 
         private void button_Xoa_Click(object sender, EventArgs e)
         {
-            Ham.deleteData("MT", maPhieuMuon);
-            //Cho nay load lai datagrid
-            maPhieuMuon = null;
+            Ham.deleteData("MT", maMuonTra);
+            dataGridView_MuonTra.DataSource = Ham.getData("MT", textBox_TimKiemMuonTra.Text);
+            maMuonTra = null;
         }
 
         private void button_TraSach_Click(object sender, EventArgs e)
         {
-            if(maPhieuMuon == null || maPhieuMuon == "")
+            if(maMuonTra == null || maMuonTra == "")
             {
                 MessageBox.Show("Vui lòng chọn phiếu mượn");
             }
             else
             {
-                MUONTRA mt = Ham.tv.MUONTRAs.Where(x => x.MaMuonTra == maPhieuMuon).SingleOrDefault();
+                MUONTRA mt = Ham.tv.MUONTRAs.Where(x => x.MaMuonTra == maMuonTra).SingleOrDefault();
                 mt.NgayTra = DateTime.Now;
                 mt.NguoiNhanTra = Ham.currentUser;
-                MessageBox.Show(Ham.getFine(maPhieuMuon).ToString());
+                int lateDay = mt.NgayTra > mt.NgayHenTra ? (int)((DateTime)mt.NgayTra - mt.NgayHenTra).TotalDays : 0;
+                Ham.tv.SaveChanges();
+                dataGridView_MuonTra.DataSource = Ham.getData("MT", textBox_TimKiemMuonTra.Text);
+                MessageBox.Show("Số ngày muộn: " + lateDay.ToString() + "\n" + "Tiền phạt: " + Ham.getFine(maMuonTra));
             }
         }
     }

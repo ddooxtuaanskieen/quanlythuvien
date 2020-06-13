@@ -55,11 +55,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BCTKDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BCTKDocGia.Designer.cs">
+      <DependentUpon>BCTKDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCTKSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BCTKSach.Designer.cs">
+      <DependentUpon>BCTKSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocGia.Designer.cs">
+      <DependentUpon>DocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="Ham.cs" />
     <Compile Include="Menu.cs">
@@ -139,6 +157,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyQuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyQuy.Designer.cs">
+      <DependentUpon>QuanLyQuy.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuenMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,12 +220,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Models\ThuVien.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ThuVien.Context.cs</LastGenOutput>
       <DependentUpon>ThuVien.edmx</DependentUpon>
+      <LastGenOutput>ThuVien.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\ThuVien.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

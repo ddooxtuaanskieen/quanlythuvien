@@ -16,6 +16,7 @@ namespace QUANLYTHUVIEN
         public static int maxLate = 2;
         public static string defaultPassword = "00000000";
         public static string defaultNVImage = "https://i.imgur.com/sIHKSa9.jpg";
+        public static int pricePerDay = 500;
         public static QUANLYTHUVIENEntities tv = new QUANLYTHUVIENEntities();
         public static string generateID(string obj)
         {
@@ -118,7 +119,8 @@ namespace QUANLYTHUVIEN
                     case "NV":
                         return tv.NHANVIENs
                             .Where(x => (x.NgayXoa == null)
-                            && (x.MaNhanVien.ToLower().IndexOf(keyword.ToLower()) != -1 || x.HoVaTen.ToLower().IndexOf(keyword.ToLower()) != -1))
+                            && (x.MaNhanVien.ToLower().IndexOf(keyword.ToLower()) != -1 
+                            || x.HoVaTen.ToLower().IndexOf(keyword.ToLower()) != -1))
                                 .Select(x => new
                                 {
                                     x.MaNhanVien,
@@ -146,7 +148,9 @@ namespace QUANLYTHUVIEN
                     //    return "DG" + (tv.DOCGIAs.Count() + 1).ToString();
                     case "MT":
                         return tv.MUONTRAs
-                            .Where(x=> x.MaMuonTra.ToLower().IndexOf(keyword.ToLower()) != -1)
+                            .Where(x=> x.MaMuonTra.ToLower().IndexOf(keyword.ToLower()) != -1
+                            || x.MaDocGia.ToLower().IndexOf(keyword.ToLower()) != -1
+                            || x.MaSach.ToLower().IndexOf(keyword.ToLower()) != -1)
                                 .Select(x => new
                                 {
                                     x.MaMuonTra,
@@ -214,12 +218,12 @@ namespace QUANLYTHUVIEN
             }
 
         }
-        public static int getFine(string maMuon)
+        public static int getFine(string maMuonTra)
         {
-            MUONTRA mt = tv.MUONTRAs.Where(x => x.MaMuonTra == maMuon).SingleOrDefault();
+            MUONTRA mt = tv.MUONTRAs.Where(x => x.MaMuonTra == maMuonTra).SingleOrDefault();
             return mt.NgayTra < mt.NgayHenTra ? 
-                0 : 
-                500 * (int)((DateTime)mt.NgayTra - mt.NgayHenTra).TotalDays;
+                0 :
+                pricePerDay * (int)((DateTime)mt.NgayTra - mt.NgayHenTra).TotalDays;
         }
     }
 }

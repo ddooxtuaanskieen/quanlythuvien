@@ -51,6 +51,7 @@
             this.textBox_MaNhanVien.Name = "textBox_MaNhanVien";
             this.textBox_MaNhanVien.Size = new System.Drawing.Size(100, 20);
             this.textBox_MaNhanVien.TabIndex = 1;
+            this.textBox_MaNhanVien.Text = "nv1";
             // 
             // textBox_MatKhau
             // 
@@ -58,6 +59,7 @@
             this.textBox_MatKhau.Name = "textBox_MatKhau";
             this.textBox_MatKhau.Size = new System.Drawing.Size(100, 20);
             this.textBox_MatKhau.TabIndex = 3;
+            this.textBox_MatKhau.Text = "00000000";
             // 
             // label2
             // 
@@ -90,6 +92,7 @@
             // 
             // DangNhap
             // 
+            this.AcceptButton = this.button_DangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
