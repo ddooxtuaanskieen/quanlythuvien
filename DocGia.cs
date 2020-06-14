@@ -14,6 +14,17 @@ namespace QUANLYTHUVIEN
     public partial class DocGia : Form
     {
         public string maDocGia = null;
+        public void clearDGInput()
+        {
+            textBox_HoVaTen.Text
+                = textBox_SoCMT.Text
+                = textBox_DiaChi.Text
+                = textBox_SoDienThoai.Text
+                = textBox_Email.Text
+                = textBox_Anh.Text
+                = "";
+            pictureBox_DocGia.Image = null;
+        }
         public DocGia()
         {
             InitializeComponent();
@@ -49,14 +60,7 @@ namespace QUANLYTHUVIEN
         private void button_Them_Click(object sender, EventArgs e)
         {
             maDocGia = null;
-            textBox_HoVaTen.Text
-                = textBox_SoCMT.Text
-                = textBox_DiaChi.Text
-                = textBox_SoDienThoai.Text
-                = textBox_Email.Text
-                = textBox_Anh.Text
-                = "";
-            pictureBox_DocGia.InitialImage = null;
+            clearDGInput();
         }
 
         private void button_Luu_Click(object sender, EventArgs e)
@@ -86,12 +90,7 @@ namespace QUANLYTHUVIEN
                 Ham.tv.SaveChanges();
 
                 maDocGia = null;
-                textBox_HoVaTen.Text
-                    = textBox_SoCMT.Text
-                    = textBox_DiaChi.Text
-                    = textBox_SoDienThoai.Text
-                    = textBox_Email.Text
-                    = "";
+                clearDGInput();
                 dataGridView_Docgia.DataSource = Ham.getData("DG", textBox_TimKiem.Text);
                 MessageBox.Show("Thêm đối tượng thành công.");
             }
@@ -123,18 +122,22 @@ namespace QUANLYTHUVIEN
                     dg.SoDienThoai = textBox_SoDienThoai.Text;
                     dg.Email = textBox_Email.Text;
                     Ham.tv.SaveChanges();
-                    dataGridView_Docgia.DataSource = Ham.getData("DG", textBox_TimKiem.Text);
+
                     maDocGia = null;
+                    clearDGInput();
+                    dataGridView_Docgia.DataSource = Ham.getData("DG", textBox_TimKiem.Text);
                     MessageBox.Show("Chỉnh sửa đối tượng thành công.");
                 }
             }
         }
-            
+
         private void button_Xoa_Click(object sender, EventArgs e)
         {
             Ham.deleteData("DG", maDocGia);
-            dataGridView_Docgia.DataSource = Ham.getData("DG", textBox_TimKiem.Text);
+
             maDocGia = null;
+            clearDGInput();
+            dataGridView_Docgia.DataSource = Ham.getData("DG", textBox_TimKiem.Text);
         }
 
         private void textBox_Anh_TextChanged(object sender, EventArgs e)

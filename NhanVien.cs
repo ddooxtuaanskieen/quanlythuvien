@@ -18,7 +18,18 @@ namespace QUANLYTHUVIEN
         {
             InitializeComponent();
         }
-
+        public void clearNVInput()
+        {
+            textBox_HoVaTen.Text
+                = textBox_SoCMT.Text
+                = textBox_DiaChi.Text
+                = textBox_SoDienThoai.Text
+                = textBox_Email.Text
+                = textBox_MatKhau.Text
+                = textBox_Anh.Text
+                = "";
+            pictureBox_NhanVien.Image = null;
+        }
         private void NhanVien_Load(object sender, EventArgs e)
         {
             dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
@@ -49,15 +60,7 @@ namespace QUANLYTHUVIEN
         private void button_Them_Click(object sender, EventArgs e)
         {
             maNhanVien = null;
-            textBox_HoVaTen.Text
-                = textBox_SoCMT.Text
-                = textBox_DiaChi.Text
-                = textBox_SoDienThoai.Text
-                = textBox_Email.Text
-                = textBox_MatKhau.Text
-                = textBox_Anh.Text
-                = "";
-            pictureBox_NhanVien.InitialImage = null;
+            clearNVInput();
         }
 
         private void button_Luu_Click(object sender, EventArgs e)
@@ -88,14 +91,7 @@ namespace QUANLYTHUVIEN
                 Ham.tv.SaveChanges();
 
                 maNhanVien = null;
-                textBox_HoVaTen.Text
-                    = textBox_SoCMT.Text
-                    = textBox_DiaChi.Text
-                    = textBox_SoDienThoai.Text
-                    = textBox_Email.Text
-                    = textBox_MatKhau.Text
-                    = "";
-                pictureBox_NhanVien.InitialImage = null;
+                clearNVInput();
                 dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
                 MessageBox.Show("Thêm đối tượng thành công.");
             }
@@ -128,8 +124,10 @@ namespace QUANLYTHUVIEN
                     nv.Email = textBox_Email.Text;
                     nv.MatKhau = textBox_MatKhau.Text == "" ? nv.MatKhau : Ham.getMD5(textBox_MatKhau.Text);
                     Ham.tv.SaveChanges();
-                    dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
+
                     maNhanVien = null;
+                    clearNVInput();
+                    dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
                     MessageBox.Show("Chỉnh sửa đối tượng thành công.");
                 }
             }
@@ -138,8 +136,11 @@ namespace QUANLYTHUVIEN
         private void button_Xoa_Click(object sender, EventArgs e)
         {
             Ham.deleteData("NV", maNhanVien);
-            dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
+
             maNhanVien = null;
+            clearNVInput();
+            dataGridView_NhanVien.DataSource = Ham.getData("NV", textBox_TimKiem.Text);
+            
         }
 
         private void textBox_Anh_TextChanged(object sender, EventArgs e)

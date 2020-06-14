@@ -14,6 +14,18 @@ namespace QUANLYTHUVIEN
     public partial class Sach : Form
     {
         public string maSach = null;
+        public void clearSInput()
+        {
+            textBox_TieuDe.Text
+                = textBox_NhaXuatBan.Text
+                = textBox_NgonNgu.Text
+                = textBox_MoTa.Text
+                = textBox_Gia.Text
+                = textBox_Anh.Text
+                = "";
+            pictureBox_Sach.Image = null;
+
+        }
         public Sach()
         {
             InitializeComponent();
@@ -36,7 +48,7 @@ namespace QUANLYTHUVIEN
             textBox_Gia.Text = s.Gia.ToString();
             textBox_Anh.Text = s.Anh;
             pictureBox_Sach.ImageLocation = s.Anh == null ?
-                Ham.defaultNVImage :
+                Ham.defaultSImage :
                 s.Anh;
         }
 
@@ -48,14 +60,7 @@ namespace QUANLYTHUVIEN
         private void button_Them_Click(object sender, EventArgs e)
         {
             maSach = null;
-            textBox_TieuDe.Text
-                = textBox_NhaXuatBan.Text
-                = textBox_NgonNgu.Text
-                = textBox_MoTa.Text
-                = textBox_Gia.Text
-                = textBox_Anh.Text
-                = "";
-            pictureBox_Sach.InitialImage = null;
+            clearSInput();
         }
 
         private void button_Luu_Click(object sender, EventArgs e)
@@ -68,26 +73,20 @@ namespace QUANLYTHUVIEN
             else
             {
                 SACH s = new SACH();
-                s.MaSach = Ham.generateID("NV");
+                s.MaSach = Ham.generateID("S");
                 s.TieuDe = textBox_TieuDe.Text;
                 s.NhaXuatBan = textBox_NhaXuatBan.Text;
                 s.NgonNgu = textBox_NgonNgu.Text;
                 s.Mota = textBox_MoTa.Text;
-                s.Gia = Int32.TryParse(textBox_Gia.Text, out int y) ? Int32.Parse(textBox_Gia.Text) : 0; s.NguoiLap = Ham.currentUser;
+                s.Gia = Int32.TryParse(textBox_Gia.Text, out int y) ? Int32.Parse(textBox_Gia.Text) : 0;
+                s.NguoiLap = Ham.currentUser;
                 s.Anh = textBox_Anh.Text;
                 s.NgayLap = DateTime.Now;
                 Ham.tv.SACHes.Add(s);
                 Ham.tv.SaveChanges();
 
                 maSach = null;
-                textBox_TieuDe.Text
-                    = textBox_NhaXuatBan.Text
-                    = textBox_NgonNgu.Text
-                    = textBox_MoTa.Text
-                    = textBox_Gia.Text
-                    = textBox_Anh.Text
-                    = "";
-                pictureBox_Sach.InitialImage = null;
+                clearSInput();
                 dataGridView_Sach.DataSource = Ham.getData("S", textBox_TimKiem.Text);
                 MessageBox.Show("Thêm đối tượng thành công.");
             }
@@ -115,8 +114,10 @@ namespace QUANLYTHUVIEN
                     s.Mota = textBox_MoTa.Text;
                     s.Gia = Int32.TryParse(textBox_Gia.Text, out int y) ? Int32.Parse(textBox_Gia.Text) : 0;
                     Ham.tv.SaveChanges();
-                    dataGridView_Sach.DataSource = Ham.getData("S", textBox_TimKiem.Text);
+                    
                     maSach = null;
+                    clearSInput();
+                    dataGridView_Sach.DataSource = Ham.getData("S", textBox_TimKiem.Text);
                     MessageBox.Show("Chỉnh sửa đối tượng thành công.");
                 }
             }
@@ -125,8 +126,10 @@ namespace QUANLYTHUVIEN
         private void button_Xoa_Click(object sender, EventArgs e)
         {
             Ham.deleteData("S", maSach);
-            dataGridView_Sach.DataSource = Ham.getData("S", textBox_TimKiem.Text);
+            
             maSach = null;
+            clearSInput();
+            dataGridView_Sach.DataSource = Ham.getData("S", textBox_TimKiem.Text);
         }
 
         private void textBox_Anh_TextChanged(object sender, EventArgs e)

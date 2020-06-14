@@ -15,9 +15,9 @@ namespace QUANLYTHUVIEN
         public static int maxBookHold = 2;
         public static int maxLate = 2;
         public static string defaultPassword = "00000000";
-        public static string defaultNVImage = "https://i.imgur.com/sIHKSa9.jpg";
-        public static string defaultDGImage = "https://i.imgur.com/sIHKSa9.jpg";
-        public static string defaultSImage = "https://i.imgur.com/sIHKSa9.jpg";
+        public static string defaultNVImage = "https://i.imgur.com/LbORpEI.png";
+        public static string defaultDGImage = "https://i.imgur.com/LbORpEI.png";
+        public static string defaultSImage = "https://i.imgur.com/m13VNIS.png";
 
         public static int pricePerDay = 500;
         public static QUANLYTHUVIENEntities tv = new QUANLYTHUVIENEntities();
