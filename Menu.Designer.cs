@@ -37,7 +37,7 @@
             // 
             // button_NhanVien
             // 
-            this.button_NhanVien.Location = new System.Drawing.Point(84, 83);
+            this.button_NhanVien.Location = new System.Drawing.Point(273, 229);
             this.button_NhanVien.Name = "button_NhanVien";
             this.button_NhanVien.Size = new System.Drawing.Size(75, 23);
             this.button_NhanVien.TabIndex = 0;
@@ -95,7 +95,9 @@
             this.Controls.Add(this.button_DocGia);
             this.Controls.Add(this.button_MuonTra);
             this.Controls.Add(this.button_NhanVien);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.ResumeLayout(false);
 

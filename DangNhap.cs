@@ -53,5 +53,25 @@ namespace QUANLYTHUVIEN
         {
             
         }
+
+        private void textBox_MatKhau_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (textBox_MatKhau.Text == "Mật khẩu") textBox_MatKhau.Clear();
+        }
+
+        private void textBox_MaNhanVien_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (textBox_MaNhanVien.Text == "Mã nhân viên") textBox_MaNhanVien.Clear();
+        }
+
+        private void pictureBox_Exit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox_Instagram_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.instagram.com/ddooxtuaanskieen/");
+        }
     }
 }

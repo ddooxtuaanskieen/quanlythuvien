@@ -213,6 +213,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
@@ -252,6 +253,16 @@
       <DependentUpon>ThuVien.edmx</DependentUpon>
       <LastGenOutput>ThuVien.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\facebook.png" />
+    <None Include="Resources\Instagram-icon-WHITE.png" />
+    <None Include="Resources\download %281%29.png" />
+    <None Include="Resources\download3.png" />
+    <None Include="Resources\book-icon-white-color-11550252205mylh7bxi14.png" />
+    <None Include="Resources\download2.png" />
+    <None Include="Resources\download1.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\iconfinder_icons_password_1564520.png" />
+    <None Include="Resources\iconfinder_Username_372902.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
