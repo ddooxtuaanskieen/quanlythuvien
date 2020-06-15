@@ -277,5 +277,16 @@ namespace QUANLYTHUVIEN
                 0 :
                 pricePerDay * (int)((DateTime)mt.NgayTra - mt.NgayHenTra).TotalDays;
         }
+        public static void openFormInPanel(Form myForm, Panel MyPanel)
+        {
+            MyPanel.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.FormBorderStyle = FormBorderStyle.None;
+            myForm.Dock = DockStyle.Fill;
+            MyPanel.Controls.Add(myForm);
+            MyPanel.Tag = myForm;
+            myForm.BringToFront();
+            myForm.Show();
+        }
     }
 }
