@@ -76,7 +76,7 @@ namespace QUANLYTHUVIEN
             this.textBox_Anh.ForeColor = System.Drawing.Color.Crimson;
             this.textBox_Anh.Location = new System.Drawing.Point(558, 213);
             this.textBox_Anh.Name = "textBox_Anh";
-            this.textBox_Anh.Size = new System.Drawing.Size(291, 19);
+            this.textBox_Anh.Size = new System.Drawing.Size(314, 19);
             this.textBox_Anh.TabIndex = 47;
             this.textBox_Anh.TextChanged += new System.EventHandler(this.textBox_Anh_TextChanged);
             // 
@@ -97,16 +97,16 @@ namespace QUANLYTHUVIEN
             this.dateTimePicker_NgaySinh.CalendarTrailingForeColor = System.Drawing.Color.Crimson;
             this.dateTimePicker_NgaySinh.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_NgaySinh.Location = new System.Drawing.Point(558, 162);
+            this.dateTimePicker_NgaySinh.Location = new System.Drawing.Point(558, 145);
             this.dateTimePicker_NgaySinh.Name = "dateTimePicker_NgaySinh";
-            this.dateTimePicker_NgaySinh.Size = new System.Drawing.Size(135, 26);
+            this.dateTimePicker_NgaySinh.Size = new System.Drawing.Size(150, 26);
             this.dateTimePicker_NgaySinh.TabIndex = 44;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(453, 168);
+            this.label8.Location = new System.Drawing.Point(453, 151);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 19);
             this.label8.TabIndex = 43;
@@ -119,7 +119,7 @@ namespace QUANLYTHUVIEN
             this.textBox_Email.ForeColor = System.Drawing.Color.Crimson;
             this.textBox_Email.Location = new System.Drawing.Point(558, 262);
             this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(291, 19);
+            this.textBox_Email.Size = new System.Drawing.Size(314, 19);
             this.textBox_Email.TabIndex = 40;
             // 
             // label5
@@ -137,16 +137,16 @@ namespace QUANLYTHUVIEN
             this.textBox_SoDienThoai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_SoDienThoai.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_SoDienThoai.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox_SoDienThoai.Location = new System.Drawing.Point(558, 121);
+            this.textBox_SoDienThoai.Location = new System.Drawing.Point(558, 104);
             this.textBox_SoDienThoai.Name = "textBox_SoDienThoai";
-            this.textBox_SoDienThoai.Size = new System.Drawing.Size(135, 19);
+            this.textBox_SoDienThoai.Size = new System.Drawing.Size(150, 19);
             this.textBox_SoDienThoai.TabIndex = 38;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(453, 121);
+            this.label4.Location = new System.Drawing.Point(453, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 19);
             this.label4.TabIndex = 37;
@@ -178,16 +178,16 @@ namespace QUANLYTHUVIEN
             this.textBox_SoCMT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_SoCMT.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_SoCMT.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox_SoCMT.Location = new System.Drawing.Point(558, 76);
+            this.textBox_SoCMT.Location = new System.Drawing.Point(558, 59);
             this.textBox_SoCMT.Name = "textBox_SoCMT";
-            this.textBox_SoCMT.Size = new System.Drawing.Size(135, 19);
+            this.textBox_SoCMT.Size = new System.Drawing.Size(150, 19);
             this.textBox_SoCMT.TabIndex = 34;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(453, 76);
+            this.label2.Location = new System.Drawing.Point(453, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 19);
             this.label2.TabIndex = 33;
@@ -198,16 +198,16 @@ namespace QUANLYTHUVIEN
             this.textBox_HoVaTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_HoVaTen.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_HoVaTen.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox_HoVaTen.Location = new System.Drawing.Point(558, 29);
+            this.textBox_HoVaTen.Location = new System.Drawing.Point(558, 12);
             this.textBox_HoVaTen.Name = "textBox_HoVaTen";
-            this.textBox_HoVaTen.Size = new System.Drawing.Size(135, 19);
+            this.textBox_HoVaTen.Size = new System.Drawing.Size(150, 19);
             this.textBox_HoVaTen.TabIndex = 32;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(453, 29);
+            this.label1.Location = new System.Drawing.Point(453, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 19);
             this.label1.TabIndex = 31;
@@ -242,10 +242,10 @@ namespace QUANLYTHUVIEN
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView_Docgia.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_Docgia.EnableHeadersVisualStyles = false;
-            this.dataGridView_Docgia.Location = new System.Drawing.Point(24, 118);
+            this.dataGridView_Docgia.Location = new System.Drawing.Point(12, 123);
             this.dataGridView_Docgia.Name = "dataGridView_Docgia";
             this.dataGridView_Docgia.RowTemplate.Height = 25;
-            this.dataGridView_Docgia.Size = new System.Drawing.Size(400, 418);
+            this.dataGridView_Docgia.Size = new System.Drawing.Size(400, 420);
             this.dataGridView_Docgia.TabIndex = 30;
             this.dataGridView_Docgia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Docgia_CellClick);
             // 
@@ -310,33 +310,33 @@ namespace QUANLYTHUVIEN
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
-            this.panel1.Location = new System.Drawing.Point(558, 48);
+            this.panel1.Location = new System.Drawing.Point(558, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(135, 4);
+            this.panel1.Size = new System.Drawing.Size(150, 4);
             this.panel1.TabIndex = 50;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
-            this.panel3.Location = new System.Drawing.Point(558, 95);
+            this.panel3.Location = new System.Drawing.Point(558, 78);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(135, 4);
+            this.panel3.Size = new System.Drawing.Size(150, 4);
             this.panel3.TabIndex = 51;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
-            this.panel4.Location = new System.Drawing.Point(558, 140);
+            this.panel4.Location = new System.Drawing.Point(558, 123);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(135, 4);
+            this.panel4.Size = new System.Drawing.Size(150, 4);
             this.panel4.TabIndex = 52;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(20)))), ((int)(((byte)(60)))));
-            this.panel5.Location = new System.Drawing.Point(558, 185);
+            this.panel5.Location = new System.Drawing.Point(558, 168);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(135, 4);
+            this.panel5.Size = new System.Drawing.Size(150, 4);
             this.panel5.TabIndex = 53;
             // 
             // panel6
@@ -368,7 +368,7 @@ namespace QUANLYTHUVIEN
             this.label6.BackColor = System.Drawing.Color.Crimson;
             this.label6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(24, 73);
+            this.label6.Location = new System.Drawing.Point(12, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(400, 45);
             this.label6.TabIndex = 57;
@@ -387,7 +387,7 @@ namespace QUANLYTHUVIEN
             // 
             // pictureBox_DocGia
             // 
-            this.pictureBox_DocGia.Location = new System.Drawing.Point(729, 29);
+            this.pictureBox_DocGia.Location = new System.Drawing.Point(752, 12);
             this.pictureBox_DocGia.Name = "pictureBox_DocGia";
             this.pictureBox_DocGia.Size = new System.Drawing.Size(120, 160);
             this.pictureBox_DocGia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

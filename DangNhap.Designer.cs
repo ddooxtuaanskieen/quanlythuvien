@@ -37,21 +37,21 @@ namespace QUANLYTHUVIEN
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox_Exit = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox_Instagram = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Exit = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Instagram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox_MaNhanVien
@@ -142,16 +142,6 @@ namespace QUANLYTHUVIEN
             this.panel3.Size = new System.Drawing.Size(150, 4);
             this.panel3.TabIndex = 9;
             // 
-            // pictureBox_Exit
-            // 
-            this.pictureBox_Exit.BackColor = System.Drawing.Color.Crimson;
-            this.pictureBox_Exit.Location = new System.Drawing.Point(568, 12);
-            this.pictureBox_Exit.Name = "pictureBox_Exit";
-            this.pictureBox_Exit.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox_Exit.TabIndex = 10;
-            this.pictureBox_Exit.TabStop = false;
-            this.pictureBox_Exit.Click += new System.EventHandler(this.pictureBox_Exit_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QUANLYTHUVIEN.Properties.Resources.iconfinder_icons_password_1564520;
@@ -211,6 +201,16 @@ namespace QUANLYTHUVIEN
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
+            // pictureBox_Exit
+            // 
+            this.pictureBox_Exit.BackColor = System.Drawing.Color.Crimson;
+            this.pictureBox_Exit.Location = new System.Drawing.Point(568, 12);
+            this.pictureBox_Exit.Name = "pictureBox_Exit";
+            this.pictureBox_Exit.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox_Exit.TabIndex = 10;
+            this.pictureBox_Exit.TabStop = false;
+            this.pictureBox_Exit.Click += new System.EventHandler(this.pictureBox_Exit_Click);
+            // 
             // DangNhap
             // 
             this.AcceptButton = this.button_DangNhap;
@@ -235,13 +235,13 @@ namespace QUANLYTHUVIEN
             this.Text = "DangNhap";
             this.Load += new System.EventHandler(this.DangNhap_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Instagram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,9 +258,9 @@ namespace QUANLYTHUVIEN
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox_Exit;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox_Instagram;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox_Exit;
     }
 }
