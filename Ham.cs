@@ -12,8 +12,6 @@ namespace QUANLYTHUVIEN
 {
     public static class Ham
     {
-        public static Color firstColor = Color.FromArgb(255, 255, 255);
-        public static Color secondColor = Color.FromArgb(220, 20, 60);
         public static string currentUser = null;
         public static int maxBookHold = 2;
         public static int maxLate = 2;

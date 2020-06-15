@@ -253,6 +253,8 @@
       <DependentUpon>ThuVien.edmx</DependentUpon>
       <LastGenOutput>ThuVien.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\search.png" />
     <None Include="Resources\facebook.png" />
     <None Include="Resources\Instagram-icon-WHITE.png" />
     <None Include="Resources\download %281%29.png" />
