@@ -21,8 +21,12 @@ namespace QUANLYTHUVIEN
 
         private void Muon_Load(object sender, EventArgs e)
         {
-            dataGridView_Sach.DataSource = Ham.tv.GETAVAILABLEBOOKS();
-            dataGridView_DocGia.DataSource = Ham.tv.GETAVALIDMEMBER(Ham.maxBookHold);
+            dataGridView_Sach.DataSource = Ham.tv.GETAVAILABLEBOOKS()
+                .Select(x => new { x.MaSach, x.TieuDe})
+                .ToList();
+            dataGridView_DocGia.DataSource = Ham.tv.GETAVALIDMEMBER(Ham.maxBookHold)
+                .Select(x => new {x.MaDocGia, x.HoVaTen })
+                .ToList();
             dataGridView_MuonTra.DataSource = Ham.getData("MT", textBox_TimKiemMuonTra.Text);
             dateTimePicker_NgayHenTra.Value = DateTime.Now.AddDays(1);
         }
@@ -30,16 +34,18 @@ namespace QUANLYTHUVIEN
         private void textBox_TimKiemSach_TextChanged(object sender, EventArgs e)
         {
             dataGridView_Sach.DataSource = Ham.tv.GETAVAILABLEBOOKS()
-                .Where(x => x.MaSach.ToLower().IndexOf(textBox_TimKiemSach.Text) != -1
-                || x.TieuDe.ToLower().IndexOf(textBox_TimKiemSach.Text) != -1)
+                .Where(x => x.MaSach.ToLower().IndexOf(textBox_TimKiemSach.Text.ToLower()) != -1
+                || x.TieuDe.ToLower().IndexOf(textBox_TimKiemSach.Text.ToLower()) != -1)
+                .Select(x => new {x.MaSach, x.TieuDe })
                 .ToList();
         }
 
         private void textBox_TimKiemDocGia_TextChanged(object sender, EventArgs e)
         {
             dataGridView_DocGia.DataSource = Ham.tv.GETAVALIDMEMBER(Ham.maxBookHold)
-                .Where(x => x.MaDocGia.ToLower().IndexOf(textBox_TimKiemSach.Text) != -1
-                || x.HoVaTen.ToLower().IndexOf(textBox_TimKiemSach.Text) != -1)
+                .Where(x => x.MaDocGia.ToLower().IndexOf(textBox_TimKiemDocGia.Text.ToLower()) != -1
+                || x.HoVaTen.ToLower().IndexOf(textBox_TimKiemDocGia.Text.ToLower()) != -1)
+                .Select(x => new {x.MaDocGia, x.HoVaTen })
                 .ToList();
         }
 
