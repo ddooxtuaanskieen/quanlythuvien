@@ -92,9 +92,6 @@ namespace QUANLYTHUVIEN
             // 
             // dateTimePicker_NgaySinh
             // 
-            this.dateTimePicker_NgaySinh.CalendarForeColor = System.Drawing.Color.Crimson;
-            this.dateTimePicker_NgaySinh.CalendarTitleForeColor = System.Drawing.Color.Crimson;
-            this.dateTimePicker_NgaySinh.CalendarTrailingForeColor = System.Drawing.Color.Crimson;
             this.dateTimePicker_NgaySinh.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_NgaySinh.Location = new System.Drawing.Point(558, 145);
