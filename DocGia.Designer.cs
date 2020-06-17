@@ -50,8 +50,6 @@ namespace QUANLYTHUVIEN
             this.dataGridView_Docgia = new System.Windows.Forms.DataGridView();
             this.textBox_TimKiem = new System.Windows.Forms.TextBox();
             this.button_Xoa = new System.Windows.Forms.Button();
-            this.button_CapNhat = new System.Windows.Forms.Button();
-            this.button_ThemMoi = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -63,6 +61,8 @@ namespace QUANLYTHUVIEN
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox_DocGia = new System.Windows.Forms.PictureBox();
+            this.button_CapNhat = new System.Windows.Forms.Button();
+            this.button_ThemMoi = new System.Windows.Forms.Button();
             this.button_Tao = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Docgia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -262,6 +262,8 @@ namespace QUANLYTHUVIEN
             this.button_Xoa.FlatAppearance.BorderSize = 2;
             this.button_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Xoa.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Xoa.Image = global::QUANLYTHUVIEN.Properties.Resources.DELETE;
+            this.button_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Xoa.Location = new System.Drawing.Point(679, 496);
             this.button_Xoa.Name = "button_Xoa";
             this.button_Xoa.Size = new System.Drawing.Size(170, 40);
@@ -269,32 +271,6 @@ namespace QUANLYTHUVIEN
             this.button_Xoa.Text = "Xóa";
             this.button_Xoa.UseVisualStyleBackColor = true;
             this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click);
-            // 
-            // button_CapNhat
-            // 
-            this.button_CapNhat.FlatAppearance.BorderSize = 2;
-            this.button_CapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_CapNhat.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_CapNhat.Location = new System.Drawing.Point(679, 429);
-            this.button_CapNhat.Name = "button_CapNhat";
-            this.button_CapNhat.Size = new System.Drawing.Size(170, 40);
-            this.button_CapNhat.TabIndex = 27;
-            this.button_CapNhat.Text = "Cập nhật";
-            this.button_CapNhat.UseVisualStyleBackColor = true;
-            this.button_CapNhat.Click += new System.EventHandler(this.button_CapNhat_Click);
-            // 
-            // button_ThemMoi
-            // 
-            this.button_ThemMoi.FlatAppearance.BorderSize = 2;
-            this.button_ThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ThemMoi.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ThemMoi.Location = new System.Drawing.Point(457, 496);
-            this.button_ThemMoi.Name = "button_ThemMoi";
-            this.button_ThemMoi.Size = new System.Drawing.Size(170, 40);
-            this.button_ThemMoi.TabIndex = 26;
-            this.button_ThemMoi.Text = "Thêm";
-            this.button_ThemMoi.UseVisualStyleBackColor = true;
-            this.button_ThemMoi.Click += new System.EventHandler(this.button_Luu_Click);
             // 
             // panel2
             // 
@@ -391,12 +367,43 @@ namespace QUANLYTHUVIEN
             this.pictureBox_DocGia.TabIndex = 46;
             this.pictureBox_DocGia.TabStop = false;
             // 
+            // button_CapNhat
+            // 
+            this.button_CapNhat.FlatAppearance.BorderSize = 2;
+            this.button_CapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_CapNhat.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_CapNhat.Image = global::QUANLYTHUVIEN.Properties.Resources.UPDATE1;
+            this.button_CapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_CapNhat.Location = new System.Drawing.Point(679, 429);
+            this.button_CapNhat.Name = "button_CapNhat";
+            this.button_CapNhat.Size = new System.Drawing.Size(170, 40);
+            this.button_CapNhat.TabIndex = 27;
+            this.button_CapNhat.Text = "Cập nhật";
+            this.button_CapNhat.UseVisualStyleBackColor = true;
+            this.button_CapNhat.Click += new System.EventHandler(this.button_CapNhat_Click);
+            // 
+            // button_ThemMoi
+            // 
+            this.button_ThemMoi.FlatAppearance.BorderSize = 2;
+            this.button_ThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ThemMoi.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ThemMoi.Image = global::QUANLYTHUVIEN.Properties.Resources.SAVE;
+            this.button_ThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_ThemMoi.Location = new System.Drawing.Point(457, 496);
+            this.button_ThemMoi.Name = "button_ThemMoi";
+            this.button_ThemMoi.Size = new System.Drawing.Size(170, 40);
+            this.button_ThemMoi.TabIndex = 26;
+            this.button_ThemMoi.Text = "Thêm";
+            this.button_ThemMoi.UseVisualStyleBackColor = true;
+            this.button_ThemMoi.Click += new System.EventHandler(this.button_Luu_Click);
+            // 
             // button_Tao
             // 
             this.button_Tao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Tao.FlatAppearance.BorderSize = 2;
             this.button_Tao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Tao.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Tao.Image = global::QUANLYTHUVIEN.Properties.Resources.NEW;
             this.button_Tao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Tao.Location = new System.Drawing.Point(457, 429);
             this.button_Tao.Name = "button_Tao";

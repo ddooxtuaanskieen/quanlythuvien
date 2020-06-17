@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BCTKSachDocGia));
             this.dataGridView_DanhSachDen = new System.Windows.Forms.DataGridView();
             this.dataGridView_TopDocGia = new System.Windows.Forms.DataGridView();
             this.dataGridView_TopSach = new System.Windows.Forms.DataGridView();
@@ -75,15 +76,16 @@
             this.dataGridView_DanhSachDen.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView_DanhSachDen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_DanhSachDen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Crimson;
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Crimson;
@@ -91,119 +93,63 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView_DanhSachDen.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_DanhSachDen.EnableHeadersVisualStyles = false;
-            this.dataGridView_DanhSachDen.RowTemplate.Height = 25;
-
-            this.dataGridView_DanhSachDen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_DanhSachDen.Location = new System.Drawing.Point(12, 90);
             this.dataGridView_DanhSachDen.Name = "dataGridView_DanhSachDen";
+            this.dataGridView_DanhSachDen.RowTemplate.Height = 25;
             this.dataGridView_DanhSachDen.Size = new System.Drawing.Size(400, 170);
             this.dataGridView_DanhSachDen.TabIndex = 0;
             // 
             // dataGridView_TopDocGia
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Crimson;
             this.dataGridView_TopDocGia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_TopDocGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_TopDocGia.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_TopDocGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_TopDocGia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView_TopDocGia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView_TopDocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_TopDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_TopDocGia.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_TopDocGia.EnableHeadersVisualStyles = false;
-            this.dataGridView_TopDocGia.RowTemplate.Height = 25;
-
-            this.dataGridView_TopDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_TopDocGia.Location = new System.Drawing.Point(472, 90);
             this.dataGridView_TopDocGia.Name = "dataGridView_TopDocGia";
+            this.dataGridView_TopDocGia.RowTemplate.Height = 25;
             this.dataGridView_TopDocGia.Size = new System.Drawing.Size(400, 170);
             this.dataGridView_TopDocGia.TabIndex = 1;
             // 
             // dataGridView_TopSach
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Crimson;
             this.dataGridView_TopSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_TopSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_TopSach.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_TopSach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_TopSach.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView_TopSach.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView_TopSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_TopSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_TopSach.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_TopSach.EnableHeadersVisualStyles = false;
-            this.dataGridView_TopSach.RowTemplate.Height = 25;
-
-            this.dataGridView_TopSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_TopSach.Location = new System.Drawing.Point(472, 379);
             this.dataGridView_TopSach.Name = "dataGridView_TopSach";
+            this.dataGridView_TopSach.RowTemplate.Height = 25;
             this.dataGridView_TopSach.Size = new System.Drawing.Size(400, 170);
             this.dataGridView_TopSach.TabIndex = 3;
             // 
             // dataGridView_SachKhaDung
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Crimson;
             this.dataGridView_SachKhaDung.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_SachKhaDung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_SachKhaDung.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_SachKhaDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_SachKhaDung.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView_SachKhaDung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView_SachKhaDung.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_SachKhaDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_SachKhaDung.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_SachKhaDung.EnableHeadersVisualStyles = false;
-            this.dataGridView_SachKhaDung.RowTemplate.Height = 25;
-
-            this.dataGridView_SachKhaDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_SachKhaDung.Location = new System.Drawing.Point(12, 379);
             this.dataGridView_SachKhaDung.Name = "dataGridView_SachKhaDung";
+            this.dataGridView_SachKhaDung.RowTemplate.Height = 25;
             this.dataGridView_SachKhaDung.Size = new System.Drawing.Size(400, 170);
             this.dataGridView_SachKhaDung.TabIndex = 2;
             // 
@@ -336,6 +282,7 @@
             this.button_SachMuonNhieu.FlatAppearance.BorderSize = 2;
             this.button_SachMuonNhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_SachMuonNhieu.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_SachMuonNhieu.Image = ((System.Drawing.Image)(resources.GetObject("button_SachMuonNhieu.Image")));
             this.button_SachMuonNhieu.Location = new System.Drawing.Point(832, 297);
             this.button_SachMuonNhieu.Name = "button_SachMuonNhieu";
             this.button_SachMuonNhieu.Size = new System.Drawing.Size(40, 40);
@@ -388,6 +335,7 @@
             this.button_DocGiaMuonNhieu.FlatAppearance.BorderSize = 2;
             this.button_DocGiaMuonNhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_DocGiaMuonNhieu.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DocGiaMuonNhieu.Image = ((System.Drawing.Image)(resources.GetObject("button_DocGiaMuonNhieu.Image")));
             this.button_DocGiaMuonNhieu.Location = new System.Drawing.Point(832, 7);
             this.button_DocGiaMuonNhieu.Name = "button_DocGiaMuonNhieu";
             this.button_DocGiaMuonNhieu.Size = new System.Drawing.Size(40, 40);

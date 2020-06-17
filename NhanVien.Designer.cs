@@ -75,6 +75,8 @@
             this.button_Them.FlatAppearance.BorderSize = 2;
             this.button_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Them.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Them.Image = global::QUANLYTHUVIEN.Properties.Resources.NEW;
+            this.button_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Them.Location = new System.Drawing.Point(437, 436);
             this.button_Them.Margin = new System.Windows.Forms.Padding(4);
             this.button_Them.Name = "button_Them";
@@ -89,6 +91,8 @@
             this.button_Luu.FlatAppearance.BorderSize = 2;
             this.button_Luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Luu.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Luu.Image = global::QUANLYTHUVIEN.Properties.Resources.SAVE;
+            this.button_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Luu.Location = new System.Drawing.Point(437, 508);
             this.button_Luu.Margin = new System.Windows.Forms.Padding(4);
             this.button_Luu.Name = "button_Luu";
@@ -103,6 +107,8 @@
             this.button_CapNhat.FlatAppearance.BorderSize = 2;
             this.button_CapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_CapNhat.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_CapNhat.Image = global::QUANLYTHUVIEN.Properties.Resources.UPDATE1;
+            this.button_CapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_CapNhat.Location = new System.Drawing.Point(701, 436);
             this.button_CapNhat.Margin = new System.Windows.Forms.Padding(4);
             this.button_CapNhat.Name = "button_CapNhat";
@@ -117,6 +123,8 @@
             this.button_Xoa.FlatAppearance.BorderSize = 2;
             this.button_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Xoa.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Xoa.Image = global::QUANLYTHUVIEN.Properties.Resources.DELETE;
+            this.button_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Xoa.Location = new System.Drawing.Point(701, 508);
             this.button_Xoa.Margin = new System.Windows.Forms.Padding(4);
             this.button_Xoa.Name = "button_Xoa";
@@ -134,7 +142,7 @@
             this.textBox_TimKiem.Location = new System.Drawing.Point(128, 42);
             this.textBox_TimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_TimKiem.Name = "textBox_TimKiem";
-            this.textBox_TimKiem.Size = new System.Drawing.Size(200, 26);
+            this.textBox_TimKiem.Size = new System.Drawing.Size(200, 19);
             this.textBox_TimKiem.TabIndex = 4;
             this.textBox_TimKiem.TextChanged += new System.EventHandler(this.textBox_TimKiem_TextChanged);
             // 
@@ -190,7 +198,6 @@
             this.textBox_HoVaTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_HoVaTen.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_HoVaTen.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox_HoVaTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_HoVaTen.Location = new System.Drawing.Point(546, 13);
             this.textBox_HoVaTen.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_HoVaTen.Name = "textBox_HoVaTen";
@@ -202,7 +209,6 @@
             this.textBox_SoCMT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_SoCMT.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_SoCMT.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox_SoCMT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_SoCMT.Location = new System.Drawing.Point(546, 47);
             this.textBox_SoCMT.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_SoCMT.Name = "textBox_SoCMT";
@@ -224,7 +230,6 @@
             this.textBox_DiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_DiaChi.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_DiaChi.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox_DiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_DiaChi.Location = new System.Drawing.Point(546, 254);
             this.textBox_DiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_DiaChi.Multiline = true;
@@ -247,7 +252,6 @@
             this.textBox_SoDienThoai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_SoDienThoai.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_SoDienThoai.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox_SoDienThoai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_SoDienThoai.Location = new System.Drawing.Point(546, 115);
             this.textBox_SoDienThoai.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_SoDienThoai.Name = "textBox_SoDienThoai";
@@ -269,7 +273,6 @@
             this.textBox_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Email.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Email.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Email.Location = new System.Drawing.Point(546, 217);
             this.textBox_Email.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Email.Name = "textBox_Email";
@@ -291,7 +294,6 @@
             this.textBox_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_MatKhau.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_MatKhau.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_MatKhau.Location = new System.Drawing.Point(546, 149);
             this.textBox_MatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_MatKhau.Name = "textBox_MatKhau";
@@ -353,7 +355,6 @@
             this.textBox_Anh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Anh.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Anh.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox_Anh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Anh.Location = new System.Drawing.Point(546, 183);
             this.textBox_Anh.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Anh.Name = "textBox_Anh";

@@ -117,31 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button_SachMuonNhieu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALEAAACxAcYtSY0AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABWUlEQVRIS+3VO0vDUBjG8Wi91GtRhNJFvGyCKE4iUhdHQVHBTQQnFyd18BM4CaLoB3BwcBBEpw7W
-        VtFq7dBP5P85saGtJ4mWuEgf+JVz0jRv8p40cSJKN57xhEltqE8bBixaEJR+aL80zjGOPLbhZRNFZCym
-        UJ1ZnOAFOVT2e8UZlE5ofIlebXiHriAoo7iBfjSHGKozhj136GUdtxqod0FZgM54xsx+ng6oM4EFpqHv
-        B83se3Tlw5jAkDZ8ZQSP2NDEr4DujA+kzMyNDrgELaj6/oY7qBVaG2UFBejkTPwKHGLLHTo92EcZR1Db
-        2lGJ1uABp7hCH7zYCrRC/dMZL6KEHcThlzWsusPa2ArM4xgHuEcSDcdWYBfq7wXqb8nfJKEPWwH1+Rph
-        /+SwZPVhK6DnSc1CNRhzbFuBqNIsEJpmgdD8kwJ6ZXZpEHF0TD3PzAtCj+Y/4Cx/AkXIVsDQlxU5AAAA
-        AElFTkSuQmCC
-</value>
-  </data>
-  <data name="button_DocGiaMuonNhieu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALEAAACxAcYtSY0AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABWUlEQVRIS+3VO0vDUBjG8Wi91GtRhNJFvGyCKE4iUhdHQVHBTQQnFyd18BM4CaLoB3BwcBBEpw7W
-        VtFq7dBP5P85saGtJ4mWuEgf+JVz0jRv8p40cSJKN57xhEltqE8bBixaEJR+aL80zjGOPLbhZRNFZCym
-        UJ1ZnOAFOVT2e8UZlE5ofIlebXiHriAoo7iBfjSHGKozhj136GUdtxqod0FZgM54xsx+ng6oM4EFpqHv
-        B83se3Tlw5jAkDZ8ZQSP2NDEr4DujA+kzMyNDrgELaj6/oY7qBVaG2UFBejkTPwKHGLLHTo92EcZR1Db
-        2lGJ1uABp7hCH7zYCrRC/dMZL6KEHcThlzWsusPa2ArM4xgHuEcSDcdWYBfq7wXqb8nfJKEPWwH1+Rph
-        /+SwZPVhK6DnSc1CNRhzbFuBqNIsEJpmgdD8kwJ6ZXZpEHF0TD3PzAtCj+Y/4Cx/AkXIVsDQlxU5AAAA
-        AElFTkSuQmCC
-</value>
-  </data>
 </root>

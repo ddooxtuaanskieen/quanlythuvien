@@ -258,6 +258,12 @@
       <DependentUpon>Sach.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaoCaoDocGiaMuonNhieu.resx">
       <DependentUpon>BaoCaoDocGiaMuonNhieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +307,9 @@
       <DependentUpon>Sach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SachMuonNhieu.rdlc" />
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Models\ThuVien.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ThuVien.Designer.cs</LastGenOutput>
@@ -333,6 +342,24 @@
       <DependentUpon>ThuVien.edmx</DependentUpon>
       <LastGenOutput>ThuVien.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\team.png" />
+    <None Include="Resources\book.png" />
+    <None Include="Resources\book %281%29.png" />
+    <None Include="Resources\student.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\money.png" />
+    <None Include="Resources\browser.png" />
+    <None Include="Resources\browser %281%29.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\permission.png" />
+    <None Include="Resources\book %282%29.png" />
+    <None Include="Resources\newspaper.png" />
+    <None Include="Resources\student %281%29.png" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\category.png" />
+    <None Include="Resources\analysis.png" />
+    <None Include="Resources\personal-information.png" />
+    <None Include="Resources\logout.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

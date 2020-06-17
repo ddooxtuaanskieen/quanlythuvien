@@ -57,12 +57,18 @@ namespace QUANLYTHUVIEN
                 label_HoVaTen.Text = nv.HoVaTen;
                 pictureBox_Anh.ImageLocation = nv.Anh == null? Ham.defaultNVImage : nv.Anh;
             }
-            
+            Ham.openFormInPanel(new TrangChu(), panel_Content);
+
         }
 
         private void button_BaoCaoThongKe_Click_1(object sender, EventArgs e)
         {
             Ham.openFormInPanel(new BCTKSachDocGia(), panel_Content);
+        }
+
+        private void button_TrangChu_Click(object sender, EventArgs e)
+        {
+            Ham.openFormInPanel(new TrangChu(), panel_Content);
         }
     }
 }
