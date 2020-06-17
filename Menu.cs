@@ -40,13 +40,7 @@ namespace QUANLYTHUVIEN
 
         private void button_PhanQuyen_Click(object sender, EventArgs e)
         {
-            PhanQuyen pq = new PhanQuyen();
-            pq.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Ham.openFormInPanel(new NhanVien(), panel_Content);
+            Ham.openFormInPanel(new PhanQuyen(), panel_Content);
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -63,6 +57,12 @@ namespace QUANLYTHUVIEN
                 label_HoVaTen.Text = nv.HoVaTen;
                 pictureBox_Anh.ImageLocation = nv.Anh == null? Ham.defaultNVImage : nv.Anh;
             }
+            
+        }
+
+        private void button_BaoCaoThongKe_Click_1(object sender, EventArgs e)
+        {
+            Ham.openFormInPanel(new BCTKSachDocGia(), panel_Content);
         }
     }
 }

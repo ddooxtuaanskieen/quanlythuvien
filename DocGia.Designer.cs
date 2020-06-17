@@ -403,7 +403,6 @@ namespace QUANLYTHUVIEN
             this.button_Tao.Size = new System.Drawing.Size(170, 40);
             this.button_Tao.TabIndex = 25;
             this.button_Tao.Text = "Tạo mới";
-            this.button_Tao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_Tao.UseVisualStyleBackColor = true;
             this.button_Tao.Click += new System.EventHandler(this.button_Them_Click);
             // 

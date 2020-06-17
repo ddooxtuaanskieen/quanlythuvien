@@ -1200,6 +1200,14 @@ INSERT INTO MUONTRA VALUES
 )
 GO
 
+CREATE TABLE QUY
+(
+	Ma nvarchar(15),
+	Ngay datetime,
+	Biendong int,
+	Mota ntext
+)
+
 CREATE PROCEDURE GETAVAILABLEBOOKS
 AS
 BEGIN

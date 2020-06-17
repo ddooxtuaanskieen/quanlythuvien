@@ -34,7 +34,11 @@
             this.button_Sach = new System.Windows.Forms.Button();
             this.button_PhanQuyen = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label_HoVaTen = new System.Windows.Forms.Label();
+            this.label_MaNhanVien = new System.Windows.Forms.Label();
+            this.pictureBox_Anh = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button_BaoCaoThongKe = new System.Windows.Forms.Button();
             this.button_DangXuat = new System.Windows.Forms.Button();
             this.button_ThongTinCaNhan = new System.Windows.Forms.Button();
             this.button_SangTac = new System.Windows.Forms.Button();
@@ -42,14 +46,10 @@
             this.button_TrangChu = new System.Windows.Forms.Button();
             this.panel_Content = new System.Windows.Forms.Panel();
             this.pictureBox_Exit = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_Anh = new System.Windows.Forms.PictureBox();
-            this.label_MaNhanVien = new System.Windows.Forms.Label();
-            this.label_HoVaTen = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Anh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).BeginInit();
             this.SuspendLayout();
             // 
             // button_NhanVien
@@ -136,7 +136,7 @@
             this.panel1.Controls.Add(this.label_MaNhanVien);
             this.panel1.Controls.Add(this.pictureBox_Anh);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button_BaoCaoThongKe);
             this.panel1.Controls.Add(this.button_DangXuat);
             this.panel1.Controls.Add(this.button_ThongTinCaNhan);
             this.panel1.Controls.Add(this.button_SangTac);
@@ -152,20 +152,64 @@
             this.panel1.Size = new System.Drawing.Size(250, 650);
             this.panel1.TabIndex = 5;
             // 
-            // button1
+            // label_HoVaTen
             // 
-            this.button1.BackColor = System.Drawing.Color.Crimson;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 500);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 45);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Báo cáo/Thống kê";
-            this.button1.UseVisualStyleBackColor = false;
+            this.label_HoVaTen.AutoSize = true;
+            this.label_HoVaTen.BackColor = System.Drawing.Color.White;
+            this.label_HoVaTen.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_HoVaTen.ForeColor = System.Drawing.Color.Crimson;
+            this.label_HoVaTen.Location = new System.Drawing.Point(83, 55);
+            this.label_HoVaTen.Name = "label_HoVaTen";
+            this.label_HoVaTen.Size = new System.Drawing.Size(86, 22);
+            this.label_HoVaTen.TabIndex = 13;
+            this.label_HoVaTen.Text = "Họ và tên";
+            // 
+            // label_MaNhanVien
+            // 
+            this.label_MaNhanVien.AutoSize = true;
+            this.label_MaNhanVien.BackColor = System.Drawing.Color.White;
+            this.label_MaNhanVien.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_MaNhanVien.ForeColor = System.Drawing.Color.Crimson;
+            this.label_MaNhanVien.Location = new System.Drawing.Point(83, 17);
+            this.label_MaNhanVien.Name = "label_MaNhanVien";
+            this.label_MaNhanVien.Size = new System.Drawing.Size(119, 22);
+            this.label_MaNhanVien.TabIndex = 12;
+            this.label_MaNhanVien.Text = "Mã nhân viên";
+            // 
+            // pictureBox_Anh
+            // 
+            this.pictureBox_Anh.BackColor = System.Drawing.Color.White;
+            this.pictureBox_Anh.Location = new System.Drawing.Point(23, 17);
+            this.pictureBox_Anh.Name = "pictureBox_Anh";
+            this.pictureBox_Anh.Size = new System.Drawing.Size(45, 60);
+            this.pictureBox_Anh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Anh.TabIndex = 11;
+            this.pictureBox_Anh.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(230, 70);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button_BaoCaoThongKe
+            // 
+            this.button_BaoCaoThongKe.BackColor = System.Drawing.Color.Crimson;
+            this.button_BaoCaoThongKe.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.button_BaoCaoThongKe.FlatAppearance.BorderSize = 2;
+            this.button_BaoCaoThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_BaoCaoThongKe.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_BaoCaoThongKe.ForeColor = System.Drawing.Color.White;
+            this.button_BaoCaoThongKe.Location = new System.Drawing.Point(0, 500);
+            this.button_BaoCaoThongKe.Name = "button_BaoCaoThongKe";
+            this.button_BaoCaoThongKe.Size = new System.Drawing.Size(250, 45);
+            this.button_BaoCaoThongKe.TabIndex = 10;
+            this.button_BaoCaoThongKe.Text = "Báo cáo/Thống kê";
+            this.button_BaoCaoThongKe.UseVisualStyleBackColor = false;
+            this.button_BaoCaoThongKe.Click += new System.EventHandler(this.button_BaoCaoThongKe_Click_1);
             // 
             // button_DangXuat
             // 
@@ -256,48 +300,6 @@
             this.pictureBox_Exit.TabIndex = 11;
             this.pictureBox_Exit.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(230, 70);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox_Anh
-            // 
-            this.pictureBox_Anh.Location = new System.Drawing.Point(23, 17);
-            this.pictureBox_Anh.Name = "pictureBox_Anh";
-            this.pictureBox_Anh.Size = new System.Drawing.Size(45, 60);
-            this.pictureBox_Anh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_Anh.TabIndex = 11;
-            this.pictureBox_Anh.TabStop = false;
-            // 
-            // label_MaNhanVien
-            // 
-            this.label_MaNhanVien.AutoSize = true;
-            this.label_MaNhanVien.BackColor = System.Drawing.Color.White;
-            this.label_MaNhanVien.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_MaNhanVien.ForeColor = System.Drawing.Color.Crimson;
-            this.label_MaNhanVien.Location = new System.Drawing.Point(83, 17);
-            this.label_MaNhanVien.Name = "label_MaNhanVien";
-            this.label_MaNhanVien.Size = new System.Drawing.Size(119, 22);
-            this.label_MaNhanVien.TabIndex = 12;
-            this.label_MaNhanVien.Text = "Mã nhân viên";
-            // 
-            // label_HoVaTen
-            // 
-            this.label_HoVaTen.AutoSize = true;
-            this.label_HoVaTen.BackColor = System.Drawing.Color.White;
-            this.label_HoVaTen.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_HoVaTen.ForeColor = System.Drawing.Color.Crimson;
-            this.label_HoVaTen.Location = new System.Drawing.Point(83, 55);
-            this.label_HoVaTen.Name = "label_HoVaTen";
-            this.label_HoVaTen.Size = new System.Drawing.Size(86, 22);
-            this.label_HoVaTen.TabIndex = 13;
-            this.label_HoVaTen.Text = "Họ và tên";
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,9 +316,9 @@
             this.Load += new System.EventHandler(this.Menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Anh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,7 +338,7 @@
         private System.Windows.Forms.Button button_SangTac;
         private System.Windows.Forms.Button button_PhanLoai;
         private System.Windows.Forms.Button button_TrangChu;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_BaoCaoThongKe;
         private System.Windows.Forms.Label label_HoVaTen;
         private System.Windows.Forms.Label label_MaNhanVien;
         private System.Windows.Forms.PictureBox pictureBox_Anh;
