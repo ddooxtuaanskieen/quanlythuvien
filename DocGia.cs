@@ -87,6 +87,15 @@ namespace QUANLYTHUVIEN
                 dg.Anh = textBox_Anh.Text;
                 dg.NgayLap = DateTime.Now;
                 Ham.tv.DOCGIAs.Add(dg);
+
+                THEDOCGIA tdg = new THEDOCGIA();
+                tdg.MaDocGia = dg.MaDocGia;
+                tdg.NgayGiaHan = DateTime.Now;
+                tdg.HanCu = null;
+                tdg.HanMoi = DateTime.Now.AddYears(1);
+                tdg.NguoiLap = Ham.currentUser;
+                Ham.tv.THEDOCGIAs.Add(tdg);
+                
                 Ham.tv.SaveChanges();
 
                 maDocGia = null;

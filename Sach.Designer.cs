@@ -136,6 +136,7 @@
             this.textBox_MoTa.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_MoTa.Multiline = true;
             this.textBox_MoTa.Name = "textBox_MoTa";
+            this.textBox_MoTa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_MoTa.Size = new System.Drawing.Size(297, 146);
             this.textBox_MoTa.TabIndex = 59;
             // 

@@ -28,6 +28,7 @@ namespace QUANLYTHUVIEN.Models
             this.SACHes = new HashSet<SACH>();
             this.SANGTACs = new HashSet<SANGTAC>();
             this.TACGIAs = new HashSet<TACGIA>();
+            this.THEDOCGIAs = new HashSet<THEDOCGIA>();
             this.THELOAIs = new HashSet<THELOAI>();
         }
     
@@ -67,6 +68,8 @@ namespace QUANLYTHUVIEN.Models
         public virtual ICollection<SANGTAC> SANGTACs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TACGIA> TACGIAs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THEDOCGIA> THEDOCGIAs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THELOAI> THELOAIs { get; set; }
     }

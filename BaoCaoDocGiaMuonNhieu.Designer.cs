@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.QUANLYTHUVIENDataSetDocGiaMuonNhieu = new QUANLYTHUVIEN.QUANLYTHUVIENDataSetDocGiaMuonNhieu();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.GETTOPMEMBERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.QUANLYTHUVIENDataSetDocGiaMuonNhieu = new QUANLYTHUVIEN.QUANLYTHUVIENDataSetDocGiaMuonNhieu();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.GETTOPMEMBERTableAdapter = new QUANLYTHUVIEN.QUANLYTHUVIENDataSetDocGiaMuonNhieuTableAdapters.GETTOPMEMBERTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.QUANLYTHUVIENDataSetDocGiaMuonNhieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GETTOPMEMBERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QUANLYTHUVIENDataSetDocGiaMuonNhieu)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // GETTOPMEMBERBindingSource
             // 
-            reportDataSource2.Name = "DocGiaMuonNhieu";
-            reportDataSource2.Value = this.GETTOPMEMBERBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "QUANLYTHUVIEN.DocGiaMuonNhieu.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(610, 725);
-            this.reportViewer1.TabIndex = 0;
+            this.GETTOPMEMBERBindingSource.DataMember = "GETTOPMEMBER";
+            this.GETTOPMEMBERBindingSource.DataSource = this.QUANLYTHUVIENDataSetDocGiaMuonNhieu;
             // 
             // QUANLYTHUVIENDataSetDocGiaMuonNhieu
             // 
             this.QUANLYTHUVIENDataSetDocGiaMuonNhieu.DataSetName = "QUANLYTHUVIENDataSetDocGiaMuonNhieu";
             this.QUANLYTHUVIENDataSetDocGiaMuonNhieu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // GETTOPMEMBERBindingSource
+            // reportViewer1
             // 
-            this.GETTOPMEMBERBindingSource.DataMember = "GETTOPMEMBER";
-            this.GETTOPMEMBERBindingSource.DataSource = this.QUANLYTHUVIENDataSetDocGiaMuonNhieu;
+            reportDataSource1.Name = "DocGiaMuonNhieu";
+            reportDataSource1.Value = this.GETTOPMEMBERBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "QUANLYTHUVIEN.DocGiaMuonNhieu.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(610, 725);
+            this.reportViewer1.TabIndex = 0;
             // 
             // GETTOPMEMBERTableAdapter
             // 
@@ -74,9 +74,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BaoCaoDocGiaMuonNhieu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Báo cáo độc giả mượn nhiều";
             this.Load += new System.EventHandler(this.BaoCaoDocGiaMuonNhieu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.QUANLYTHUVIENDataSetDocGiaMuonNhieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GETTOPMEMBERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QUANLYTHUVIENDataSetDocGiaMuonNhieu)).EndInit();
             this.ResumeLayout(false);
 
         }

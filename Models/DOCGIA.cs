@@ -18,6 +18,7 @@ namespace QUANLYTHUVIEN.Models
         public DOCGIA()
         {
             this.MUONTRAs = new HashSet<MUONTRA>();
+            this.THEDOCGIAs = new HashSet<THEDOCGIA>();
         }
     
         public string MaDocGia { get; set; }
@@ -35,5 +36,7 @@ namespace QUANLYTHUVIEN.Models
         public virtual NHANVIEN NHANVIEN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MUONTRA> MUONTRAs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THEDOCGIA> THEDOCGIAs { get; set; }
     }
 }

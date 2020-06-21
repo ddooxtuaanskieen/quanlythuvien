@@ -12,22 +12,15 @@ namespace QUANLYTHUVIEN.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class MUONTRA
+    public partial class THEDOCGIA
     {
-        public string MaMuonTra { get; set; }
         public string MaDocGia { get; set; }
-        public string MaSach { get; set; }
-        public string NguoiChoMuon { get; set; }
-        public System.DateTime NgayMuon { get; set; }
-        public System.DateTime NgayHenTra { get; set; }
-        public string NguoiNhanTra { get; set; }
-        public Nullable<System.DateTime> NgayTra { get; set; }
-        public Nullable<int> Phi { get; set; }
-        public Nullable<int> Phat { get; set; }
+        public System.DateTime NgayGiaHan { get; set; }
+        public Nullable<System.DateTime> HanCu { get; set; }
+        public Nullable<System.DateTime> HanMoi { get; set; }
+        public string NguoiLap { get; set; }
     
         public virtual DOCGIA DOCGIA { get; set; }
-        public virtual SACH SACH { get; set; }
         public virtual NHANVIEN NHANVIEN { get; set; }
-        public virtual NHANVIEN NHANVIEN1 { get; set; }
     }
 }

@@ -7,20 +7,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QUANLYTHUVIEN.Models;
+using System.Web;
+using System.Net;
+using System.Net.Mail;
 
 namespace QUANLYTHUVIEN
 {
     public static class Ham
     {
-        public static string currentUser = null;
-        public static int maxBookHold = 2;
-        public static int maxLate = 2;
-        public static string defaultPassword = "00000000";
+        public static string currentUser = null; //Mã người dùng hiện tại
+        public static int maxBookHold = 2; //Trong 1 thời điểm, 1 độc giả được mượn nhiều nhất 2 quyển
+        public static int maxLate = 2; //Trả muộn sách 2 lần là vào danh sách đen
+        public static int joinFare = 100000; //Phí đăng ký thẻ độc giả trong 1 năm
+        public static string defaultPassword = "00000000"; //Mật khẩu mặc định
+        public static int pricePerDay = 500; //Phí mượn 1 ngày
+        public static double percentPricePerRent = 0.8; //Cọc 80% giá trị sách
+        public static double percentPricePerLateDay = 0.01; //Mỗi ngày muộn phạt 1% giá trị sách
+
+        public static DateTime lastDaySendReminder = new DateTime(2020, 06, 21);
+
         public static string defaultNVImage = "https://i.imgur.com/LbORpEI.png";
         public static string defaultDGImage = "https://i.imgur.com/LbORpEI.png";
         public static string defaultSImage = "https://i.imgur.com/m13VNIS.png";
-
-        public static int pricePerDay = 500;
         public static QUANLYTHUVIENEntities tv = new QUANLYTHUVIENEntities();
         public static string generateID(string obj)
         {
@@ -121,14 +129,15 @@ namespace QUANLYTHUVIEN
                             x.NgayMuon,
                             x.NgayHenTra,
                             x.NguoiNhanTra,
-                            x.NgayTra
+                            x.NgayTra,
+                            x.Phi,
+                            x.Phat
                         })
                         .ToList();
                 default:
                     return null;
             }
         }
-
         public static IEnumerable<Object> getData(string obj, string keyword)
         {
             if (keyword == null || keyword == "")
@@ -202,7 +211,9 @@ namespace QUANLYTHUVIEN
                                     x.NgayMuon,
                                     x.NgayHenTra,
                                     x.NguoiNhanTra,
-                                    x.NgayTra
+                                    x.NgayTra,
+                                    x.Phi,
+                                    x.Phat
                                 })
                             .ToList();
                     default:
@@ -270,12 +281,75 @@ namespace QUANLYTHUVIEN
             }
 
         }
-        public static int getFine(string maMuonTra)
+        public static int getCostRent(string maMuonTra)
         {
             MUONTRA mt = tv.MUONTRAs.Where(x => x.MaMuonTra == maMuonTra).SingleOrDefault();
-            return mt.NgayTra < mt.NgayHenTra ? 
+            return DateTime.Now <= mt.NgayHenTra ?
+                pricePerDay * (int)(DateTime.Now - (DateTime)mt.NgayMuon).TotalDays :
+                pricePerDay * (int)((DateTime)mt.NgayHenTra - (DateTime)mt.NgayMuon).TotalDays;
+        }
+        public static double getFine(string maMuonTra)
+        {
+            MUONTRA mt = tv.MUONTRAs.Where(x => x.MaMuonTra == maMuonTra).SingleOrDefault();
+            int bookPrice = tv.SACHes.Where(x => x.MaSach == mt.MaSach).SingleOrDefault().Gia;
+            return DateTime.Now <= mt.NgayHenTra ? 
                 0 :
-                pricePerDay * (int)((DateTime)mt.NgayTra - mt.NgayHenTra).TotalDays;
+                percentPricePerLateDay * bookPrice * (int)(DateTime.Now - (DateTime)mt.NgayHenTra).TotalDays;
+        }
+        public static void sendEmailRemindMuon(string maMuonTra)
+        {
+            MUONTRA mt = Ham.tv.MUONTRAs.Where(x => x.MaMuonTra == maMuonTra).SingleOrDefault();
+            string tenDocGia = tv.DOCGIAs.Where(x => x.MaDocGia == mt.MaDocGia).SingleOrDefault().HoVaTen;
+            string emailDocGia = tv.DOCGIAs.Where(x => x.MaDocGia == mt.MaDocGia).SingleOrDefault().Email;
+            string tenSach = tv.SACHes.Where(x=>x.MaSach == mt.MaSach).SingleOrDefault().TieuDe;
+            int thoiHan = (int)(DateTime.Now - (DateTime)mt.NgayHenTra).TotalDays;
+
+            string subject = "Nhắc nhở trả sách";
+            string body = "Thư viện gửi đến bạn " + tenDocGia + " nhắc nhở trả sách đúng hạn" + "\n"
+                + "Mã phiếu mượn: " + maMuonTra + "\n"
+                + "Mã độc giả: " + mt.MaDocGia + "\n"
+                + "Tên độc giả: " + tenDocGia + "\n"
+                + "Mã sách: " + mt.MaSach + "\n"
+                + "Tên sách: " + tenSach + "\n"
+                + "Hạn trả sách: " + mt.NgayHenTra.ToString() + "\n"
+                + "Thời gian còn: " + (Math.Abs(thoiHan)).ToString() + " ngày" + "\n"
+                + "Vui lòng sắp xếp thời gian trả sách đúng thời hạn." + "\n"
+                + "Thư viện xin cảm ơn!";
+            string username = "ddooxtuaanskieen@gmail.com";
+            string password = "Kien72381997";
+            MailMessage mail = new MailMessage(username, emailDocGia, subject, body);
+            SmtpClient client = new SmtpClient("smtp.gmail.com");
+            client.Port = 587;
+            client.Credentials = new System.Net.NetworkCredential(username, password);
+            client.EnableSsl = true;
+            client.Send(mail);
+        }
+        public static void sendEmailRemindTheDocGia(string maDocGia)
+        {
+            THEDOCGIA tdg = Ham.tv.THEDOCGIAs.Where(x => x.MaDocGia == maDocGia)
+                .OrderByDescending(y => y.NgayGiaHan)
+                .FirstOrDefault();
+            DateTime hanThe = (DateTime)tdg.HanMoi;
+            string tenDocGia = tv.DOCGIAs.Where(x => x.MaDocGia == maDocGia).SingleOrDefault().HoVaTen;
+            string emailDocGia = tv.DOCGIAs.Where(x => x.MaDocGia == maDocGia).SingleOrDefault().Email;
+            int thoiHan = (int)(DateTime.Now - hanThe).TotalDays;
+
+            string subject = "Nhắc nhở gia hạn thẻ độc giả";
+            string body = "Thư viện gửi đến bạn " + tenDocGia + " nhắc nhở gia hạn thẻ độc giả" + "\n"
+                + "Mã độc giả: " + maDocGia + "\n"
+                + "Tên độc giả: " + tenDocGia + "\n"
+                + "Hạn thẻ: " + hanThe.ToString() + "\n"
+                + "Thời gian còn: " + (Math.Abs(thoiHan)).ToString() + " ngày" + "\n"
+                + "Vui lòng sắp xếp thời gian gia hạn thẻ độc giả để tiếp tục sử dụng các dịch vụ của thư viện." + "\n"
+                + "Thư viện xin cảm ơn!";
+            string username = "ddooxtuaanskieen@gmail.com";
+            string password = "Kien72381997";
+            MailMessage mail = new MailMessage(username, emailDocGia, subject, body);
+            SmtpClient client = new SmtpClient("smtp.gmail.com");
+            client.Port = 587;
+            client.Credentials = new System.Net.NetworkCredential(username, password);
+            client.EnableSsl = true;
+            client.Send(mail);
         }
         public static void openFormInPanel(Form myForm, Panel MyPanel)
         {

@@ -34,6 +34,7 @@
           <Property Name="NguoiNhanTra" Type="nvarchar" MaxLength="15" />
           <Property Name="NgayTra" Type="datetime" />
           <Property Name="Phi" Type="int" />
+          <Property Name="Phat" Type="int" />
         </EntityType>
         <EntityType Name="NHANVIEN">
           <Key>
@@ -124,6 +125,17 @@
           <Property Name="NgayLap" Type="datetime" Nullable="false" />
           <Property Name="NgayXoa" Type="datetime" />
         </EntityType>
+        <EntityType Name="THEDOCGIA">
+          <Key>
+            <PropertyRef Name="MaDocGia" />
+            <PropertyRef Name="NgayGiaHan" />
+          </Key>
+          <Property Name="MaDocGia" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="NgayGiaHan" Type="datetime" Nullable="false" />
+          <Property Name="HanCu" Type="datetime" />
+          <Property Name="HanMoi" Type="datetime" />
+          <Property Name="NguoiLap" Type="nvarchar" MaxLength="15" Nullable="false" />
+        </EntityType>
         <EntityType Name="THELOAI">
           <Key>
             <PropertyRef Name="MaTheloai" />
@@ -147,7 +159,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__MaDocGi__66603565">
+        <Association Name="FK__MUONTRA__MaDocGi__6B24EA82">
           <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="1" />
           <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -159,7 +171,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__MaSach__6754599E">
+        <Association Name="FK__MUONTRA__MaSach__6C190EBB">
           <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
           <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -171,7 +183,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__NguoiCh__68487DD7">
+        <Association Name="FK__MUONTRA__NguoiCh__6D0D32F4">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -183,7 +195,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__NguoiNh__6A30C649">
+        <Association Name="FK__MUONTRA__NguoiNh__6EF57B66">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
           <End Role="MUONTRA" Type="Self.MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -351,6 +363,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__THEDOCGIA__MaDoc__66603565">
+          <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="1" />
+          <End Role="THEDOCGIA" Type="Self.THEDOCGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCGIA">
+              <PropertyRef Name="MaDocGia" />
+            </Principal>
+            <Dependent Role="THEDOCGIA">
+              <PropertyRef Name="MaDocGia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THEDOCGIA__Nguoi__68487DD7">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
+          <End Role="THEDOCGIA" Type="Self.THEDOCGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="THEDOCGIA">
+              <PropertyRef Name="NguoiLap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__THELOAI__NguoiLa__571DF1D5">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="THELOAI" Type="Self.THELOAI" Multiplicity="*" />
@@ -372,6 +408,9 @@
         </Function>
         <Function Name="GETTOPBOOK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="GETTOPMEMBER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="THEDOCGIALATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="n" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="QUANLYTHUVIENModelStoreContainer">
           <EntitySet Name="DOCGIA" EntityType="Self.DOCGIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MUONTRA" EntityType="Self.MUONTRA" Schema="dbo" store:Type="Tables" />
@@ -382,24 +421,25 @@
           <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SANGTAC" EntityType="Self.SANGTAC" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TACGIA" EntityType="Self.TACGIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THEDOCGIA" EntityType="Self.THEDOCGIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="THELOAI" EntityType="Self.THELOAI" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__DOCGIA__NguoiLap__619B8048" Association="Self.FK__DOCGIA__NguoiLap__619B8048">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="DOCGIA" EntitySet="DOCGIA" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__MaDocGi__66603565" Association="Self.FK__MUONTRA__MaDocGi__66603565">
+          <AssociationSet Name="FK__MUONTRA__MaDocGi__6B24EA82" Association="Self.FK__MUONTRA__MaDocGi__6B24EA82">
             <End Role="DOCGIA" EntitySet="DOCGIA" />
             <End Role="MUONTRA" EntitySet="MUONTRA" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__MaSach__6754599E" Association="Self.FK__MUONTRA__MaSach__6754599E">
+          <AssociationSet Name="FK__MUONTRA__MaSach__6C190EBB" Association="Self.FK__MUONTRA__MaSach__6C190EBB">
             <End Role="SACH" EntitySet="SACH" />
             <End Role="MUONTRA" EntitySet="MUONTRA" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__NguoiCh__68487DD7" Association="Self.FK__MUONTRA__NguoiCh__68487DD7">
+          <AssociationSet Name="FK__MUONTRA__NguoiCh__6D0D32F4" Association="Self.FK__MUONTRA__NguoiCh__6D0D32F4">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="MUONTRA" EntitySet="MUONTRA" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__NguoiNh__6A30C649" Association="Self.FK__MUONTRA__NguoiNh__6A30C649">
+          <AssociationSet Name="FK__MUONTRA__NguoiNh__6EF57B66" Association="Self.FK__MUONTRA__NguoiNh__6EF57B66">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="MUONTRA" EntitySet="MUONTRA" />
           </AssociationSet>
@@ -455,6 +495,14 @@
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="TACGIA" EntitySet="TACGIA" />
           </AssociationSet>
+          <AssociationSet Name="FK__THEDOCGIA__MaDoc__66603565" Association="Self.FK__THEDOCGIA__MaDoc__66603565">
+            <End Role="DOCGIA" EntitySet="DOCGIA" />
+            <End Role="THEDOCGIA" EntitySet="THEDOCGIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THEDOCGIA__Nguoi__68487DD7" Association="Self.FK__THEDOCGIA__Nguoi__68487DD7">
+            <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+            <End Role="THEDOCGIA" EntitySet="THEDOCGIA" />
+          </AssociationSet>
           <AssociationSet Name="FK__THELOAI__NguoiLa__571DF1D5" Association="Self.FK__THELOAI__NguoiLa__571DF1D5">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="THELOAI" EntitySet="THELOAI" />
@@ -474,6 +522,9 @@
           <FunctionImport Name="GETBLACKLIST" ReturnType="Collection(QUANLYTHUVIENModel.GETBLACKLIST_Result)">
           <Parameter Name="N" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="THEDOCGIALATE" ReturnType="Collection(QUANLYTHUVIENModel.THEDOCGIALATE_Result)">
+          <Parameter Name="n" Mode="In" Type="Int32" />
+          </FunctionImport>
           <EntitySet Name="DOCGIAs" EntityType="QUANLYTHUVIENModel.DOCGIA" />
           <EntitySet Name="MUONTRAs" EntityType="QUANLYTHUVIENModel.MUONTRA" />
           <EntitySet Name="NHANVIENs" EntityType="QUANLYTHUVIENModel.NHANVIEN" />
@@ -483,24 +534,29 @@
           <EntitySet Name="SACHes" EntityType="QUANLYTHUVIENModel.SACH" />
           <EntitySet Name="SANGTACs" EntityType="QUANLYTHUVIENModel.SANGTAC" />
           <EntitySet Name="TACGIAs" EntityType="QUANLYTHUVIENModel.TACGIA" />
+          <EntitySet Name="THEDOCGIAs" EntityType="QUANLYTHUVIENModel.THEDOCGIA" />
           <EntitySet Name="THELOAIs" EntityType="QUANLYTHUVIENModel.THELOAI" />
           <AssociationSet Name="FK__DOCGIA__NguoiLap__619B8048" Association="QUANLYTHUVIENModel.FK__DOCGIA__NguoiLap__619B8048">
             <End Role="NHANVIEN" EntitySet="NHANVIENs" />
             <End Role="DOCGIA" EntitySet="DOCGIAs" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__MaDocGi__66603565" Association="QUANLYTHUVIENModel.FK__MUONTRA__MaDocGi__66603565">
+          <AssociationSet Name="FK__MUONTRA__MaDocGi__6B24EA82" Association="QUANLYTHUVIENModel.FK__MUONTRA__MaDocGi__6B24EA82">
             <End Role="DOCGIA" EntitySet="DOCGIAs" />
             <End Role="MUONTRA" EntitySet="MUONTRAs" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__MaSach__6754599E" Association="QUANLYTHUVIENModel.FK__MUONTRA__MaSach__6754599E">
+          <AssociationSet Name="FK__THEDOCGIA__MaDoc__66603565" Association="QUANLYTHUVIENModel.FK__THEDOCGIA__MaDoc__66603565">
+            <End Role="DOCGIA" EntitySet="DOCGIAs" />
+            <End Role="THEDOCGIA" EntitySet="THEDOCGIAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MUONTRA__MaSach__6C190EBB" Association="QUANLYTHUVIENModel.FK__MUONTRA__MaSach__6C190EBB">
             <End Role="SACH" EntitySet="SACHes" />
             <End Role="MUONTRA" EntitySet="MUONTRAs" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__NguoiCh__68487DD7" Association="QUANLYTHUVIENModel.FK__MUONTRA__NguoiCh__68487DD7">
+          <AssociationSet Name="FK__MUONTRA__NguoiCh__6D0D32F4" Association="QUANLYTHUVIENModel.FK__MUONTRA__NguoiCh__6D0D32F4">
             <End Role="NHANVIEN" EntitySet="NHANVIENs" />
             <End Role="MUONTRA" EntitySet="MUONTRAs" />
           </AssociationSet>
-          <AssociationSet Name="FK__MUONTRA__NguoiNh__6A30C649" Association="QUANLYTHUVIENModel.FK__MUONTRA__NguoiNh__6A30C649">
+          <AssociationSet Name="FK__MUONTRA__NguoiNh__6EF57B66" Association="QUANLYTHUVIENModel.FK__MUONTRA__NguoiNh__6EF57B66">
             <End Role="NHANVIEN" EntitySet="NHANVIENs" />
             <End Role="MUONTRA" EntitySet="MUONTRAs" />
           </AssociationSet>
@@ -536,6 +592,10 @@
             <End Role="NHANVIEN" EntitySet="NHANVIENs" />
             <End Role="TACGIA" EntitySet="TACGIAs" />
           </AssociationSet>
+          <AssociationSet Name="FK__THEDOCGIA__Nguoi__68487DD7" Association="QUANLYTHUVIENModel.FK__THEDOCGIA__Nguoi__68487DD7">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="THEDOCGIA" EntitySet="THEDOCGIAs" />
+          </AssociationSet>
           <AssociationSet Name="FK__THELOAI__NguoiLa__571DF1D5" Association="QUANLYTHUVIENModel.FK__THELOAI__NguoiLa__571DF1D5">
             <End Role="NHANVIEN" EntitySet="NHANVIENs" />
             <End Role="THELOAI" EntitySet="THELOAIs" />
@@ -560,7 +620,7 @@
             <End Role="TACGIA" EntitySet="TACGIAs" />
             <End Role="SANGTAC" EntitySet="SANGTACs" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <ComplexType Name="GETAVAILABLEBOOKS_Result">
           <Property Type="String" Name="MaSach" Nullable="false" MaxLength="15" />
           <Property Type="String" Name="TieuDe" Nullable="false" MaxLength="200" />
@@ -600,6 +660,10 @@
           <Property Type="String" Name="HoVaTen" Nullable="false" MaxLength="200" />
           <Property Type="Int32" Name="TRE" Nullable="true" />
         </ComplexType>
+        <ComplexType Name="THEDOCGIALATE_Result">
+          <Property Type="String" Name="MaDocGia" Nullable="false" MaxLength="15" />
+          <Property Type="Int32" Name="HAN" Nullable="true" />
+        </ComplexType>
         <EntityType Name="DOCGIA">
           <Key>
             <PropertyRef Name="MaDocGia" />
@@ -616,7 +680,8 @@
           <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="NgayXoa" Type="DateTime" Precision="3" />
           <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__DOCGIA__NguoiLap__619B8048" FromRole="DOCGIA" ToRole="NHANVIEN" />
-          <NavigationProperty Name="MUONTRAs" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaDocGi__66603565" FromRole="DOCGIA" ToRole="MUONTRA" />
+          <NavigationProperty Name="MUONTRAs" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaDocGi__6B24EA82" FromRole="DOCGIA" ToRole="MUONTRA" />
+          <NavigationProperty Name="THEDOCGIAs" Relationship="QUANLYTHUVIENModel.FK__THEDOCGIA__MaDoc__66603565" FromRole="DOCGIA" ToRole="THEDOCGIA" />
         </EntityType>
         <EntityType Name="MUONTRA">
           <Key>
@@ -631,10 +696,11 @@
           <Property Name="NguoiNhanTra" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="NgayTra" Type="DateTime" Precision="3" />
           <Property Name="Phi" Type="Int32" />
-          <NavigationProperty Name="DOCGIA" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaDocGi__66603565" FromRole="MUONTRA" ToRole="DOCGIA" />
-          <NavigationProperty Name="SACH" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaSach__6754599E" FromRole="MUONTRA" ToRole="SACH" />
-          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiCh__68487DD7" FromRole="MUONTRA" ToRole="NHANVIEN" />
-          <NavigationProperty Name="NHANVIEN1" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiNh__6A30C649" FromRole="MUONTRA" ToRole="NHANVIEN" />
+          <Property Name="Phat" Type="Int32" />
+          <NavigationProperty Name="DOCGIA" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaDocGi__6B24EA82" FromRole="MUONTRA" ToRole="DOCGIA" />
+          <NavigationProperty Name="SACH" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaSach__6C190EBB" FromRole="MUONTRA" ToRole="SACH" />
+          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiCh__6D0D32F4" FromRole="MUONTRA" ToRole="NHANVIEN" />
+          <NavigationProperty Name="NHANVIEN1" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiNh__6EF57B66" FromRole="MUONTRA" ToRole="NHANVIEN" />
         </EntityType>
         <EntityType Name="NHANVIEN">
           <Key>
@@ -653,8 +719,8 @@
           <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="NgayXoa" Type="DateTime" Precision="3" />
           <NavigationProperty Name="DOCGIAs" Relationship="QUANLYTHUVIENModel.FK__DOCGIA__NguoiLap__619B8048" FromRole="NHANVIEN" ToRole="DOCGIA" />
-          <NavigationProperty Name="MUONTRAs" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiCh__68487DD7" FromRole="NHANVIEN" ToRole="MUONTRA" />
-          <NavigationProperty Name="MUONTRAs1" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiNh__6A30C649" FromRole="NHANVIEN" ToRole="MUONTRA" />
+          <NavigationProperty Name="MUONTRAs" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiCh__6D0D32F4" FromRole="NHANVIEN" ToRole="MUONTRA" />
+          <NavigationProperty Name="MUONTRAs1" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__NguoiNh__6EF57B66" FromRole="NHANVIEN" ToRole="MUONTRA" />
           <NavigationProperty Name="NHANVIEN1" Relationship="QUANLYTHUVIENModel.FK__NHANVIEN__NguoiL__38996AB5" FromRole="NHANVIEN" ToRole="NHANVIEN1" />
           <NavigationProperty Name="NHANVIEN2" Relationship="QUANLYTHUVIENModel.FK__NHANVIEN__NguoiL__38996AB5" FromRole="NHANVIEN1" ToRole="NHANVIEN" />
           <NavigationProperty Name="PHANLOAIs" Relationship="QUANLYTHUVIENModel.FK__PHANLOAI__NguoiL__5DCAEF64" FromRole="NHANVIEN" ToRole="PHANLOAI" />
@@ -664,6 +730,7 @@
           <NavigationProperty Name="SACHes" Relationship="QUANLYTHUVIENModel.FK__SACH__NguoiLap__47DBAE45" FromRole="NHANVIEN" ToRole="SACH" />
           <NavigationProperty Name="SANGTACs" Relationship="QUANLYTHUVIENModel.FK__SANGTAC__NguoiLa__534D60F1" FromRole="NHANVIEN" ToRole="SANGTAC" />
           <NavigationProperty Name="TACGIAs" Relationship="QUANLYTHUVIENModel.FK__TACGIA__NguoiLap__4CA06362" FromRole="NHANVIEN" ToRole="TACGIA" />
+          <NavigationProperty Name="THEDOCGIAs" Relationship="QUANLYTHUVIENModel.FK__THEDOCGIA__Nguoi__68487DD7" FromRole="NHANVIEN" ToRole="THEDOCGIA" />
           <NavigationProperty Name="THELOAIs" Relationship="QUANLYTHUVIENModel.FK__THELOAI__NguoiLa__571DF1D5" FromRole="NHANVIEN" ToRole="THELOAI" />
         </EntityType>
         <EntityType Name="PHANLOAI">
@@ -719,7 +786,7 @@
           <Property Name="NguoiLap" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="NgayXoa" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="MUONTRAs" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaSach__6754599E" FromRole="SACH" ToRole="MUONTRA" />
+          <NavigationProperty Name="MUONTRAs" Relationship="QUANLYTHUVIENModel.FK__MUONTRA__MaSach__6C190EBB" FromRole="SACH" ToRole="MUONTRA" />
           <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__SACH__NguoiLap__47DBAE45" FromRole="SACH" ToRole="NHANVIEN" />
           <NavigationProperty Name="PHANLOAIs" Relationship="QUANLYTHUVIENModel.FK__PHANLOAI__MaSach__5BE2A6F2" FromRole="SACH" ToRole="PHANLOAI" />
           <NavigationProperty Name="SANGTACs" Relationship="QUANLYTHUVIENModel.FK__SANGTAC__MaSach__5165187F" FromRole="SACH" ToRole="SANGTAC" />
@@ -755,6 +822,19 @@
           <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__TACGIA__NguoiLap__4CA06362" FromRole="TACGIA" ToRole="NHANVIEN" />
           <NavigationProperty Name="SANGTACs" Relationship="QUANLYTHUVIENModel.FK__SANGTAC__MaTacGi__52593CB8" FromRole="TACGIA" ToRole="SANGTAC" />
         </EntityType>
+        <EntityType Name="THEDOCGIA">
+          <Key>
+            <PropertyRef Name="MaDocGia" />
+            <PropertyRef Name="NgayGiaHan" />
+          </Key>
+          <Property Name="MaDocGia" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NgayGiaHan" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="HanCu" Type="DateTime" Precision="3" />
+          <Property Name="HanMoi" Type="DateTime" Precision="3" />
+          <Property Name="NguoiLap" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DOCGIA" Relationship="QUANLYTHUVIENModel.FK__THEDOCGIA__MaDoc__66603565" FromRole="THEDOCGIA" ToRole="DOCGIA" />
+          <NavigationProperty Name="NHANVIEN" Relationship="QUANLYTHUVIENModel.FK__THEDOCGIA__Nguoi__68487DD7" FromRole="THEDOCGIA" ToRole="NHANVIEN" />
+        </EntityType>
         <EntityType Name="THELOAI">
           <Key>
             <PropertyRef Name="MaTheloai" />
@@ -780,7 +860,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__MaDocGi__66603565">
+        <Association Name="FK__MUONTRA__MaDocGi__6B24EA82">
           <End Type="QUANLYTHUVIENModel.DOCGIA" Role="DOCGIA" Multiplicity="1" />
           <End Type="QUANLYTHUVIENModel.MUONTRA" Role="MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -792,7 +872,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__MaSach__6754599E">
+        <Association Name="FK__THEDOCGIA__MaDoc__66603565">
+          <End Type="QUANLYTHUVIENModel.DOCGIA" Role="DOCGIA" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.THEDOCGIA" Role="THEDOCGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCGIA">
+              <PropertyRef Name="MaDocGia" />
+            </Principal>
+            <Dependent Role="THEDOCGIA">
+              <PropertyRef Name="MaDocGia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MUONTRA__MaSach__6C190EBB">
           <End Type="QUANLYTHUVIENModel.SACH" Role="SACH" Multiplicity="1" />
           <End Type="QUANLYTHUVIENModel.MUONTRA" Role="MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -804,7 +896,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__NguoiCh__68487DD7">
+        <Association Name="FK__MUONTRA__NguoiCh__6D0D32F4">
           <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
           <End Type="QUANLYTHUVIENModel.MUONTRA" Role="MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -816,7 +908,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MUONTRA__NguoiNh__6A30C649">
+        <Association Name="FK__MUONTRA__NguoiNh__6EF57B66">
           <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="0..1" />
           <End Type="QUANLYTHUVIENModel.MUONTRA" Role="MUONTRA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -924,6 +1016,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__THEDOCGIA__Nguoi__68487DD7">
+          <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+          <End Type="QUANLYTHUVIENModel.THEDOCGIA" Role="THEDOCGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="THEDOCGIA">
+              <PropertyRef Name="NguoiLap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__THELOAI__NguoiLa__571DF1D5">
           <End Type="QUANLYTHUVIENModel.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
           <End Type="QUANLYTHUVIENModel.THELOAI" Role="THELOAI" Multiplicity="*" />
@@ -996,7 +1100,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1061,6 +1165,14 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="THEDOCGIALATE" FunctionName="QUANLYTHUVIENModel.Store.THEDOCGIALATE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QUANLYTHUVIENModel.THEDOCGIALATE_Result">
+                <ScalarProperty Name="MaDocGia" ColumnName="MaDocGia" />
+                <ScalarProperty Name="HAN" ColumnName="HAN" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <EntitySetMapping Name="DOCGIAs">
             <EntityTypeMapping TypeName="QUANLYTHUVIENModel.DOCGIA">
               <MappingFragment StoreEntitySet="DOCGIA">
@@ -1081,6 +1193,7 @@
           <EntitySetMapping Name="MUONTRAs">
             <EntityTypeMapping TypeName="QUANLYTHUVIENModel.MUONTRA">
               <MappingFragment StoreEntitySet="MUONTRA">
+                <ScalarProperty Name="Phat" ColumnName="Phat" />
                 <ScalarProperty Name="Phi" ColumnName="Phi" />
                 <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
                 <ScalarProperty Name="NguoiNhanTra" ColumnName="NguoiNhanTra" />
@@ -1186,6 +1299,17 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="THEDOCGIAs">
+            <EntityTypeMapping TypeName="QUANLYTHUVIENModel.THEDOCGIA">
+              <MappingFragment StoreEntitySet="THEDOCGIA">
+                <ScalarProperty Name="NguoiLap" ColumnName="NguoiLap" />
+                <ScalarProperty Name="HanMoi" ColumnName="HanMoi" />
+                <ScalarProperty Name="HanCu" ColumnName="HanCu" />
+                <ScalarProperty Name="NgayGiaHan" ColumnName="NgayGiaHan" />
+                <ScalarProperty Name="MaDocGia" ColumnName="MaDocGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="THELOAIs">
             <EntityTypeMapping TypeName="QUANLYTHUVIENModel.THELOAI">
               <MappingFragment StoreEntitySet="THELOAI">
@@ -1198,7 +1322,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

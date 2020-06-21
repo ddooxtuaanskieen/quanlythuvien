@@ -234,6 +234,7 @@
             this.textBox_DiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_DiaChi.Multiline = true;
             this.textBox_DiaChi.Name = "textBox_DiaChi";
+            this.textBox_DiaChi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_DiaChi.Size = new System.Drawing.Size(325, 130);
             this.textBox_DiaChi.TabIndex = 11;
             // 

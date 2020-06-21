@@ -36,6 +36,7 @@ namespace QUANLYTHUVIEN.Models
         public virtual DbSet<SACH> SACHes { get; set; }
         public virtual DbSet<SANGTAC> SANGTACs { get; set; }
         public virtual DbSet<TACGIA> TACGIAs { get; set; }
+        public virtual DbSet<THEDOCGIA> THEDOCGIAs { get; set; }
         public virtual DbSet<THELOAI> THELOAIs { get; set; }
     
         public virtual ObjectResult<GETAVAILABLEBOOKS_Result> GETAVAILABLEBOOKS()
@@ -69,6 +70,15 @@ namespace QUANLYTHUVIEN.Models
                 new ObjectParameter("N", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GETBLACKLIST_Result>("GETBLACKLIST", nParameter);
+        }
+    
+        public virtual ObjectResult<THEDOCGIALATE_Result> THEDOCGIALATE(Nullable<int> n)
+        {
+            var nParameter = n.HasValue ?
+                new ObjectParameter("n", n) :
+                new ObjectParameter("n", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<THEDOCGIALATE_Result>("THEDOCGIALATE", nParameter);
         }
     }
 }

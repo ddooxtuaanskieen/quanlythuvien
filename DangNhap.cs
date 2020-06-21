@@ -43,6 +43,7 @@ namespace QUANLYTHUVIEN
                 {
                     Ham.currentUser = nv.MaNhanVien;
                     MessageBox.Show("Đăng nhập thành công.");
+                    this.Hide();
                     Menu m = new Menu();
                     m.ShowDialog();
                 }
@@ -51,7 +52,7 @@ namespace QUANLYTHUVIEN
 
         private void DangNhap_Load(object sender, EventArgs e)
         {
-            
+            Ham.sendEmailRemindTheDocGia("DG1");
         }
 
         private void textBox_MatKhau_MouseClick(object sender, MouseEventArgs e)
@@ -66,7 +67,7 @@ namespace QUANLYTHUVIEN
 
         private void pictureBox_Exit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void pictureBox_Instagram_Click(object sender, EventArgs e)

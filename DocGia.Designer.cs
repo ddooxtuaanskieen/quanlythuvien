@@ -157,6 +157,7 @@ namespace QUANLYTHUVIEN
             this.textBox_DiaChi.Location = new System.Drawing.Point(558, 311);
             this.textBox_DiaChi.Multiline = true;
             this.textBox_DiaChi.Name = "textBox_DiaChi";
+            this.textBox_DiaChi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_DiaChi.Size = new System.Drawing.Size(291, 80);
             this.textBox_DiaChi.TabIndex = 36;
             // 
